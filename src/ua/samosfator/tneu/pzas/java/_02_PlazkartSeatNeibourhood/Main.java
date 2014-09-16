@@ -1,6 +1,8 @@
 package ua.samosfator.tneu.pzas.java._02_PlazkartSeatNeibourhood;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static Scanner in = new Scanner(System.in);
