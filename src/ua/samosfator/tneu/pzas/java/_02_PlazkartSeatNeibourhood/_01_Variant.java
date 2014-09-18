@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class _01_Variant {
     public static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -34,6 +34,8 @@ public class Main {
         for (String s : in.nextLine().split(" ")) {
             inputPlaces.add(Integer.valueOf(s));
         }
+
+        System.out.println(rooms);
 
         for (List<Integer> singleRoom : rooms) {
             if (singleRoom.containsAll(inputPlaces)) {
