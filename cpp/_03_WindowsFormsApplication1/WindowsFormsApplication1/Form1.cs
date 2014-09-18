@@ -20,9 +20,9 @@ namespace WindowsFormsApplication1{
         private void button1_Click(object sender, EventArgs e)
         {
             textLabel.Text = "Путін редиска";
-            button1.Text = "Героям Слава!";
             button1.Enabled = false;
             MessageBox.Show("Не треба було натискати на цю кнопку!");
+            button1.Text = "Героям Слава!";
         }
 
         private void label1_Click(object sender, EventArgs e)
