@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Форматування тексту</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p>
+		Динамічне застосування стилів до HTML елемента. Управління CSS властивостями HTML-елемента за допомогою JScript.
+	</p>
+	<input type="text" placeholder="css властивість">
+	<input type="text" placeholder="значення">
+	<button onclick="apply()">Застосувати</button>
+
+	<script type="text/javascript">
+		var p = document.querySelectorAll("p")[0],
+			property = document.querySelectorAll("input")[0],
+			value = document.querySelectorAll("input")[1];
+
+			function apply() {
+				p.style[property.value] = value.value;
+			}
+	</script>
+</body>
+</html>

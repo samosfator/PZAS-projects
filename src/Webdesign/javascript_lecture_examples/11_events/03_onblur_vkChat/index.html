@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Діалоги ВК</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<span></span>
+	<br>
+	<textarea name="message" cols="30"></textarea>
+
+	<script type="text/javascript">
+		var text = document.getElementsByName("message")[0],
+			span = document.getElementsByTagName("span")[0];
+
+		text.oninput = function() {
+			span.innerHTML = "Ви набираєте повідомлення...";
+		}
+
+		text.onblur = function () {
+			span.innerHTML = "";
+		}
+
+		function calc() {
+			result.value = parseInt(first.value) + parseInt(second.value);
+		}
+	</script>
+</body>
+</html>

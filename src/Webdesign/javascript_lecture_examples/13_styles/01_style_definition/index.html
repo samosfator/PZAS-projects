@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Зміна CSS через javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<span onclick="increase()">Хай живе Javascript!</span>
+
+	<script type="text/javascript">
+		var span = document.querySelectorAll("span")[0];
+		var size = 12;
+
+		function increase() {
+			/**
+			 * element.style.назва_css_властивості = значення
+			 */
+			span.style.fontSize = size + "pt";
+			size += 2;
+		}
+	</script>
+</body>
+</html>

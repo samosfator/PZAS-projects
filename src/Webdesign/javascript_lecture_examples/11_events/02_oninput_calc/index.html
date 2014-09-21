@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Калькулятор</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<input type="text" name="first" value="2" placeholder="">
+	+
+	<input type="text" name="second" value="3" placeholder="">
+	=
+	<input type="text" name="result" value="" placeholder="">
+
+	<script type="text/javascript">
+		var first = document.getElementsByName("first")[0],
+			second = document.getElementsByName("second")[0],
+			result = document.getElementsByName("result")[0];
+
+			first.oninput = calc;
+			second.oninput = calc;
+
+		function calc() {
+			result.value = parseInt(first.value) + parseInt(second.value);
+		}
+	</script>
+</body>
+</html>

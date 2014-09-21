@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Стилі класами</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p>
+		Динамічне застосування стилів до HTML елемента. Управління CSS властивостями HTML-елемента за допомогою JScript.
+	</p>
+
+	<script type="text/javascript">
+		var p = document.querySelectorAll("p")[0];
+		p.className = "bold";
+	</script>
+	<style type="text/css" media="screen">
+		.bold {
+			font-weight: bold;
+		}
+	</style>
+</body>
+</html>

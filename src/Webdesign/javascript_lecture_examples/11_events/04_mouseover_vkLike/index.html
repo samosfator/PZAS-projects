@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Фото-лайки</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<span class="like" onclick="alert('+1')">♥</span>
+	<img src="img.png">
+
+	<script type="text/javascript">
+		var img = document.getElementsByTagName("img")[0],
+			like = document.getElementsByClassName("like")[0];
+
+		img.onmouseenter = function() {
+			like.style.display = "block";
+		}
+		like.onmouseenter = function() {
+			like.style.display = "block";
+		}
+		img.onmouseleave = function() {
+			like.style.display = "none";
+		}
+	</script>
+	<style type="text/css">
+		.like {
+			display: none;
+			font-size: 91pt;
+			color: #F0F0F0;
+			position: fixed;
+			left: 225px;
+			cursor: pointer;}
+		.like:hover {
+			background-color: rgba(0, 0, 0, 0.34);}
+	</style>
+</body>
+</html>
