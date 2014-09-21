@@ -1,0 +1,80 @@
+* {
+  text-align: center;
+}
+
+a {
+  color: black;
+  border-bottom: 1px solid blue;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 36pt;
+}
+
+p {
+  font-size: 14pt;
+  line-height: 150%;
+  margin: 5px;
+}
+
+p.small {
+  font-size: 10pt;
+}
+
+p.financing {
+  font-size: 10pt;
+  text-indent: 50px;
+}
+
+p.popularity {
+  font-size: 28pt;
+}
+
+.big {
+  font-size: 20pt;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.lightblue {
+  color: #00b0f0;
+}
+
+.green {
+  color: green;
+}
+
+.orange {
+  color: orange;
+}
+
+.violet {
+  color: #7030a0;
+}
+
+.red {
+  color: red;
+}
+
+.left, p.small, p.financing {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.yellow {
+  color: yellow;
+}

@@ -1,0 +1,1 @@
+**CPIT** — comprehensive practical individual task. It is given once for a semester to consolidate gained knowledge.
