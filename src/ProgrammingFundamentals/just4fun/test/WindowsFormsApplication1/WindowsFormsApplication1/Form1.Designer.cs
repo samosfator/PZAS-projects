@@ -94,7 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(980, 398);
+            this.ClientSize = new System.Drawing.Size(603, 169);
             this.Controls.Add(this.giftMoney);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.totalSalary);
@@ -102,7 +102,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rawSalary);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Голубєв Владислав Віталійович ПЗАС-12";
             this.ResumeLayout(false);
             this.PerformLayout();
 
