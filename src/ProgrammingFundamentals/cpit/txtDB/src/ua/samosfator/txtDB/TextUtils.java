@@ -1,6 +1,7 @@
 package ua.samosfator.txtDB;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -8,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * 1. Написати програму, яка копіює вміст вхідного файла у вихідний файл;
@@ -42,13 +44,29 @@ public class TextUtils {
         List<String> strings = Files.readAllLines(input);
         List<String> latinWords = new ArrayList<>();
         for (String string : strings) {
-            List<String> collected = Arrays.asList(string.split("[Aa-zZ]*")).stream()
-                    .filter(e -> e.equals("")).collect(Collectors.toList());
-            System.out.println(collected);
+            List<String> collected = Arrays.asList(string.split(" ")).stream()
+                    .filter(e -> e.matches("[Aa-zZ]*")).collect(Collectors.toList());
+            latinWords.addAll(collected);
         }
-
-        System.out.println(latinWords);
-        System.out.println(latinWords.size());
         return latinWords.size();
+    }
+
+    //видаляє кожне друге слово.
+    public static void removeEvenWords(Path input) throws IOException {
+        List<String> strings = Files.readAllLines(input);
+        List<String> allStrings = new ArrayList<>();
+
+        for (String string : strings) {
+            ArrayList<String> str = new ArrayList<>(Arrays.asList(string.split(" ")));
+            str.add("\n");
+            allStrings.addAll(str);
+        }
+        //TODO Rewrite using IntStream
+        for (int i = 0; i < allStrings.size(); i++) if (i % 2 == 0) allStrings.remove(i);
+
+        PrintWriter pw = new PrintWriter("output.txt");
+        allStrings.forEach(e -> pw.print(e + " "));
+        pw.flush();
+        pw.close();
     }
 }
