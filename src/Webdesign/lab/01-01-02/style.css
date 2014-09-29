@@ -1,0 +1,29 @@
+body {
+	font-family: Arial;
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+td, th {
+	border: 1px solid black;
+	text-align: center;
+	padding: 5px 15px 5px 15px;
+	height: 20px;
+}
+td.task {
+	width: 250px;
+}
+td.time {
+	font-size: 9pt;
+	padding: 0 5px;
+}
+td.subject {
+	font-weight: bold;
+	background: #F7F7F7;
+}
+.weekday {
+	background: rgba(255, 255, 0, 0.3);
+	color: black;
+	font-weight: bold;
+}
