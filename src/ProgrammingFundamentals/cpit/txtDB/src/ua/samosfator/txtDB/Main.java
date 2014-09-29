@@ -6,6 +6,10 @@ import java.nio.file.Paths;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        TextUtils.removeEvenWords(Paths.get("input.txt"));
+        DB db = new DB("db.txt");
+        db.set("name", "Vlad");
+        System.out.println(db.get("name"));
+        db.delete("name");
+        System.out.println(db.get("name"));
     }
 }

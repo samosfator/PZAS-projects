@@ -52,6 +52,7 @@ public class TextUtils {
     }
 
     //видаляє кожне друге слово.
+    //TODO correct empty lines handling
     public static void removeEvenWords(Path input) throws IOException {
         List<String> strings = Files.readAllLines(input);
         List<String> allStrings = new ArrayList<>();
