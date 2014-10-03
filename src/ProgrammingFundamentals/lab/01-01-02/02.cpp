@@ -27,6 +27,7 @@ int main() {
 			result = (1 / (a * x)) - b;
 		} else if ((x + 5) > 0 && c != 0) {
 			result = (x - a) / x;
+			//cout << x << "-" << a << "/" << x << endl;
 		} else {
 			result = (10 * x) / (c - 4);
 		}

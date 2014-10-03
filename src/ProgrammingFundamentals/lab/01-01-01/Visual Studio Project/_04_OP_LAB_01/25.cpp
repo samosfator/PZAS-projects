@@ -2,20 +2,18 @@
 
 using namespace std;
 
-int main25() {
+int main() {
 	setlocale(LC_ALL, "rus");
 
 	int input;
 	cin >> input;
 
-	for (int i = 1; i < input + 1; i++) {
+	for (int i = 1; i <= (input / 2); i++) {
 		if (input % i == 0) {
 			cout << i << ", ";
 		}
 	}
-	cout << endl;
-
-	system("pause");
+	cout << input << endl;
 
 	return 0;
 }
