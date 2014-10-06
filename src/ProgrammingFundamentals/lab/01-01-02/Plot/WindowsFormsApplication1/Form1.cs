@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1 {
     public partial class Form1 : Form {
 
         private double a, b, c, x1, x2, h, y;
+        private Pen pen;
 
         public Form1() {
             InitializeComponent();
@@ -29,6 +31,7 @@ namespace WindowsFormsApplication1 {
 
         private void drawGraph() {
             Graphics g = this.CreateGraphics();
+            pen = new Pen(Color.Red, 2);
             int startPointX, startPointY, endPointX, endPointY;
             int xMargin = 700;
             int yMargin = 200;
@@ -37,14 +40,14 @@ namespace WindowsFormsApplication1 {
 
             for (double x = x1; x <= x2; x += h) {
                 y = calcY(x);
-                
-                startPointX  = (int)(x + xMargin);
+
+                startPointX = (int)(x + xMargin);
                 startPointY = (int)(y + yMargin);
                 endPointX = (int)(startPointX + h);
                 endPointY = (int)(calcY(x + h) + yMargin);
 
                 try {
-                    g.DrawLine(new Pen(Color.Red, 2),
+                    g.DrawLine(pen,
                         new Point(startPointX, startPointY),
                         new Point(endPointX, endPointY));
                 } catch (Exception) { }
@@ -58,15 +61,19 @@ namespace WindowsFormsApplication1 {
             g.DrawLine(new Pen(Color.Black), //Y axis
                 new Point(0, yMargin),
                 new Point(2000, yMargin));
+            g.FillEllipse(new SolidBrush(Color.Red), new Rectangle());
         }
 
         private double calcY(double x) {
-            if ((x + 5) < 0 && c == 0) {
+            if (x < -5 && c == 0) {
                 y = (1 / (a * x)) - b;
-            } else if ((x + 5) > 0 && c != 0) {
+                pen = new Pen(Color.Magenta, 2);
+            } else if (x > -5 && c != 0) {
                 y = (x - a) / x;
+                pen = new Pen(Color.Cyan, 2);
             } else {
                 y = (10 * x) / (c - 4);
+                pen = new Pen(Color.Blue, 2);
             }
             if (!((a != 0 && b != 0) || (b != 0 && c != 0))) {
                 y = Convert.ToInt32(y);

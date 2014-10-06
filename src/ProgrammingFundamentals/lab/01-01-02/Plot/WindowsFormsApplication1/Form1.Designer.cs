@@ -143,6 +143,7 @@
             this.hTextBox.Name = "hTextBox";
             this.hTextBox.Size = new System.Drawing.Size(100, 20);
             this.hTextBox.TabIndex = 12;
+            this.hTextBox.Text = "1";
             // 
             // button1
             // 
