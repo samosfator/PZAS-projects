@@ -33,7 +33,7 @@ namespace WindowsFormsApplication1 {
                 totalSalary.Text = Convert.ToString(
                     (Convert.ToDouble(rawSalary.Text) +
                         Convert.ToDouble(giftMoney.Text)) * 0.8);
-            catch (Exception) {}
+            } catch (Exception) { }
         }
     }
 }
