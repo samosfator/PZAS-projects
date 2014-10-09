@@ -1,0 +1,62 @@
+html, body {
+	background-color: rgb(232, 232, 232);
+	height: 100%;
+	font-family: Arial;
+	font-size: 10pt;
+}
+
+td, th {
+	border: 1px solid black;
+}
+
+/*First column - pair info*/
+td:nth-child(1) {
+	max-width: 50px;
+	width: 30px;
+}
+
+.day {
+	background-color: white;
+	border-radius: 2px;
+	box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 1px 0px;
+	box-sizing: border-box;
+	height: 250px;
+	min-width: 400px;
+	padding: 5px;
+	width: 40%;
+}
+.day table {
+	width: 100%;
+}
+
+.pair-info {
+	color: grey;
+	padding: 0;
+	text-align: center;
+}
+
+.pair-number {
+	border-bottom: 1px solid rgb(230, 230, 230);
+	font-size: 12pt;
+	font-weight: bold;
+	line-height: 22px;
+	padding-top: 2px;
+}
+
+.pair-time {
+	padding: 2px 2px;
+}
+
+.subject, .task {
+	padding-left: 10px;
+}
+
+.subject.lecture {
+	background: url("../img/icons/book/book_128.png") no-repeat right;
+	background-size: 46px;
+}
+
+.subject.practical {
+	background: url("../img/icons/computer/computer_128.png") no-repeat right;
+	background-size: 44px 50px;
+}

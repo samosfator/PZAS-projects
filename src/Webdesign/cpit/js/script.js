@@ -1,0 +1,1 @@
+var currentEducationalWeek = moment().week() - moment("20140901", "YYYYMMDD").week() + 1;
