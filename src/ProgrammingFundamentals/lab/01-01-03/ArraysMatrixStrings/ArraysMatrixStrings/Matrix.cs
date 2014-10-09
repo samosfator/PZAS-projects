@@ -15,16 +15,18 @@ namespace ArraysMatrixStrings {
         }
 
         public int CountNotNullColumns() {
-            int count = 0;
+            var count = 0;
 
             for (int i = 0; i < cols; i++) {
                 for (int j = 0; j < rows; j++) {
                     if (matrix[j][i] == 0) {
                         count++;
-                        Console.WriteLine("Колонка " + (i + 1) + " має нульовий елемент");
+                        Console.WriteLine("Стовпець " + (i + 1) + " має нульовий елемент");
                     }
                 }
             }
+
+            Console.WriteLine("Задана матриця має: {0} ненульових стовпцi", cols - count);
 
             return count;
         }

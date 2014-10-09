@@ -13,9 +13,8 @@ namespace ArraysMatrixStrings {
                                  new int[] {-1, 3, 0, 1},
                                  new int[] {3, -2, 12, 122}
                              };
-            new Matrix(matrix).Sort();
-
-            //Arrays.MinMaxRangeMupltiply(new double[] { 1, -2, -213, 23, 23, -2, 3, -2, 22 });
+            new Matrix(matrix).CountNotNullColumns();
+            //double result = Arrays.MinMaxRangeMupltiply(new double[] { 10, -2, -23, 23, 23, -2, 3, -2, 222 });
             Console.Read();
         }
     }
