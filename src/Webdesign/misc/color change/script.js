@@ -2,7 +2,9 @@ var body = document.getElementsByTagName("body")[0];
 var r = 150,
 	g = 1,
 	b = 1;
-var increaseR = true, increaseG = true, increaseB = true;
+var increaseR = true,
+	increaseG = true,
+	increaseB = true;
 
 setInterval(function() {
 	if (r < 255 && increaseR) {
@@ -19,7 +21,6 @@ setInterval(function() {
 				b++;
 				g--;
 			} else {
-				//increaseB = false;
 				increaseR = true;
 			}
 		}
@@ -27,3 +28,14 @@ setInterval(function() {
 
 	body.style.backgroundColor = "rgb(" + r + ", " + g + ", " + b + ")";
 }, 1);
+
+
+setInterval(function9) {
+	var r = 150,
+		g = 1,
+		b = 1;
+	var increaseR = true,
+		increaseG = true,
+		increaseB = true;
+
+}, 5000);

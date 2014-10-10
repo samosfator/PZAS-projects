@@ -69,7 +69,7 @@ namespace WindowsFormsApplication1 {
         }
 
         private double calcY(double x) {
-            if (x < -5 && c == 0 && x != 0) {
+            if (x < -5 && c == 0) {
                 y = (1 / (a * x)) - b;
                 pen = new Pen(Color.Magenta, 2);
             } else if (x > -5 && c != 0 && x != 0) {
