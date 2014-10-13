@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Знаодження чисел Фіобаначчі</title>
+	<meta charset="utf-8">
+</head>
+<body style="background: lightgrey">
+	<form name="fib">
+		<strong>Введіть число N</strong>
+		<input type="text" name="n" value="" style="border: 3px solid black;">
+		<input onclick="calcFib();" type="button" value="Обчислити">
+		<br>
+		Результат:
+		<br>
+		<textarea name="result" cols="80" rows="15" style="border: 3px solid black;"></textarea>
+	</form>
+	<script>
+        function calcFib() {
+        	var n = parseInt(fib.n.value),
+        		f0 = 1,
+        		f1 = 1,
+        		fn;
+        	fib.result.value = "i = 0  fi = " + f0 + "\n" +
+        		"i = 1  fi = " + f1 + "\n";
+        	for (var i = 2; i <= n; i++) {
+        		fib.result.value += "i = " + i + "  f" + i + " = " + calc(i) + "\n";
+        	}
+        }
+        /*
+        Знайти найбільше непарне число n куб якого менше n
+         */
+        function calc(n) {
+        	return n < 2 ? 1 : calc(n - 1) + calc(n - 2);
+        }
+	</script>
+</body>
+</html>
