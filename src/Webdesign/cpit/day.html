@@ -4,47 +4,40 @@
 	<title>123</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/day.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<!--Replace with google cdn link-->
+	<script src="js/lib/jquery-2.1.1.min.js"></script>
+	<script src="js/lib/angular.min.js"></script>
 	<script src="js/lib/moment.min.js"></script>
 	<script src="js/app.js"></script>
 </head>
 <body>
-	<div class="day">
-		<table>
-			<thead>
-				<tr>
-					<th colspan="3">Понеділок</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td class="pair-info">
-						<div class="pair-number">1</div>
-						<div class="pair-time">08:00</div>
-					</td>
-					<td class="subject practical">Web-дизайн</td>
-					<td class="task">Завдання</td>
-				</tr>
-				<tr>
-					<td class="pair-info">
-						<div class="pair-number">2</div>
-						<div class="pair-time">09:20</div>
-					</td>
-					<td class="subject lecture">Web-дизайн</td>
-					<td class="task">Завдання</td>
-				</tr>
-				<tr>
-					<td class="pair-info">
-						<div class="pair-number">3</div>
-						<div class="pair-time">11:10</div>
-					</td>
-					<td class="subject lecture">Основи ПІ</td>
-					<td class="task">Завдання</td>
-				</tr>
-			</tbody>
-		</table>
+	<div id="settings">
+		<h1 ng-controller="WeekCountController as shedule">{{ shedule.currentWeek + "-ий тиждень"}}</h1>
+		<input type="text" class="quickSearch" ng-model="quickSearch" placeholder="Швидкий пошук">
+		<div class="clear"></div>
 	</div>
-</body>
-<script src="js/script.js"></script>
+	<div id="week" ng-controller="DayController as days">
+		<div class="day" ng-repeat="day in days track by $index">
+			<table>
+				<thead>
+					<tr>
+						<th colspan="3">{{ day.name }}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="lecture in day.lectures | filter:quickSearch">
+						<td class="pair-info">
+							<div class="pair-number">{{ lecture.number }}</div>
+							<div class="pair-time">{{ lecture.time }}</div>
+						</td>
+						<td class="subject ng-class:lecture.type">{{ lecture.name }}</td>
+						<td>
+							<div class="task">{{ lecture.task }}</div>
+							<div class="lecturer" ng-show="taskCheckbox">{{ lecture.lecturer.name }}</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </html>

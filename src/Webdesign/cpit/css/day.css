@@ -1,8 +1,22 @@
+@media (max-width: 850px) {
+	.day {
+		width: 92% !important;
+	}
+	h1 {
+		font-size: 150%;
+	}
+	.quickSearch {
+		width: 65%;
+	}
+}
+
 html, body {
 	background-color: rgb(232, 232, 232);
 	height: 100%;
 	font-family: Arial;
 	font-size: 10pt;
+	margin: 0;
+	min-width: 550px;
 }
 
 table {
@@ -17,17 +31,33 @@ tr:last-child td {
 	border-bottom: none;
 }
 
+.clear {
+	clear: both;
+}
+
 .day {
 	background-color: white;
 	border-radius: 2px;
 	box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 1px 0px;
 	box-sizing: border-box;
-	min-width: 400px;
+	float: left;
+	margin: 20px;
+	margin-bottom: 0;
+	min-width: 350px;
 	padding: 5px;
 	width: 40%;
 }
 .day table {
 	width: 100%;
+}
+
+.fixed-width {
+	display: inline-block;
+	width: 400px;
+}
+
+.lecturer {
+	display: none;
 }
 
 .pair-info {
@@ -51,6 +81,44 @@ tr:last-child td {
 	padding: 2px 2px;
 }
 
+.quickSearch {
+	border: none;
+	border-radius: 2px;
+	line-height: 20px;
+	padding: 3px 10px;
+}
+
+#settings {
+	background: #B8B7B5;
+	box-sizing: border-box;
+	box-shadow: none;
+	display: block;
+	float: left;
+	height: 100%;
+	opacity: .5;
+	overflow: hidden;
+	padding: 0 10px 0 15px;
+	-webkit-transition: width .4s linear,
+						opacity .4s linear,
+						box-shadow .4s linear;
+	transition: width .4s linear,
+				opacity .4s linear,
+				box-shadow .4s linear;
+	width: 0%;
+}
+
+#settings h1 {
+	color: white;
+	display: inline-block;
+	width: 400px;
+}
+
+#settings:hover {
+	box-shadow: inset -15px 0px 20px -10px rgb(107, 107, 107);
+	opacity: 1;
+	width: 25%;
+}
+
 .subject {
 	border-right: 1px solid rgb(210, 210, 210);
 	/*Decrease contrast of subject type icon*/
@@ -71,4 +139,17 @@ tr:last-child td {
 .subject.practical {
 	background: url("../img/icons/computer/computer_64.png") no-repeat left;
 	background-size: 32px 36px;
+}
+
+.task-checkbox {
+	background: white;
+	width: auto;
+}
+
+#week {
+	float: right;
+	width: 95%;
+	min-width: 65%;
+	-webkit-transition: width .4s linear;
+	transition: width .4s linear;
 }
