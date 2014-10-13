@@ -5,9 +5,7 @@
 	app.controller('WeekCountController', function() {
 		this.currentWeek = moment().week() - moment("20140901", "YYYYMMDD").week() + 1;
 		this.leftWeeks = moment("20141215", "YYYYMMDD").week() - moment().week() - 1;
-		this.taskCheckbox = false;
 		app.currentWeek = this.currentWeek;
-		taskCheckbox = this.taskCheckbox;
 	});
 
 	app.controller('DayController', function($scope) {
@@ -140,6 +138,10 @@
 				time: "09:35",
 				type: "practical"
 			}, {
+				lecturer: {
+					name: "Шпінталь М.Я.",
+					fullName: "Шпінталь Михайло Ярославович"
+				},
 				name: "ОП",
 				number: 3,
 				task: "Завдання",

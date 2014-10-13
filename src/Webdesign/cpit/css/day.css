@@ -19,6 +19,10 @@ html, body {
 	min-width: 550px;
 }
 
+label {
+	cursor: pointer;
+}
+
 table {
 	border-spacing: 0;
 }
@@ -29,6 +33,15 @@ td {
 
 tr:last-child td {
 	border-bottom: none;
+}
+
+#checkboxes {
+	background: #FFF;
+	margin-top: 25px;
+	padding: 5px 10px 7px 10px;
+	width: 88%;
+	border-radius: 2px;
+	border: 1px solid grey;
 }
 
 .clear {
@@ -56,10 +69,6 @@ tr:last-child td {
 	width: 400px;
 }
 
-.lecturer {
-	display: none;
-}
-
 .pair-info {
 	border-right: 1px solid rgb(210, 210, 210);
 	color: grey;
@@ -82,16 +91,18 @@ tr:last-child td {
 }
 
 .quickSearch {
-	border: none;
+	border: 1px solid gray;
 	border-radius: 2px;
 	line-height: 20px;
 	padding: 3px 10px;
+	width: 88%;
 }
 
 #settings {
 	background: #B8B7B5;
 	box-sizing: border-box;
 	box-shadow: none;
+	border-right: 1px solid grey;
 	display: block;
 	float: left;
 	height: 100%;
@@ -110,7 +121,8 @@ tr:last-child td {
 #settings h1 {
 	color: white;
 	display: inline-block;
-	width: 400px;
+	text-align: center;
+	width: 88%;
 }
 
 #settings:hover {

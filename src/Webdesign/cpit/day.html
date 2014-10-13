@@ -15,6 +15,9 @@
 		<h1 ng-controller="WeekCountController as shedule">{{ shedule.currentWeek + "-ий тиждень"}}</h1>
 		<input type="text" class="quickSearch" ng-model="quickSearch" placeholder="Швидкий пошук">
 		<div class="clear"></div>
+		<div id="checkboxes">
+			<label><input type="checkbox" name="" value="" ng-model="lecturers"> {{ lecturers ? "Викладачі" : "Завдання" }}</label>
+		</div>
 	</div>
 	<div id="week" ng-controller="DayController as days">
 		<div class="day" ng-repeat="day in days track by $index">
@@ -32,8 +35,8 @@
 						</td>
 						<td class="subject ng-class:lecture.type">{{ lecture.name }}</td>
 						<td>
-							<div class="task">{{ lecture.task }}</div>
-							<div class="lecturer" ng-show="taskCheckbox">{{ lecture.lecturer.name }}</div>
+							<div class="task" ng-hide="lecturers">{{ lecture.task }}</div>
+							<div class="lecturer task" ng-show="lecturers">{{ lecture.lecturer.name }}</div>
 						</td>
 					</tr>
 				</tbody>
