@@ -37,11 +37,12 @@ tr:last-child td {
 
 #checkboxes {
 	background: #FFF;
+	border: 1px solid grey;
+	border-radius: 2px;
 	margin-top: 25px;
+	min-width: 275px;
 	padding: 5px 10px 7px 10px;
 	width: 88%;
-	border-radius: 2px;
-	border: 1px solid grey;
 }
 
 .clear {
@@ -94,6 +95,7 @@ tr:last-child td {
 	border: 1px solid gray;
 	border-radius: 2px;
 	line-height: 20px;
+	min-width: 275px;
 	padding: 3px 10px;
 	width: 88%;
 }
@@ -121,6 +123,7 @@ tr:last-child td {
 #settings h1 {
 	color: white;
 	display: inline-block;
+	min-width: 275px;
 	text-align: center;
 	width: 88%;
 }
