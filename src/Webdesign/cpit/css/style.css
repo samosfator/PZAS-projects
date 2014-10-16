@@ -60,6 +60,8 @@ tr:last-child td {
 	min-width: 350px;
 	padding: 5px;
 	width: 40%;
+	-webkit-transition: background .5s linear;
+			transition: background .5s linear;
 }
 .day table {
 	width: 100%;
@@ -68,6 +70,27 @@ tr:last-child td {
 .fixed-width {
 	display: inline-block;
 	width: 400px;
+}
+
+.lecturer, .task {
+	height: auto;
+	opacity: 1;
+	position: relative;
+	top: 8px;
+	transition: all .4s linear;
+	-webkit-transition: all .4s linear;
+}
+
+.lecturer {
+	position: relative;
+	top: -7px;
+}
+
+.lecturer.ng-hide, .task.ng-hide {
+	display: block !important;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	opacity: 0;
 }
 
 .pair-info {
@@ -142,7 +165,7 @@ tr:last-child td {
 	width: 40%;
 }
 
-.subject, .task {
+.subject, .task, .lecturer {
 	padding-left: 10px;
 }
 
