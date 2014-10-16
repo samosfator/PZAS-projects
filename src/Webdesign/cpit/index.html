@@ -25,6 +25,13 @@
 				</label>
 			</div>
 		</div>
+		<script type="text/javascript" src="//vk.com/js/api/openapi.js?115"></script>
+
+		<!-- VK Widget -->
+		<div id="vk_groups" style="margin-top: 25px;"></div>
+		<script type="text/javascript">
+			VK.Widgets.Group("vk_groups", {mode: 2, wide: 1, width: "300", height: "400"}, 4129271);
+		</script>
 	</div>
 	<div id="week" ng-controller="DayController as days">
 		<div class="day" ng-repeat="day in days track by $index">
