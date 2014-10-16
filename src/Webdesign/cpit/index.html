@@ -3,20 +3,27 @@
 <head>
 	<title>123</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/style.css"> 
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/switch.css">
 	<!--Replace with google cdn link-->
 	<script src="js/lib/jquery-2.1.1.min.js"></script>
 	<script src="js/lib/angular.min.js"></script>
 	<script src="js/lib/moment.min.js"></script>
 	<script src="js/app.js"></script>
 </head>
-<body>
+<body ng-init="checked = 0">
 	<div id="settings">
 		<h1 ng-controller="WeekCountController as shedule">{{ shedule.currentWeek + "-ий тиждень" }}</h1>
 		<input type="text" class="quickSearch" ng-model="quickSearch" placeholder="Швидкий пошук">
 		<div class="clear"></div>
 		<div id="checkboxes">
-			<label><input type="checkbox" name="" value="" ng-model="lecturers"> {{ lecturers ? "Викладачі" : "Завдання" }}</label>
+			<div class="onoffswitch">
+				<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+				<label class="onoffswitch-label" for="myonoffswitch" ng-click="checked = !checked">
+					<span class="onoffswitch-inner"></span>
+					<span class="onoffswitch-switch"></span>
+				</label>
+			</div>
 		</div>
 	</div>
 	<div id="week" ng-controller="DayController as days">
@@ -35,8 +42,8 @@
 						</td>
 						<td class="subject ng-class:lecture.type">{{ lecture.name }}</td>
 						<td>
-							<div class="task" ng-hide="lecturers">{{ lecture.task }}</div>
-							<div class="lecturer" ng-show="lecturers">{{ lecture.lecturer.name }}</div>
+							<div class="task" ng-hide="checked">{{ lecture.task }}</div>
+							<div class="lecturer" ng-show="checked">{{ lecture.lecturer.name }}</div>
 						</td>
 					</tr>
 				</tbody>
