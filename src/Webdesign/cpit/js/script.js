@@ -9,3 +9,14 @@
 		}, 100);
 	});
 })();
+
+//Change width of shedule on settings hover
+(function() {
+	$(document).ready(function() {
+		$("#settings").hover(function() {
+			$("#week").css("width", "74%");
+		}, function() {
+			$("#week").css("width", "95%");
+		});
+	});
+})();
