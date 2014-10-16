@@ -9,7 +9,6 @@
 	});
 
 	app.controller('DayController', function($scope) {
-		//getjson or getscript
 		$scope.days = [{
 			name: "Понеділок",
 			lectures: [{
