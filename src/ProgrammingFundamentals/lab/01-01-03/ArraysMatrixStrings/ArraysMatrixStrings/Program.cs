@@ -10,9 +10,15 @@ namespace ArraysMatrixStrings {
                                  new[] {32, -2, 112, 122}
                              };
             //Console.WriteLine(new Matrix(matrix).Sort());
-            Console.WriteLine(new Matrix(matrix).GetNotNullColumns());
+            //Console.WriteLine(new Matrix(matrix).GetNotNullColumns());
 
-            //Arrays.MultiplyMinMaxRange(new double[] { 10, -2, -23, 23, 23, -2, 3, -2, 222 });
+            //Console.WriteLine(Arrays.SumPositiveElements(new double[] { 10, -2, -23, 23, 23, -2, 3, -2, 222 }););
+            //Console.WriteLine(Arrays.MultiplyMinMaxRange(new double[] { 10, -2, -23, 23, 23, -2, 3, -2, 222 }););
+
+            var strings = new Strings(Console.ReadLine());
+            //strings.IsParenthesesConcur();
+            //strings.PrintLongestWord();
+            strings.RemoveLatinWords();
             Console.Read();
         }
     }

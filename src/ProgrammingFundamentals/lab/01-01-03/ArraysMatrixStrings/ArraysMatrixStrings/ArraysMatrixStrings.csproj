@@ -38,6 +38,7 @@
     <Compile Include="Arrays.cs" />
     <Compile Include="Matrix.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Strings.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
