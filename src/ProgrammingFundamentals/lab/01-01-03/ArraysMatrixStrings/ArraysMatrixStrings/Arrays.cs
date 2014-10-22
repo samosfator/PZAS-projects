@@ -1,53 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ArraysMatrixStrings {
     class Arrays {
-        public static double PositiveAverage<T>(IList<T> array) {
+        public static double SumPositiveElements<T>(IList<T> array) {
             return array.Where(i => double.Parse(i.ToString()) > 0).Sum(i => double.Parse(i.ToString()));
         }
 
-        public static double MinMaxRangeMupltiply(double[] array) {
-            double minMod, maxMod, result;
-            int minModIndex, maxModIndex;
-            bool AbsPerformed = false;
-            minMod = maxMod = result = 0;
+        public static double MultiplyMinMaxRange(double[] array) {
+            var result = 1.0;
 
-            //Get maximum absolute value from the array
-            for (int i = 0; i < array.Length; i++) {
-                if (Math.Abs(array[i]) > maxMod) {
-                    AbsPerformed = array[i] < 0;
-                    maxMod = Math.Abs(array[i]);
-                }
-            }
-            maxModIndex = AbsPerformed ? Array.IndexOf(array, -maxMod) : Array.IndexOf(array, maxMod);
+            var maxAbs = array.Max(e => Math.Abs(e));
+            var maxAbsIndex = Array.IndexOf(array, array.Max().Equals(maxAbs) ? maxAbs : -maxAbs);
+            Console.WriteLine("maxModIndex: {0}", maxAbsIndex);
 
-            minMod = maxMod;
-            //Get minimum absolute value from the array
-            for (int i = 0; i < array.Length; i++) {
-                if (Math.Abs(array[i]) < minMod) {
-                    AbsPerformed = array[i] < 0;
-                    minMod = Math.Abs(array[i]);
-                }
-            }
-            minModIndex = AbsPerformed ? Array.IndexOf(array, -minMod) : Array.IndexOf(array, minMod);
+            var minAbs = array.Min(e => Math.Abs(e));
+            var minAbsIndex = Array.IndexOf(array, array.Min().Equals(minAbs) ? minAbs : -minAbs);
+            Console.WriteLine("minModIndex: {0}", minAbsIndex);
 
-            Console.WriteLine("maxMod: {0}, maxModIndex: {1}", maxMod, maxModIndex);
-            Console.WriteLine("minMod: {0}, minModIndex: {1}", minMod, minModIndex);
-
-            if (minModIndex < maxModIndex) {
-                for (; minModIndex < maxModIndex; minModIndex++) {
-                    Console.Write(array[minModIndex] + " + ");
-                    result += array[minModIndex];
-                }
-            } else {
-                for (; maxModIndex < minModIndex; maxModIndex++) {
-                    Console.Write(array[minModIndex] + " + ");
-                    result += array[maxModIndex];
-                }
+            var iterCondition = new[] { minAbsIndex, maxAbsIndex };
+            Array.Sort(iterCondition);
+            for (var i = iterCondition[0]; i < iterCondition[1]; i++) {
+                Console.Write(array[i] + " * ");
+                result *= array[i];
             }
 
             Console.WriteLine("\b\b= " + result);

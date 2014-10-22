@@ -1,67 +1,80 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ArraysMatrixStrings {
     class Matrix {
-        private int[][] matrix;
-        private int rows, cols;
+        private readonly int[][] _matrix;
+        private readonly int _rows, _cols;
+        private int[] _unsortedCharacteristic, _sortedCharacteristic;
+
         public Matrix(int[][] matrix) {
-            this.matrix = matrix;
-            this.cols = matrix[0].Length;
-            this.rows = matrix.Length;
+            _matrix = matrix;
+            _cols = matrix[0].Length;
+            _rows = matrix.Length;
         }
 
-        public int CountNotNullColumns() {
+        public int GetNotNullColumns() {
             var count = 0;
 
-            for (int i = 0; i < cols; i++) {
-                for (int j = 0; j < rows; j++) {
-                    if (matrix[j][i] == 0) {
+            for (var i = 0; i < _cols; i++) {
+                for (var j = 0; j < _rows; j++) {
+                    if (_matrix[j][i] == 0) {
                         count++;
                         Console.WriteLine("Стовпець " + (i + 1) + " має нульовий елемент");
                     }
                 }
             }
 
-            Console.WriteLine("Задана матриця має: {0} ненульових стовпцi", cols - count);
+            Console.WriteLine("Задана матриця має: {0} ненульових стовпцi", _cols - count);
 
-            return count;
+            return _cols - count;
         }
 
-        public void Sort() {
-            int[] UnsortedCharacteristic = new int[rows];
-            int[] SortedCharacteristic = new int[rows];
-            for (int i = 0; i < rows; i++) {
-                for (int j = 0; j < cols; j++) {
-                    UnsortedCharacteristic[i] += matrix[i][j];
+        public Matrix Sort() {
+            CalcCharacteristic();
+            for (var i = 0; i < _rows; i++) {
+                if (!_unsortedCharacteristic[i].Equals(_sortedCharacteristic[i])) {
+                    SwapRows(i, Array.IndexOf(_sortedCharacteristic, _unsortedCharacteristic[i]));
+                    CalcCharacteristic();
                 }
             }
-            Array.Copy(UnsortedCharacteristic, SortedCharacteristic, rows);
-            Array.Sort(SortedCharacteristic);
-
-            foreach (int i in SortedCharacteristic) Console.WriteLine(i);
-
-            for (int i = 0; i < rows; i++) {
-                if (!UnsortedCharacteristic[i].Equals(SortedCharacteristic[i])) swap(i, Array.IndexOf(SortedCharacteristic, UnsortedCharacteristic[i]));
-            }
+            return this;
         }
 
-        private void swap(int rowIndex, int destinationIndex) {
-            int[] currentRow = new int[cols];
-            int[] destRow = new int[cols];
-
-            for (int i = 0; i < cols; i++) {
-                currentRow[i] = matrix[rowIndex][i];
-                destRow[i] = matrix[destinationIndex][i];
+        private void CalcCharacteristic() {
+            _unsortedCharacteristic = new int[_rows];
+            _sortedCharacteristic = new int[_rows];
+            foreach (var row in _matrix) {
+                _unsortedCharacteristic[Array.IndexOf(_matrix, row)] = row.Where(e => e > 0 && Array.IndexOf(row, e) % 2 == 0).Sum();
             }
 
-            for (int i = 0; i < cols; i++) {
-                
-            }
+            Array.Copy(_unsortedCharacteristic, _sortedCharacteristic, _rows);
+            Array.Sort(_sortedCharacteristic);
 
+            PrintCharacteristic();
+        }
+
+        private void SwapRows(int rowIndex, int destinationIndex) {
+            var tempRow = new int[_cols];
+            Array.Copy(_matrix[rowIndex], tempRow, _cols);
+            Array.Copy(_matrix[destinationIndex], _matrix[rowIndex], _cols);
+            Array.Copy(tempRow, _matrix[destinationIndex], _cols);
+            Console.WriteLine("Swap {0} and {1} row", rowIndex, destinationIndex);
+        }
+
+        private void PrintCharacteristic() {
+            Console.Write("Characteristic: ");
+            foreach (var i in _unsortedCharacteristic) Console.Write(i + ", ");
+            Console.WriteLine();
+        }
+
+        public override string ToString() {
+            var str = "";
+            foreach (var i in _matrix) {
+                str = i.Aggregate(str, (current, next) => current + (next + ", "));
+                str += "\n";
+            }
+            return str;
         }
     }
 }
