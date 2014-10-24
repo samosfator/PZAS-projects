@@ -5,7 +5,8 @@ using System.Linq;
 namespace ArraysMatrixStrings {
     class Arrays {
         public static double SumPositiveElements<T>(IEnumerable<T> array) {
-            return array.Where(i => double.Parse(i.ToString()) > 0).Sum(i => double.Parse(i.ToString()));
+            var arr = array.Cast<double>().ToArray();
+            return arr.Where(i => i > 0).Sum(i => i);
         }
 
         public static double MultiplyMinMaxRange(double[] array) {
