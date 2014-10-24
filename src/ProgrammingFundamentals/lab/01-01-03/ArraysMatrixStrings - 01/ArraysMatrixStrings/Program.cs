@@ -1,6 +1,5 @@
 ﻿using System;
 
-//2nd variant
 namespace ArraysMatrixStrings {
     static class Program {
         public static void Main() {
