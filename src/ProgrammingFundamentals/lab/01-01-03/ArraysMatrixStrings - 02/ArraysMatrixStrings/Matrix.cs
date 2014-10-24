@@ -5,7 +5,6 @@ namespace ArraysMatrixStrings {
     class Matrix {
         private readonly int[][] _matrix;
         private readonly int _rows, _cols;
-        private int[] _unsortedCharacteristic, _sortedCharacteristic;
 
         public Matrix(int[][] matrix) {
             _matrix = matrix;
@@ -31,41 +30,12 @@ namespace ArraysMatrixStrings {
         }
 
         public Matrix Sort() {
-            CalcCharacteristic();
-            for (var i = 0; i < _rows; i++) {
-                if (!_unsortedCharacteristic[i].Equals(_sortedCharacteristic[i])) {
-                    SwapRows(i, Array.IndexOf(_sortedCharacteristic, _unsortedCharacteristic[i]));
-                    CalcCharacteristic();
-                }
-            }
+            Array.Sort(_matrix, (row1, row2) => CalcCharacteristic(row1).CompareTo(CalcCharacteristic(row2)));
             return this;
         }
 
-        private void CalcCharacteristic() {
-            _unsortedCharacteristic = new int[_rows];
-            _sortedCharacteristic = new int[_rows];
-            foreach (var row in _matrix) {
-                _unsortedCharacteristic[Array.IndexOf(_matrix, row)] = row.Where(e => e > 0 && Array.IndexOf(row, e) % 2 == 0).Sum();
-            }
-
-            Array.Copy(_unsortedCharacteristic, _sortedCharacteristic, _rows);
-            Array.Sort(_sortedCharacteristic);
-
-            PrintCharacteristic();
-        }
-
-        private void SwapRows(int rowIndex, int destinationIndex) {
-            var tempRow = new int[_cols];
-            Array.Copy(_matrix[rowIndex], tempRow, _cols);
-            Array.Copy(_matrix[destinationIndex], _matrix[rowIndex], _cols);
-            Array.Copy(tempRow, _matrix[destinationIndex], _cols);
-            Console.WriteLine("Swap {0} and {1} row", rowIndex, destinationIndex);
-        }
-
-        private void PrintCharacteristic() {
-            Console.Write("Characteristic: ");
-            foreach (var i in _unsortedCharacteristic) Console.Write(i + ", ");
-            Console.WriteLine();
+        private static int CalcCharacteristic(int[] row) {
+            return row.Where(e => e > 0 && Array.IndexOf(row, e) % 2 == 0).Sum();
         }
 
         public override string ToString() {
