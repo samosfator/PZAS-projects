@@ -1,0 +1,43 @@
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	background: yellow;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+header {
+	background: lightpink;
+	height: 100px;
+	padding: 0;
+}
+
+header h1 {
+	margin: 0;
+	float: left;
+	width: 50%;
+}
+
+#left {
+	background: lightgreen;
+	float: left;
+	height: 100%;
+	width: 150px;
+}
+
+#working-area {
+	background: lightgrey;
+	height: 100%;
+}
+
+ul {
+	margin: 0;
+}
+
+#wrapper {
+	height: 100%;
+}

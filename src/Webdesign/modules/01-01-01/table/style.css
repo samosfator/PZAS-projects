@@ -1,0 +1,35 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+}
+
+table {
+	background: lightgrey;
+	border-collapse: collapse;
+	height: 100%;
+	width: 100%;
+}
+
+.right {
+	background: yellow;
+	box-sizing: border-box;
+	width: 100px;
+	max-width: 100px;
+}
+
+.top {
+	background: lightpink;
+	height: 300px;
+}
+
+.top .right {
+	background: lightgrey;
+	font-size: 10pt;
+}
+
+.transparent-block {
+	position: fixed;
+	width: 100%;
+}
