@@ -19,14 +19,13 @@ namespace ArraysMatrixStrings {
         }
 
         public string RemoveEvenWords() {
-            var split = Regex.Split(_input, @"(\b[^\s]+\b)").ToArray();
-            var words = split.Where(s => s.Length > 0).Where(s => Char.IsLetter(s.First())).ToArray();
-            split.ToList().ForEach(Console.WriteLine);
+            var words = Regex.Split(_input, @"(\b[^\s]+\b)")
+                .Where(s => s.Length > 0).Where(s => Char.IsLetter(s.First())).ToArray();
             var result = "";
             for (var i = 0; i < words.Length; i++) {
-                if (i % 2 != 0) {
+                if (i % 2 == 0) {
                     var word = words[i];
-                    result += word + split[i + 1];
+                    result += word + " ";
                 }
             }
             return result;
