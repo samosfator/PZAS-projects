@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>робота з масивами</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form name="arr">
+	</form>
+	<script>
+    function go() {
+        alert('input start!');
+        var a = new Array();
+        var i = 0,
+            numb;
+        do {
+            numb = parseInt(prompt("Введіть число:", " "));
+            if (isNaN(numb)) {
+                break;
+            } else {
+                a[i] = numb;
+            };
+
+            i++;
+        } while (i + 1);
+        alert(" Підсумковий масив : " + a);
+        return a
+    }
+	</script>
+</body>
+</html>
