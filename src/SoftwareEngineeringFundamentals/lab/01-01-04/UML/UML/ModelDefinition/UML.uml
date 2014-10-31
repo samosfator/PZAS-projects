@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+  dslVersion="1.0.0.0"
+  Id="7a4ea006-f272-4be3-8bed-6dbd9c52f42e"
+  name="UML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <actor
+        Id="cf92b226-c577-485f-962b-9c3098d48731"
+        name="Секретар"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="966c07fd-404a-42a6-b80e-35f6ecf0eba8"
+            isDerived="false"
+            sourceEndRoleName="Секретар"
+            targetEndRoleName="Додати ліки"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5763b225-0138-466d-827d-5dbebee65f0a"
+              LastKnownName="Додати ліки"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="22843bdf-549c-48b0-bd64-0a100c5de817"
+                  name="Секретар"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="93803f87-2722-41a6-abc6-15fb465f82a6"
+                  name="Додати ліки"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="73769422-73db-4b9e-99d6-5ec1f85a97fe"
+            isDerived="false"
+            sourceEndRoleName="Секретар"
+            targetEndRoleName="Видалити ліки"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="29278d35-4213-405f-ae95-18cdf4824592"
+              LastKnownName="Видалити ліки"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a7ccd100-1a33-48d6-b8c9-d7a04f1696aa"
+                  name="Секретар"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c15d9261-973f-4337-8432-dee9251f075b"
+                  name="Видалити ліки"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2ce264c2-759c-42e5-ac79-e33b87660869"
+            isDerived="false"
+            sourceEndRoleName="Секретар"
+            targetEndRoleName="Показати список ліків"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f36fb11c-aeb1-4d4d-aefb-727653e1ba2e"
+              LastKnownName="Показати список ліків"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="599665fe-bae7-4144-a69d-332f0094d0ee"
+                  name="Секретар"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="04be1392-0f4c-4a7d-898c-87dc881cd524"
+                  name="Показати список ліків"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5763b225-0138-466d-827d-5dbebee65f0a"
+        name="Додати ліки"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="1248fdc5-7157-4d90-a956-b7918d2aa783">
+            <useCaseMoniker
+              Id="b3ea2fc2-e050-41af-a59b-ffd025605ce3"
+              LastKnownName="Завантажити фотографію ліків"
+              LastKnownLocation="UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="29278d35-4213-405f-ae95-18cdf4824592"
+        name="Видалити ліки"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f36fb11c-aeb1-4d4d-aefb-727653e1ba2e"
+        name="Показати список ліків"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="c22b89f2-b079-49cb-88f9-370db9b2957b">
+            <useCaseMoniker
+              Id="efd8cf60-62f2-4e74-bcc4-071a976bd0d2"
+              LastKnownName="Показати у вигляді таблиці"
+              LastKnownLocation="UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="efd8cf60-62f2-4e74-bcc4-071a976bd0d2"
+        name="Показати у вигляді таблиці"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b3ea2fc2-e050-41af-a59b-ffd025605ce3"
+        name="Завантажити фотографію ліків"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="a38359ac-867a-438e-880d-c8ac8fb52ce3"
+        name="Sequence1"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <lifelines>
+          <lifeline
+            Id="8c2abdb3-e86e-4776-a278-bf74bd2e5ba4"
+            name="Lifeline1"
+            isActor="false"
+            lifelineDisplayName="Lifeline1" />
+        </lifelines>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="42c56523-aa66-4758-b730-52ef54c63901"
+        name="Activity1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="6b3577bc-81b0-4881-89fb-37ebed2d6c54"
+            name="Initial1"
+            isLeaf="false" />
+          <objectNode
+            Id="81ed3d7d-d215-4cd5-a44a-e261cd3b14a9"
+            name="Object1"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="2729425c-a12e-4ce3-a016-20f0a62708c8"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <activityFinalNode
+            Id="dc58519f-1628-47a9-95d3-6846506375ac"
+            name="ActivityFinal1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
