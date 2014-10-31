@@ -12,7 +12,7 @@ namespace ArraysMatrixStrings {
             _rows = matrix.Length;
         }
 
-        public int GetNotNullColumns() {
+        public void GetNotNullColumns() {
             var count = 0;
 
             for (var i = 0; i < _cols; i++) {
@@ -23,15 +23,12 @@ namespace ArraysMatrixStrings {
                     }
                 }
             }
-
             Console.WriteLine("Задана матриця має: {0} ненульових стовпцi", _cols - count);
-
-            return _cols - count;
         }
 
-        public Matrix Sort() {
+        public void Sort() {
             Array.Sort(_matrix, (row1, row2) => CalcCharacteristic(row1).CompareTo(CalcCharacteristic(row2)));
-            return this;
+            Console.WriteLine("Відсортована за характеристиками матриця: \n {0}", this);
         }
 
         private static int CalcCharacteristic(int[] row) {

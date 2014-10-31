@@ -1,24 +1,26 @@
 ﻿using System;
 
-//2nd variant
 namespace ArraysMatrixStrings {
     static class Program {
         public static void Main() {
-            int[][] matrix = {
+            int[][] testMatrix = {
                                  new[] {21, 24, 3, 0},
                                  new[] {-1, 23, 0, 11},
                                  new[] {2, 2, 2, 2}
                              };
-            Console.WriteLine(new Matrix(matrix).Sort());
-            //Console.WriteLine(new Matrix(matrix).GetNotNullColumns());
+            var matrix = new Matrix(testMatrix);
+            matrix.Sort();
+            matrix.GetNotNullColumns();
 
-            //Console.WriteLine(Arrays.SumPositiveElements(new double[] { 10, -2, -23, 23, 23, -2, 3, -2, 222 }));
-            //Console.WriteLine(Arrays.MultiplyMinMaxRange(new double[] { 10, -2, -23, 23, 23, -2, 3, -2, 222 }));
+            var testArray = new double[] { 10, -2, -23, 23, 23, -2, 3, -2, 222 };
+            Arrays.SumPositiveElements(testArray);
+            Arrays.MultiplyMinMaxRange(testArray);
+            Arrays.SortDesc(testArray);
 
-            //var strings = new Strings(Console.ReadLine());
-            //strings.IsParenthesesConcur();
-            //strings.PrintLongestWord();
-            //strings.RemoveLatinWords();
+            var strings = new Strings(Console.ReadLine());
+            strings.IsParenthesesConcur();
+            strings.PrintLongestWord();
+            strings.RemoveLatinWords();
             Console.Read();
         }
     }
