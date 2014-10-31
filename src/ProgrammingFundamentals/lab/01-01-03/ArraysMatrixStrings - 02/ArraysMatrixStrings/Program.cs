@@ -6,7 +6,7 @@ namespace ArraysMatrixStrings {
             int[][] testMatrix = {
                                  new[] {21, 24, 3, 0},
                                  new[] {-1, 23, 0, 11},
-                                 new[] {2, 2, 2, 2}
+                                 new[] {-20, 90, 21, 2}
                              };
             var matrix = new Matrix(testMatrix);
             matrix.Sort();

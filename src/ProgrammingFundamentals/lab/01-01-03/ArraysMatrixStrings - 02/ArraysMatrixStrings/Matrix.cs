@@ -23,12 +23,13 @@ namespace ArraysMatrixStrings {
                     }
                 }
             }
-            Console.WriteLine("Задана матриця має: {0} ненульових стовпцi", _cols - count);
+            Console.WriteLine("Задана матриця має: {0} ненульових стовпцi \n", _cols - count);
         }
 
         public void Sort() {
+            Console.WriteLine("Оригiнальна матриця: \n {0}", this);
             Array.Sort(_matrix, (row1, row2) => CalcCharacteristic(row1).CompareTo(CalcCharacteristic(row2)));
-            Console.WriteLine("Відсортована за характеристиками матриця: \n {0}", this);
+            Console.WriteLine("Вiдсортована за характеристиками матриця: \n {0}", this);
         }
 
         private static int CalcCharacteristic(int[] row) {
@@ -36,10 +37,11 @@ namespace ArraysMatrixStrings {
         }
 
         public override string ToString() {
-            var str = "";
-            foreach (var i in _matrix) {
-                str = i.Aggregate(str, (current, next) => current + (next + ", "));
-                str += "\n";
+            var str = "\b";
+            foreach (var row in _matrix) {
+                str += "|";
+                str = row.Aggregate(str, (current, next) => current + (next + ", "));
+                str += "|\n";
             }
             return str;
         }

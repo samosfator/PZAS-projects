@@ -17,7 +17,7 @@ namespace ArraysMatrixStrings {
             //Console.WriteLine(new Matrix(matrix).SumRowsWithNegativeElements());
 
             var strings = new Strings(Console.ReadLine());
-            //Console.WriteLine("Рядок має {0} чисел", strings.CountNumbers());
+            Console.WriteLine("Рядок має {0} чисел", strings.CountNumbers());
             //Console.WriteLine(strings.RemoveNonLatinWords());
             Console.WriteLine(strings.RemoveEvenWords());
             Console.Read();

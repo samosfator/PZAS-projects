@@ -7,7 +7,7 @@ namespace ArraysMatrixStrings {
         public static void SumPositiveElements<T>(IEnumerable<T> array) {
             var arr = array.Cast<double>().ToArray();
             var sum = arr.Where(i => i > 0).Sum(i => i);
-            Console.WriteLine("Сума додатнiх елементiв масиву: {0}", sum);
+            Console.WriteLine("Сума додатнiх елементiв масиву: {0} \n", sum);
         }
 
         public static void MultiplyMinMaxRange(double[] array) {
@@ -24,17 +24,16 @@ namespace ArraysMatrixStrings {
 
             var iterCondition = new[] { minAbsIndex, maxAbsIndex };
             Array.Sort(iterCondition);
-            for (var i = iterCondition[0]; i < iterCondition[1]; i++) {
+            for (var i = iterCondition[0] + 1; i < iterCondition[1]; i++) {
                 Console.Write(array[i] + " * ");
                 result *= array[i];
             }
 
-            Console.WriteLine("\b\b= " + result);
+            Console.WriteLine("\b\b= {0} \n", result);
         }
 
         public static void SortDesc(double[] array) {
             Console.WriteLine("Впорядкувати елементи масиву за спаданням: ");
-
             Array.Sort(array);
             PrintArray(array.Reverse());
         }
@@ -42,7 +41,7 @@ namespace ArraysMatrixStrings {
         private static void PrintArray(IEnumerable<double> array) {
             Console.Write("[");
             array.ToList().ForEach(el => Console.Write(el + ", "));
-            Console.WriteLine("\b\b]");
+            Console.WriteLine("\b\b]\n");
         }
     }
 }
