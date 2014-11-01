@@ -212,9 +212,9 @@
         <lifelines>
           <lifeline
             Id="8c2abdb3-e86e-4776-a278-bf74bd2e5ba4"
-            name="Lifeline1"
+            name="Введення інформації про ліки"
             isActor="false"
-            lifelineDisplayName="Lifeline1" />
+            lifelineDisplayName="Введення інформації про ліки" />
         </lifelines>
       </interaction>
     </packageHasNamedElement>

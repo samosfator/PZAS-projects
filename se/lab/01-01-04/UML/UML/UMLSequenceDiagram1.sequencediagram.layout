@@ -3,14 +3,14 @@
   <SequenceDesignerModelMoniker Id="08951343-b46a-4a6b-b83a-a15a0913148f" />
   <nestedChildShapes>
     <lifelineShape Id="c5040cdd-e3ea-4517-b865-bbad59d29652" absoluteBounds="1.2083332538604739, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
-      <lifelineMoniker Id="ec016b24-65e4-4cc0-b49d-3bc58a4dc302" LastKnownName="Lifeline1" />
+      <lifelineMoniker Id="ec016b24-65e4-4cc0-b49d-3bc58a4dc302" LastKnownName="Введення інформації про ліки" />
       <relativeChildShapes>
-        <umlLifelineHeadShape Id="21baed4d-fba8-4f72-b3b1-9fed0323ab10" absoluteBounds="0.78333325386047381, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
-          <lifelineMoniker Id="ec016b24-65e4-4cc0-b49d-3bc58a4dc302" LastKnownName="Lifeline1" />
+        <umlLifelineHeadShape Id="21baed4d-fba8-4f72-b3b1-9fed0323ab10" absoluteBounds="0.28333325386047381, 0.62083333333333335, 2, 0.37916666666666671" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="ec016b24-65e4-4cc0-b49d-3bc58a4dc302" LastKnownName="Введення інформації про ліки" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
         <lifelineHoverShape Id="301e20fb-91fc-4d63-98b5-3a2c52b4deef" absoluteBounds="1.2083332538604739, 1, 0, 7">
-          <lifelineMoniker Id="ec016b24-65e4-4cc0-b49d-3bc58a4dc302" LastKnownName="Lifeline1" />
+          <lifelineMoniker Id="ec016b24-65e4-4cc0-b49d-3bc58a4dc302" LastKnownName="Введення інформації про ліки" />
         </lifelineHoverShape>
       </relativeChildShapes>
     </lifelineShape>

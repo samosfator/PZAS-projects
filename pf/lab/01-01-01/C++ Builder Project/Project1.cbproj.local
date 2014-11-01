@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2014-09-19 08:26:28.000.944,=C:\Users\Vlad\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2014-09-19 08:26:29.000.012,=C:\Users\Vlad\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2014-09-19 08:44:57.000.843,C:\Users\Vlad\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Vlad\IdeaProjects\PZAS-projects\cpp\_05_OP_LAB_00\Unit1.dfm</Transaction>
+    <Transaction>2014-09-19 08:44:57.000.843,C:\Users\Vlad\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\Vlad\IdeaProjects\PZAS-projects\cpp\_05_OP_LAB_00\Unit1.cpp</Transaction>
+    <Transaction>2014-09-19 08:44:57.000.843,C:\Users\Vlad\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Users\Vlad\IdeaProjects\PZAS-projects\cpp\_05_OP_LAB_00\Unit1.h</Transaction>
+    <Transaction>2014-09-19 08:45:10.000.731,C:\Users\Vlad\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=C:\Users\Vlad\IdeaProjects\PZAS-projects\cpp\_05_OP_LAB_00\Project1PCH1.h</Transaction>
+    <Transaction>2014-09-19 08:45:15.000.099,C:\Users\Vlad\Documents\Embarcadero\Studio\Projects\Project1.cbproj=C:\Users\Vlad\IdeaProjects\PZAS-projects\cpp\_05_OP_LAB_00\Project1.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>
