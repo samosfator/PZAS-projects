@@ -1,6 +1,4 @@
 ﻿#include <iostream>
-#include <string>
-#include <algorithm>
 #include "Matrix.h"
 #include "Abit.h"
 
