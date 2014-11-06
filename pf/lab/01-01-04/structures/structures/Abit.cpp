@@ -1,58 +1,72 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 #include <algorithm>
 #include "Abit.h"
 
 using namespace std;
 
-int getAbitNumber() {
+struct EdgeComparer {
+	//const vector<Vertex>& V;
+	//EdgeComparer(const vector<Vertex>& vertices) : V(vertices) {}
+	bool operator() (const double& a, const double& b) const {
+		return a < b;
+	}
+};
+
+Abit::Abit() {
+	abitNumber = getAbitNumber();
+	passingScore = getPassingScore();
+	ABITUR = inputAbits(abitNumber);
+}
+
+int Abit::getAbitNumber() {
 	int abitNumber = 0;
-	cout << "Ñê³ëüêè àá³òóð³ºíò³â âè õî÷åòå äîäàòè?";
+	cout << "Ð¡ÐºÑ–Ð»ÑŒÐºÐ¸ Ð°Ð±Ñ–Ñ‚ÑƒÑ€Ñ–Ñ”Ð½Ñ‚Ñ–Ð² Ð²Ð¸ Ñ…Ð¾Ñ‡ÐµÑ‚Ðµ Ð´Ð¾Ð´Ð°Ñ‚Ð¸?";
 	cin >> abitNumber;
 	cin.ignore();
 	return abitNumber;
 }
 
-int getPassingScore() {
+int Abit::getPassingScore() {
 	int passingScore = 0;
-	cout << "Ââåä³òü áàæàíèé ïðîõ³äíèé áàë: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð±Ð°Ð¶Ð°Ð½Ð¸Ð¹ Ð¿Ñ€Ð¾Ñ…Ñ–Ð´Ð½Ð¸Ð¹ Ð±Ð°Ð»: " << endl;
 	cin >> passingScore;
 	cin.ignore();
 	return passingScore;
 }
 
-ABITURIENT* inputAbits(int abitNumber) {
+Abit::ABITURIENT* Abit::inputAbits(int abitNumber) {
 	ABITURIENT* ABITUR = new ABITURIENT[abitNumber];
 	for (int i = 0; i < abitNumber; i++) {
-		cout << "Ââåä³òü ³ì'ÿ: \n";
+		cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ñ–Ð¼'Ñ: \n";
 		getline(cin, ABITUR[i].NAME);
-		cout << "Ââåä³òü ñòàòü: \n";
+		cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ ÑÑ‚Ð°Ñ‚ÑŒ: \n";
 		getline(cin, ABITUR[i].GENDER);
-		cout << "Ââåä³òü ñïåö³àëüí³òü: \n";
+		cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ ÑÐ¿ÐµÑ†Ñ–Ð°Ð»ÑŒÐ½Ñ–Ñ‚ÑŒ: \n";
 		getline(cin, ABITUR[i].SPEC);
 		for (int j = 0; j < 3; j++) {
-			cout << "Ââåä³òü íàçâó " << j + 1 << " åêçàìåíó: \n";
+			cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð½Ð°Ð·Ð²Ñƒ " << j + 1 << " ÐµÐºÐ·Ð°Ð¼ÐµÐ½Ñƒ: \n";
 			getline(cin, ABITUR[i].EXAM[j][0]);
-			cout << "Ââåä³òü ðåçóëüòàò " << j + 1 << " åêçàìåíó: \n";
+			cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ñ€ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ " << j + 1 << " ÐµÐºÐ·Ð°Ð¼ÐµÐ½Ñƒ: \n";
 			getline(cin, ABITUR[i].EXAM[j][1]);
 		}
 	}
 	return ABITUR;
 }
 
-void printAbits(ABITURIENT * ABITUR, int abitNumber) {
+void Abit::printAbits(ABITURIENT * ABITUR, int abitNumber) {
 	for (int i = 0; i < abitNumber; i++) {
 		cout << "-----------------" << endl;
-		cout << "²ì'ÿ: " << ABITUR[i].NAME << endl;
-		cout << "Ñòàòü: " << ABITUR[i].GENDER << endl;
-		cout << "Ñïåö³àëüí³ñòü: " << ABITUR[i].SPEC << endl;
+		cout << "Ð†Ð¼'Ñ: " << ABITUR[i].NAME << endl;
+		cout << "Ð¡Ñ‚Ð°Ñ‚ÑŒ: " << ABITUR[i].GENDER << endl;
+		cout << "Ð¡Ð¿ÐµÑ†Ñ–Ð°Ð»ÑŒÐ½Ñ–ÑÑ‚ÑŒ: " << ABITUR[i].SPEC << endl;
 		for (int j = 0; j < 3; j++) {
 			cout << ABITUR[i].EXAM[j][0] << " : " << ABITUR[i].EXAM[j][1] << endl;
 		}
 	}
 }
 
-double getAvScore(const ABITURIENT &a) {
+double Abit::getAvScore(const ABITURIENT &a) {
 	double aSum = 0;
 	for (int i = 0; i < 3; i++) {
 		aSum += stod(a.EXAM[i][1]);
@@ -60,11 +74,22 @@ double getAvScore(const ABITURIENT &a) {
 	return aSum / 3.0;
 }
 
-bool sortAvScore(const ABITURIENT &a, const ABITURIENT &b) {
+bool Abit::sortAvScore(const ABITURIENT &a, const ABITURIENT &b) {
 	return getAvScore(a) < getAvScore(b);
 }
 
-void filterAbits(ABITURIENT * ABITUR, int abitNumber, int passingScore) {
+void Abit::sortAbits() {
+	cout << "\nÐÐ±Ñ–Ñ‚ÑƒÑ€Ñ–Ñ”Ð½Ñ‚Ð¸ Ð²Ñ–Ð´ÑÐ¾Ñ€Ñ‚Ð¾Ð²Ð°Ð½Ñ– Ð·Ð° Ð·Ñ€Ð¾ÑÑ‚Ð°Ð½Ð½ÑÐ¼ ÑÐµÑ€ÐµÐ´Ð½ÑŒÐ¾Ð³Ð¾ Ð±Ð°Ð»Ñƒ\n";
+	sort(ABITUR, ABITUR + abitNumber,
+		[this](ABITURIENT first, ABITURIENT second) {
+			return sortAvScore(first, second);
+		});
+	Abit::printAbits(ABITUR, abitNumber);
+}
+
+void Abit::filterAbits() {
+	cout << "\nÐÐ±Ñ–Ñ‚ÑƒÑ€Ñ–Ñ”Ð½Ñ‚Ð¸, Ñƒ ÑÐºÐ¸Ñ… ÑÐµÑ€ÐµÐ´Ð½Ñ–Ð¹ Ð±Ð°Ð» Ð½Ð¸Ð¶Ñ‡Ðµ Ð·Ð° Ð¿Ñ€Ð¾Ñ…Ñ–Ð´Ð½Ð¸Ð¹:\n";
+
 	int filteredAbits = 0;
 	for (int i = 0; i < abitNumber; i++) {
 		ABITURIENT abit = ABITUR[i];
@@ -74,6 +99,6 @@ void filterAbits(ABITURIENT * ABITUR, int abitNumber, int passingScore) {
 		}
 	}
 	if (filteredAbits < 1) {
-		cout << "Íåìàº àá³òóð³ºíò³â, ó ÿêèõ ñåðåäí³é áàë íèæ÷å çà ïðîõ³äíèé" << endl;
+		cout << "ÐÐµÐ¼Ð°Ñ” Ð°Ð±Ñ–Ñ‚ÑƒÑ€Ñ–Ñ”Ð½Ñ‚Ñ–Ð², Ñƒ ÑÐºÐ¸Ñ… ÑÐµÑ€ÐµÐ´Ð½Ñ–Ð¹ Ð±Ð°Ð» Ð½Ð¸Ð¶Ñ‡Ðµ Ð·Ð° Ð¿Ñ€Ð¾Ñ…Ñ–Ð´Ð½Ð¸Ð¹" << endl;
 	}
 }
