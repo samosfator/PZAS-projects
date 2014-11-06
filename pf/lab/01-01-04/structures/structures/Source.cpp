@@ -1,5 +1,6 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
@@ -12,7 +13,7 @@ struct ABITURIENT {
 
 int getAbitNumber() {
 	int abitNumber = 0;
-	cout << "Ñê³ëüêè àá³òóð³ºíò³â âè õî÷åòå äîäàòè?";
+	cout << "Ð¡ÐºÑ–Ð»ÑŒÐºÐ¸ Ð°Ð±Ñ–Ñ‚ÑƒÑ€Ñ–Ñ”Ð½Ñ‚Ñ–Ð² Ð²Ð¸ Ñ…Ð¾Ñ‡ÐµÑ‚Ðµ Ð´Ð¾Ð´Ð°Ñ‚Ð¸?";
 	cin >> abitNumber;
 	cin.ignore();
 	return abitNumber;
@@ -21,32 +22,44 @@ int getAbitNumber() {
 ABITURIENT* inputAbits(int abitNumber) {
 	ABITURIENT* ABITUR = new ABITURIENT[abitNumber];
 	for (int i = 0; i < abitNumber; i++) {
-		cout << "Ââåä³òü ³ì'ÿ: \n";
+		cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ñ–Ð¼'Ñ: \n";
 		getline(cin, ABITUR[i].NAME);
-		cout << "Ââåä³òü ñòàòü: \n";
+		cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ ÑÑ‚Ð°Ñ‚ÑŒ: \n";
 		getline(cin, ABITUR[i].GENDER);
-		cout << "Ââåä³òü ñïåö³àëüí³òü: \n";
+		cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ ÑÐ¿ÐµÑ†Ñ–Ð°Ð»ÑŒÐ½Ñ–Ñ‚ÑŒ: \n";
 		getline(cin, ABITUR[i].SPEC);
 		for (int j = 0; j < 3; j++) {
-			cout << "Ââåä³òü íàçâó " << j + 1 << " åêçàìåíó: \n";
+			cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð½Ð°Ð·Ð²Ñƒ " << j + 1 << " ÐµÐºÐ·Ð°Ð¼ÐµÐ½Ñƒ: \n";
 			getline(cin, ABITUR[i].EXAM[j][0]);
-			cout << "Ââåä³òü ðåçóëüòàò " << j + 1 << " åêçàìåíó: \n";
+			cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ñ€ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ " << j + 1 << " ÐµÐºÐ·Ð°Ð¼ÐµÐ½Ñƒ: \n";
 			getline(cin, ABITUR[i].EXAM[j][1]);
 		}
 	}
 	return ABITUR;
 }
 
-void printAbits(ABITURIENT ** ABITUR, int abitNumber) {
+void printAbits(ABITURIENT * ABITUR, int abitNumber) {
 	for (int i = 0; i < abitNumber; i++) {
 		cout << "-----------------" << endl;
-		cout << "²ì'ÿ: " << ABITUR[i]->NAME << endl;
-		cout << "Ñòàòü: " << ABITUR[i]->GENDER << endl;
-		cout << "Ñïåö³àëüí³ñòü: " << ABITUR[i]->SPEC << endl;
+		cout << "Ð†Ð¼'Ñ: " << ABITUR[i].NAME << endl;
+		cout << "Ð¡Ñ‚Ð°Ñ‚ÑŒ: " << ABITUR[i].GENDER << endl;
+		cout << "Ð¡Ð¿ÐµÑ†Ñ–Ð°Ð»ÑŒÐ½Ñ–ÑÑ‚ÑŒ: " << ABITUR[i].SPEC << endl;
 		for (int j = 0; j < 3; j++) {
-			cout << ABITUR[i]->EXAM[j][0] << " : " << ABITUR[i]->EXAM[j][1] << endl;
+			cout << ABITUR[i].EXAM[j][0] << " : " << ABITUR[i].EXAM[j][1] << endl;
 		}
 	}
+}
+
+double getAvScore(const ABITURIENT &a) {
+	double aSum = 0;
+	for (int i = 0; i < 3; i++) {
+		aSum += stod(a.EXAM[i][1]);
+	}
+	return aSum / 3.0;
+}
+
+bool sortAvScore(const ABITURIENT &a, const ABITURIENT &b) {
+	return getAvScore(a) < getAvScore(b);
 }
 
 int main() {
@@ -56,7 +69,8 @@ int main() {
 	int abitNumber = getAbitNumber();
 	
 	ABITURIENT* ABITUR = inputAbits(abitNumber);
-	printAbits(&ABITUR, abitNumber);
+	sort(ABITUR, ABITUR + abitNumber, &sortAvScore);
+	printAbits(ABITUR, abitNumber);
 
 	system("pause");
 }
