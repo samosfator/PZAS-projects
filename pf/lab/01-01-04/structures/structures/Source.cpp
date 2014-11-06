@@ -19,6 +19,14 @@ int getAbitNumber() {
 	return abitNumber;
 }
 
+int getPassingScore() {
+	int passingScore = 0;
+	cout << "Введіть бажаний прохідний бал: " << endl;
+	cin >> passingScore;
+	cin.ignore();
+	return passingScore;
+}
+
 ABITURIENT* inputAbits(int abitNumber) {
 	ABITURIENT* ABITUR = new ABITURIENT[abitNumber];
 	for (int i = 0; i < abitNumber; i++) {
@@ -62,15 +70,33 @@ bool sortAvScore(const ABITURIENT &a, const ABITURIENT &b) {
 	return getAvScore(a) < getAvScore(b);
 }
 
+void filterAbits(ABITURIENT * ABITUR, int abitNumber, int passingScore) {
+	int filteredAbits = 0;
+	for (int i = 0; i < abitNumber; i++) {
+		ABITURIENT abit = ABITUR[i];
+		if (getAvScore(abit) < passingScore) {
+			filteredAbits++;
+			cout << abit.NAME << " - " << abit.SPEC << endl;
+		}
+	}
+	if (filteredAbits < 1) {
+		cout << "Немає абітурієнтів, у яких середній бал нижче за прохідний" << endl;
+	}
+}
+
 int main() {
 	setlocale(LC_ALL, "Russian");
 	system("chcp 1251");
 
 	int abitNumber = getAbitNumber();
+	int passingScore = getPassingScore();
 	
 	ABITURIENT* ABITUR = inputAbits(abitNumber);
 	sort(ABITUR, ABITUR + abitNumber, &sortAvScore);
+	cout << "\nАбітурієнти відсортовані за зростанням середнього балу\n";
 	printAbits(ABITUR, abitNumber);
+	cout << "\nАбітурієнти, у яких середній бал нижче за прохідний\n";
+	filterAbits(ABITUR, abitNumber, passingScore);
 
 	system("pause");
 }
