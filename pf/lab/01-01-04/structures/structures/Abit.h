@@ -19,7 +19,7 @@ private:
 
 	double getAvScore(const ABITURIENT &a);
 
-	bool sortAvScore(const ABITURIENT &a, const ABITURIENT &b);
+	bool avScoreComparator(const ABITURIENT &a, const ABITURIENT &b);
 
 public:
 	Abit();

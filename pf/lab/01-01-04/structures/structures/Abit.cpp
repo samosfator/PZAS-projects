@@ -5,14 +5,6 @@
 
 using namespace std;
 
-struct EdgeComparer {
-	//const vector<Vertex>& V;
-	//EdgeComparer(const vector<Vertex>& vertices) : V(vertices) {}
-	bool operator() (const double& a, const double& b) const {
-		return a < b;
-	}
-};
-
 Abit::Abit() {
 	abitNumber = getAbitNumber();
 	passingScore = getPassingScore();
@@ -38,7 +30,7 @@ int Abit::getPassingScore() {
 Abit::ABITURIENT* Abit::inputAbits(int abitNumber) {
 	ABITURIENT* ABITUR = new ABITURIENT[abitNumber];
 	for (int i = 0; i < abitNumber; i++) {
-		cout << "Введіть ім'я: \n";
+		cout << "\nВведіть ім'я " << i + 1 << "-ого абітурієнта\n";
 		getline(cin, ABITUR[i].NAME);
 		cout << "Введіть стать: \n";
 		getline(cin, ABITUR[i].GENDER);
@@ -74,15 +66,15 @@ double Abit::getAvScore(const ABITURIENT &a) {
 	return aSum / 3.0;
 }
 
-bool Abit::sortAvScore(const ABITURIENT &a, const ABITURIENT &b) {
+bool Abit::avScoreComparator(const ABITURIENT &a, const ABITURIENT &b) {
 	return getAvScore(a) < getAvScore(b);
 }
 
 void Abit::sortAbits() {
 	cout << "\nАбітурієнти відсортовані за зростанням середнього балу\n";
 	sort(ABITUR, ABITUR + abitNumber,
-		[this](ABITURIENT first, ABITURIENT second) {
-			return sortAvScore(first, second);
+		[this](ABITURIENT a, ABITURIENT b) {
+			return avScoreComparator(a, b);
 		});
 	Abit::printAbits(ABITUR, abitNumber);
 }
@@ -95,7 +87,9 @@ void Abit::filterAbits() {
 		ABITURIENT abit = ABITUR[i];
 		if (getAvScore(abit) < passingScore) {
 			filteredAbits++;
+			cout << endl;
 			cout << abit.NAME << " - " << abit.SPEC << endl;
+			cout << endl;
 		}
 	}
 	if (filteredAbits < 1) {
