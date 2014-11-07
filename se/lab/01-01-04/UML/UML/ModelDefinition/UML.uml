@@ -1,8 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="7a4ea006-f272-4be3-8bed-6dbd9c52f42e"
   name="UML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="f7ca17fc-10b7-4625-9233-41a2e0f9b421">
+      <body>Check if password is long enough, if login consists of allowed characters</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="4c62b59b-33be-4714-ab57-1f286916e4a9"
+          LastKnownName="Prior credentials validation"
+          LastKnownLocation="UML.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="986a418d-456d-4c07-9467-a42c883efe11">
+      <body>Sorry for inconvinience. Seems like you don't have a permission to access this database. Try to contact to your system administrator or try later.</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="6e5737da-3921-4c1e-ba9d-cbadef18cfd7"
+          LastKnownName="Show sorry message"
+          LastKnownLocation="UML.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="6f48d1ad-d6f2-4864-93e4-40902cc8f22a">
+      <body>Some troubles occured while saving drug entry. Close other programs and try again.</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="b4d4f5d4-90c3-4d8e-80fa-5b202a2cba93"
+          LastKnownName="Show sorry message"
+          LastKnownLocation="UML.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="8e2bdd45-258f-47b2-bc89-196361869926">
+      <body>Avoid decomposing the use cases into too much detail. Use cases are about the users' experience of your system, instead of its internal workings.</body>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -26,20 +62,20 @@
         isLeaf="false">
         <targetEnds>
           <association
-            Id="966c07fd-404a-42a6-b80e-35f6ecf0eba8"
+            Id="bb259bde-836f-457d-a1e5-5f25e43b8d6c"
             isDerived="false"
             sourceEndRoleName="Секретар"
-            targetEndRoleName="Додати ліки"
+            targetEndRoleName="Отримання інвойсу"
             isLeaf="false"
             isAbstract="false">
             <useCaseMoniker
-              Id="5763b225-0138-466d-827d-5dbebee65f0a"
-              LastKnownName="Додати ліки"
+              Id="cfacbe1d-4e48-4997-b8ec-a479adc12665"
+              LastKnownName="Отримання інвойсу"
               LastKnownLocation="UML.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="22843bdf-549c-48b0-bd64-0a100c5de817"
+                  Id="549f910c-b0de-4554-a59e-11352b2cc71e"
                   name="Секретар"
                   isLeaf="false"
                   isStatic="false"
@@ -52,8 +88,8 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="93803f87-2722-41a6-abc6-15fb465f82a6"
-                  name="Додати ліки"
+                  Id="47b706b9-8378-4ec8-a4d1-45e3f4aab613"
+                  name="Отримання інвойсу"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -65,20 +101,20 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="73769422-73db-4b9e-99d6-5ec1f85a97fe"
+            Id="5b72f0fd-6b4f-4b2f-8f17-d5925c418c89"
             isDerived="false"
             sourceEndRoleName="Секретар"
-            targetEndRoleName="Видалити ліки"
+            targetEndRoleName="Авторизація"
             isLeaf="false"
             isAbstract="false">
             <useCaseMoniker
-              Id="29278d35-4213-405f-ae95-18cdf4824592"
-              LastKnownName="Видалити ліки"
+              Id="ce922e2d-8cb9-4fe5-b503-0895858beab8"
+              LastKnownName="Авторизація"
               LastKnownLocation="UML.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="a7ccd100-1a33-48d6-b8c9-d7a04f1696aa"
+                  Id="0b64a988-3d0c-4ff6-a5b1-c284e3c5bf8f"
                   name="Секретар"
                   isLeaf="false"
                   isStatic="false"
@@ -91,47 +127,8 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="c15d9261-973f-4337-8432-dee9251f075b"
-                  name="Видалити ліки"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="2ce264c2-759c-42e5-ac79-e33b87660869"
-            isDerived="false"
-            sourceEndRoleName="Секретар"
-            targetEndRoleName="Показати список ліків"
-            isLeaf="false"
-            isAbstract="false">
-            <useCaseMoniker
-              Id="f36fb11c-aeb1-4d4d-aefb-727653e1ba2e"
-              LastKnownName="Показати список ліків"
-              LastKnownLocation="UML.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="599665fe-bae7-4144-a69d-332f0094d0ee"
-                  name="Секретар"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="04be1392-0f4c-4a7d-898c-87dc881cd524"
-                  name="Показати список ліків"
+                  Id="adc569c0-9f5f-4ad8-ac29-58fb3c63fb58"
+                  name="Авторизація"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -153,13 +150,29 @@
         isLeaf="false">
         <extendedCases>
           <extend
-            Id="1248fdc5-7157-4d90-a956-b7918d2aa783">
+            Id="003f559e-1edc-429d-9360-996a2841cc18">
             <useCaseMoniker
-              Id="b3ea2fc2-e050-41af-a59b-ffd025605ce3"
-              LastKnownName="Завантажити фотографію ліків"
+              Id="ce922e2d-8cb9-4fe5-b503-0895858beab8"
+              LastKnownName="Авторизація"
               LastKnownLocation="UML.uml" />
           </extend>
         </extendedCases>
+        <additions>
+          <include
+            Id="7af2fdd4-6053-4b47-aa4a-e08baa30a1c0">
+            <useCaseMoniker
+              Id="6f066372-a619-424d-96b6-4cae16192138"
+              LastKnownName="Заповнити інформацію"
+              LastKnownLocation="UML.uml" />
+          </include>
+          <include
+            Id="338736ff-c0eb-441b-8124-eb180396447d">
+            <useCaseMoniker
+              Id="3e4f2675-3d07-4c51-a777-50f0861f354b"
+              LastKnownName="Ввести кількість"
+              LastKnownLocation="UML.uml" />
+          </include>
+        </additions>
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -167,7 +180,33 @@
         Id="29278d35-4213-405f-ae95-18cdf4824592"
         name="Видалити ліки"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="565f22f4-a128-4816-87b5-60fbcc265467">
+            <useCaseMoniker
+              Id="ce922e2d-8cb9-4fe5-b503-0895858beab8"
+              LastKnownName="Авторизація"
+              LastKnownLocation="UML.uml" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include
+            Id="41a87273-1393-4ffd-87ea-41a1400ef1c1">
+            <useCaseMoniker
+              Id="979629b8-13d8-4716-871b-bcef284bbee2"
+              LastKnownName="Ввести назву ліків для видалення"
+              LastKnownLocation="UML.uml" />
+          </include>
+          <include
+            Id="0d178c4d-592b-4189-a352-c8d2b9503aff">
+            <useCaseMoniker
+              Id="676b2b4e-4235-417b-9b36-386417759e8a"
+              LastKnownName="Ввести назву ліків"
+              LastKnownLocation="UML.uml" />
+          </include>
+        </additions>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -177,10 +216,10 @@
         isLeaf="false">
         <extendedCases>
           <extend
-            Id="c22b89f2-b079-49cb-88f9-370db9b2957b">
+            Id="59107636-b359-456e-bbfb-77e4ed8376ab">
             <useCaseMoniker
-              Id="efd8cf60-62f2-4e74-bcc4-071a976bd0d2"
-              LastKnownName="Показати у вигляді таблиці"
+              Id="ce922e2d-8cb9-4fe5-b503-0895858beab8"
+              LastKnownName="Авторизація"
               LastKnownLocation="UML.uml" />
           </extend>
         </extendedCases>
@@ -191,14 +230,42 @@
         Id="efd8cf60-62f2-4e74-bcc4-071a976bd0d2"
         name="Показати у вигляді таблиці"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="9c593b33-fc6e-4423-85f9-9a4e63a5d80a"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="f36fb11c-aeb1-4d4d-aefb-727653e1ba2e"
+              LastKnownName="Показати список ліків"
+              LastKnownLocation="UML.uml" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="b3ea2fc2-e050-41af-a59b-ffd025605ce3"
         name="Завантажити фотографію ліків"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="54d713d9-d555-4435-b4ca-0a759965dab4">
+            <useCaseMoniker
+              Id="6f066372-a619-424d-96b6-4cae16192138"
+              LastKnownName="Заповнити інформацію"
+              LastKnownLocation="UML.uml" />
+          </extend>
+          <extend
+            Id="9fb18e81-7a92-44e2-829b-c150fc0cdf7f">
+            <useCaseMoniker
+              Id="ce922e2d-8cb9-4fe5-b503-0895858beab8"
+              LastKnownName="Авторизація"
+              LastKnownLocation="UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <interaction
@@ -209,19 +276,700 @@
         isAbstract="false"
         isLeaf="false"
         isReentrant="false">
+        <fragments>
+          <messageOccurrenceSpecification
+            Id="aa5bfcdf-e99c-4f16-852d-85495f98c8fa"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="8c2abdb3-e86e-4776-a278-bf74bd2e5ba4"
+                LastKnownName="..."
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget
+            Id="076217e5-4a36-4cb9-90c1-47ae0e230a0a"
+            name="LostFoundTarget1" />
+          <messageOccurrenceSpecification
+            Id="c0270ffd-b034-4fb2-912d-d956c559b2d3"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="8c2abdb3-e86e-4776-a278-bf74bd2e5ba4"
+                LastKnownName="..."
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="0877993b-a422-4040-be95-13ed39e46864"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="8c2abdb3-e86e-4776-a278-bf74bd2e5ba4"
+                LastKnownName="..."
+                LastKnownLocation="UML.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="21d3331d-89b2-4a24-bd02-a67ceb7b860b"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="UML.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="f5aebd25-2b9d-46ea-9773-be2281883774"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="UML.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="7c4bdbab-1792-46ec-a0bb-dd1651b11482"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="UML.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="f5aebd25-2b9d-46ea-9773-be2281883774"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="c9a25946-b08f-4ae3-807f-c1da7cd35adc"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="8c2abdb3-e86e-4776-a278-bf74bd2e5ba4"
+                LastKnownName="..."
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7c4bdbab-1792-46ec-a0bb-dd1651b11482"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="8c2abdb3-e86e-4776-a278-bf74bd2e5ba4"
+                LastKnownName="..."
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="fc820045-2187-4a79-be06-fbf8262fb8a2"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="6c7aab15-3244-4067-bc68-95636c84b95f"
+                LastKnownName="..."
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="2e6b6d15-8a4f-458e-a71e-70f3688283e7"
+            name="BehaviorExecutionSpecification4">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="6c7aab15-3244-4067-bc68-95636c84b95f"
+                LastKnownName="..."
+                LastKnownLocation="UML.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="6e604bb3-05cb-4307-8776-228a60cc484c"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="UML.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="91941fcc-28aa-428f-bfc4-8514bcb5e1b0"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="UML.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="b49ae9d1-31e1-4819-97ee-689a4e156f3e"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="UML.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="91941fcc-28aa-428f-bfc4-8514bcb5e1b0"
+            name="ExecutionOccurrenceSpecification7">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="75130ce3-07c8-457b-89d3-b8719c41adac"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="6c7aab15-3244-4067-bc68-95636c84b95f"
+                LastKnownName="..."
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b49ae9d1-31e1-4819-97ee-689a4e156f3e"
+            name="MessageOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="6c7aab15-3244-4067-bc68-95636c84b95f"
+                LastKnownName="..."
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a7457b8c-574d-46f7-8ba6-1676c91d3e42"
+            name="MessageOccurrenceSpecification12">
+            <covered>
+              <lifelineMoniker
+                Id="d5b62303-a30c-40b7-82bf-0f8fbb1a1681"
+                LastKnownName="перевірка"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="21d3331d-89b2-4a24-bd02-a67ceb7b860b"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="2edd65a1-cc65-4fb1-b130-bfb9f2c7494b"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="8c2abdb3-e86e-4776-a278-bf74bd2e5ba4"
+                LastKnownName="..."
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="07f7af3d-1ebc-4ced-936e-899f6420d91e"
+            name="BehaviorExecutionSpecification5">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d5b62303-a30c-40b7-82bf-0f8fbb1a1681"
+                LastKnownName="перевірка"
+                LastKnownLocation="UML.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="1012bc92-dac8-4eac-9692-ded6899a1d06"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="UML.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="c2b5447d-c4d6-413d-a902-5f68a3cb11af"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="UML.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="637bbb75-afdd-418b-a00f-16abccea9dbd"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="UML.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="c2b5447d-c4d6-413d-a902-5f68a3cb11af"
+            name="ExecutionOccurrenceSpecification9">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="7604ffc5-11dc-4130-95d4-69225568c462"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d5b62303-a30c-40b7-82bf-0f8fbb1a1681"
+                LastKnownName="перевірка"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="637bbb75-afdd-418b-a00f-16abccea9dbd"
+            name="MessageOccurrenceSpecification13">
+            <covered>
+              <lifelineMoniker
+                Id="d5b62303-a30c-40b7-82bf-0f8fbb1a1681"
+                LastKnownName="перевірка"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="6e604bb3-05cb-4307-8776-228a60cc484c"
+            name="ExecutionOccurrenceSpecification8">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="738e69dd-f3dd-42d7-a5d2-3cb25cbcaf7c"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="6c7aab15-3244-4067-bc68-95636c84b95f"
+                LastKnownName="..."
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="1012bc92-dac8-4eac-9692-ded6899a1d06"
+            name="ExecutionOccurrenceSpecification10">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="c380550d-e8d0-4683-a833-257c33efebb7"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d5b62303-a30c-40b7-82bf-0f8fbb1a1681"
+                LastKnownName="перевірка"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="61a6cc78-2cda-41bf-b490-01e7a10db205"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="8c2abdb3-e86e-4776-a278-bf74bd2e5ba4"
+                LastKnownName="..."
+                LastKnownLocation="UML.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="c6eb2413-20e6-4d72-b4c2-dd8b65f7cceb"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="UML.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="3bbf9fef-afe1-4a7e-b60d-475748fd2f58"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="UML.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="beb948b4-2171-426c-ae0f-c0142816a55a"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="b64029fd-003c-4b99-bdfb-1a6dd59503d1"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="UML.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="3bbf9fef-afe1-4a7e-b60d-475748fd2f58"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="15734ce5-ea6b-451f-acaa-9a8d7f4a2355"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="8c2abdb3-e86e-4776-a278-bf74bd2e5ba4"
+                LastKnownName="..."
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2658e05a-f116-49be-a967-3fed0e7a4062"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="6c7aab15-3244-4067-bc68-95636c84b95f"
+                LastKnownName="..."
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="beb948b4-2171-426c-ae0f-c0142816a55a"
+            name="MessageOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="8c2abdb3-e86e-4776-a278-bf74bd2e5ba4"
+                LastKnownName="..."
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c9710a06-e971-4689-a638-8f6a3c298b74"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="d5b62303-a30c-40b7-82bf-0f8fbb1a1681"
+                LastKnownName="перевірка"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="4fe42f52-0b76-45bd-a80b-3dfd21d2349c"
+            name="BehaviorExecutionSpecification3">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d5b62303-a30c-40b7-82bf-0f8fbb1a1681"
+                LastKnownName="перевірка"
+                LastKnownLocation="UML.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="f0a0a4c6-cc93-4fea-833d-4f1972450f61"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="UML.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="4eeac0b9-0711-4721-80cb-dc8186c27b50"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="UML.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="e1d9b9c3-fe40-4e13-8938-1d96366a254b"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="UML.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="4eeac0b9-0711-4721-80cb-dc8186c27b50"
+            name="ExecutionOccurrenceSpecification5">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="2472248e-e7c9-4697-bc43-1677efc7585f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d5b62303-a30c-40b7-82bf-0f8fbb1a1681"
+                LastKnownName="перевірка"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e1d9b9c3-fe40-4e13-8938-1d96366a254b"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="d5b62303-a30c-40b7-82bf-0f8fbb1a1681"
+                LastKnownName="перевірка"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b64029fd-003c-4b99-bdfb-1a6dd59503d1"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="8c2abdb3-e86e-4776-a278-bf74bd2e5ba4"
+                LastKnownName="..."
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2b19f0dd-8521-48f8-a5b5-dbf3256c8d90"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="6c7aab15-3244-4067-bc68-95636c84b95f"
+                LastKnownName="..."
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="c6eb2413-20e6-4d72-b4c2-dd8b65f7cceb"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="1ba18cd4-ecfb-4c8b-8099-bb3318d32128"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="8c2abdb3-e86e-4776-a278-bf74bd2e5ba4"
+                LastKnownName="..."
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="f0a0a4c6-cc93-4fea-833d-4f1972450f61"
+            name="ExecutionOccurrenceSpecification6">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="76aefab6-08fa-411f-8fc6-02063813853b"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d5b62303-a30c-40b7-82bf-0f8fbb1a1681"
+                LastKnownName="перевірка"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
         <lifelines>
           <lifeline
             Id="8c2abdb3-e86e-4776-a278-bf74bd2e5ba4"
-            name="Введення інформації про ліки"
+            name="..."
             isActor="false"
-            lifelineDisplayName="Введення інформації про ліки" />
+            lifelineDisplayName="...">
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="aa5bfcdf-e99c-4f16-852d-85495f98c8fa"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="c0270ffd-b034-4fb2-912d-d956c559b2d3"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="f5aebd25-2b9d-46ea-9773-be2281883774"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="21d3331d-89b2-4a24-bd02-a67ceb7b860b"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="3bbf9fef-afe1-4a7e-b60d-475748fd2f58"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="c6eb2413-20e6-4d72-b4c2-dd8b65f7cceb"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="UML.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="6c7aab15-3244-4067-bc68-95636c84b95f"
+            name="..."
+            isActor="false"
+            lifelineDisplayName="...">
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="fc820045-2187-4a79-be06-fbf8262fb8a2"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="91941fcc-28aa-428f-bfc4-8514bcb5e1b0"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="6e604bb3-05cb-4307-8776-228a60cc484c"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="2658e05a-f116-49be-a967-3fed0e7a4062"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="2b19f0dd-8521-48f8-a5b5-dbf3256c8d90"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="UML.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="d5b62303-a30c-40b7-82bf-0f8fbb1a1681"
+            name="перевірка"
+            isActor="false"
+            lifelineDisplayName="перевірка">
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="a7457b8c-574d-46f7-8ba6-1676c91d3e42"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="c2b5447d-c4d6-413d-a902-5f68a3cb11af"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="1012bc92-dac8-4eac-9692-ded6899a1d06"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="c9710a06-e971-4689-a638-8f6a3c298b74"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="4eeac0b9-0711-4721-80cb-dc8186c27b50"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="f0a0a4c6-cc93-4fea-833d-4f1972450f61"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="UML.uml" />
+            </topLevelOccurrences>
+          </lifeline>
         </lifelines>
+        <messages>
+          <message
+            Id="e1eae791-5985-47fb-9568-1ca3a40c4f6d"
+            name="Почалося введення"
+            messageKind="Lost"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="aa5bfcdf-e99c-4f16-852d-85495f98c8fa"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker
+                Id="076217e5-4a36-4cb9-90c1-47ae0e230a0a"
+                LastKnownName="LostFoundTarget1"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="32425039-2455-4871-9c2a-f88f17e6c902"
+            name="Перевірка логіну і паролю"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c0270ffd-b034-4fb2-912d-d956c559b2d3"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="7c4bdbab-1792-46ec-a0bb-dd1651b11482"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="f6c027b5-dc9b-447f-93be-9d1fce418ed3"
+            name="&lt;&lt;create&gt;&gt;"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="fc820045-2187-4a79-be06-fbf8262fb8a2"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b49ae9d1-31e1-4819-97ee-689a4e156f3e"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="8ab2b321-e64e-49d2-a2e3-ac57fbf39c2c"
+            name="&lt;&lt;create&gt;&gt;"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a7457b8c-574d-46f7-8ba6-1676c91d3e42"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="637bbb75-afdd-418b-a00f-16abccea9dbd"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="6622fdbe-70b2-4f05-8f53-3ecee998e643"
+            name="Отримати інформацію про ліки"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2658e05a-f116-49be-a967-3fed0e7a4062"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="beb948b4-2171-426c-ae0f-c0142816a55a"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="069fa3a1-c61d-4c4b-bc0e-b6a914229540"
+            name="&lt;&lt;create&gt;&gt;"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c9710a06-e971-4689-a638-8f6a3c298b74"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e1d9b9c3-fe40-4e13-8938-1d96366a254b"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="cb74c00c-c538-41f3-af29-19a41758df2c"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b64029fd-003c-4b99-bdfb-1a6dd59503d1"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2b19f0dd-8521-48f8-a5b5-dbf3256c8d90"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
       </interaction>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <activity
         Id="42c56523-aa66-4758-b730-52ef54c63901"
-        name="Activity1"
+        name="Авторизація"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false"
@@ -230,28 +978,2185 @@
         isSingleExecution="false">
         <nodes>
           <initialNode
-            Id="6b3577bc-81b0-4881-89fb-37ebed2d6c54"
+            Id="0049e974-530d-4938-b076-cb43c0439201"
             name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e1ac3441-2587-4344-abfb-0c69958b6872"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="9801c9e7-d26a-4ca1-83dc-98eaa341819b"
+                  LastKnownName="Введення логіну і паролю"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="9801c9e7-d26a-4ca1-83dc-98eaa341819b"
+            name="Введення логіну і паролю"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4fae3d03-0085-48ef-82eb-043b6f567a2f"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="4c62b59b-33be-4714-ab57-1f286916e4a9"
+                  LastKnownName="Prior credentials validation"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="4c62b59b-33be-4714-ab57-1f286916e4a9"
+            name="Prior credentials validation"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="04d10e18-3d53-4821-ab8c-84de03e8af5e"
+                isLeaf="false">
+                <sendSignalActionMoniker
+                  Id="bb91aca9-d87a-480e-a26d-f0f5d610ce69"
+                  LastKnownName="Send credentials to server"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="90be99be-99de-478f-81ef-6f896ba74ccc"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="a4320da7-4465-496d-ad49-2aaf47155a77"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="bff28a83-9a0f-4f56-8824-b62f037aa550"
+                  LastKnownName="Показ вікна з пропозиціями дій і подальше виконання програми..."
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="33932027-e73d-4e0c-9a6a-183ac9e9d352"
+                guard="Incorrect login or password"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="8be0f443-44de-4021-8a93-6bfb8f5c6544"
+                  LastKnownName="Fork1"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="bff28a83-9a0f-4f56-8824-b62f037aa550"
+            name="Показ вікна з пропозиціями дій і подальше виконання програми..."
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="46f26103-7807-41a8-b920-8b515c0490b4"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="cb2309a2-0a94-48cd-a354-7699ab31cfcb"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="a372a43a-5916-4de1-a6a0-eac987cc9610"
+            name="Show error message"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7756ea5d-3531-4445-a23e-675663b5495d"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="26e17ee8-6761-4ccb-9135-d812d92aab8a"
+                  LastKnownName="Join1"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <sendSignalAction
+            Id="bb91aca9-d87a-480e-a26d-f0f5d610ce69"
+            name="Send credentials to server"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b951bba0-c226-42a9-9a2b-3987300ab27e"
+                isLeaf="false">
+                <acceptEventActionMoniker
+                  Id="a82c5ea5-7456-4b3a-9d46-b35e2f31b80b"
+                  LastKnownName="Receive auth success response"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <sendSignalActionHasTarget>
+                <inputPin
+                  Id="cfd1dfdd-cf0d-450a-b567-08c3092c7ddb"
+                  name="Raw login and password"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <upperBound>
+                    <literalInteger
+                      Id="7c1a777d-7702-42b7-8a40-e27bd93812b9"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </inputPin>
+              </sendSignalActionHasTarget>
+            </pins>
+          </sendSignalAction>
+          <acceptEventAction
+            Id="a82c5ea5-7456-4b3a-9d46-b35e2f31b80b"
+            name="Receive auth success response"
+            isLeaf="false"
+            isUnmarshall="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="6cd8a8c2-87f9-43e6-9ae0-f0b9872e03e9"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="90be99be-99de-478f-81ef-6f896ba74ccc"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <acceptEventActionHasResults>
+                <outputPin
+                  Id="f80b8907-b959-4fc4-85c1-400b0fb2e259"
+                  name="AES-256 encrypted login and password"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <upperBound>
+                    <literalInteger
+                      Id="e9222302-a91f-44b6-a8bb-ca217697df7a"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </outputPin>
+              </acceptEventActionHasResults>
+            </pins>
+          </acceptEventAction>
+          <opaqueAction
+            Id="4150f15d-30b0-4b1d-8302-1713e48c9921"
+            name="Request do login once more"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="42ac1560-1b99-483d-95c6-b77537b4a427"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="26e17ee8-6761-4ccb-9135-d812d92aab8a"
+                  LastKnownName="Join1"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode
+            Id="8be0f443-44de-4021-8a93-6bfb8f5c6544"
+            name="Fork1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3cb793f6-ef29-49bd-9740-8f513a96f7b9"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="a372a43a-5916-4de1-a6a0-eac987cc9610"
+                  LastKnownName="Show error message"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="1f8a9d94-9f34-4892-b66a-442053b4be3c"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="4150f15d-30b0-4b1d-8302-1713e48c9921"
+                  LastKnownName="Request do login once more"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <joinNode
+            Id="26e17ee8-6761-4ccb-9135-d812d92aab8a"
+            name="Join1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5aa5007c-873c-4d98-bc91-717c78cbe02f"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="0ce53c25-2385-4cb1-8a05-d37779f6844e"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <activityFinalNode
+            Id="cb2309a2-0a94-48cd-a354-7699ab31cfcb"
+            name="ActivityFinal1"
             isLeaf="false" />
+          <decisionNode
+            Id="0ce53c25-2385-4cb1-8a05-d37779f6844e"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="31d80849-bdae-41b1-942d-4322f39ac886"
+                guard="User rejected relogin"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="cb2309a2-0a94-48cd-a354-7699ab31cfcb"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="da84ffe5-c89d-4d47-a828-11bbfd1a4cd0"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="6e5737da-3921-4c1e-ba9d-cbadef18cfd7"
+                  LastKnownName="Show sorry message"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="6e5737da-3921-4c1e-ba9d-cbadef18cfd7"
+            name="Show sorry message"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="711af936-0cbd-42ba-afe2-535cc389fdb9"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="9801c9e7-d26a-4ca1-83dc-98eaa341819b"
+                  LastKnownName="Введення логіну і паролю"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c9a25946-b08f-4ae3-807f-c1da7cd35adc"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="2edd65a1-cc65-4fb1-b130-bfb9f2c7494b"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="15734ce5-ea6b-451f-acaa-9a8d7f4a2355"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="1ba18cd4-ecfb-4c8b-8099-bb3318d32128"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="2472248e-e7c9-4697-bc43-1677efc7585f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="76aefab6-08fa-411f-8fc6-02063813853b"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="75130ce3-07c8-457b-89d3-b8719c41adac"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="738e69dd-f3dd-42d7-a5d2-3cb25cbcaf7c"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="7604ffc5-11dc-4130-95d4-69225568c462"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c380550d-e8d0-4683-a833-257c33efebb7"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6f066372-a619-424d-96b6-4cae16192138"
+        name="Заповнити інформацію"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="3f343869-9e22-4e07-89a1-2778ad700f68">
+            <useCaseMoniker
+              Id="676b2b4e-4235-417b-9b36-386417759e8a"
+              LastKnownName="Ввести назву ліків"
+              LastKnownLocation="UML.uml" />
+          </include>
+          <include
+            Id="6569b964-884a-4a58-85bc-bd46abf278a4">
+            <useCaseMoniker
+              Id="228c1b8f-28af-4bf5-8538-0cadd6481679"
+              LastKnownName="Ввести тип ліків"
+              LastKnownLocation="UML.uml" />
+          </include>
+          <include
+            Id="89a39201-d847-4656-abff-561ec2467500">
+            <useCaseMoniker
+              Id="fc8976d3-155e-43df-9858-820a4ef4efe2"
+              LastKnownName="Ввести кількість ліків"
+              LastKnownLocation="UML.uml" />
+          </include>
+          <include
+            Id="6a7040d2-2df4-4266-929e-7c2d4da5fd06">
+            <useCaseMoniker
+              Id="896380f1-217b-4eb1-99be-39782b9f66f6"
+              LastKnownName="Ввести ціну ліків"
+              LastKnownLocation="UML.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3e4f2675-3d07-4c51-a777-50f0861f354b"
+        name="Ввести кількість"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="979629b8-13d8-4716-871b-bcef284bbee2"
+        name="Ввести назву ліків для видалення"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="b5c172f8-85aa-4184-b012-1d70f17ef604"
+        name="Послідовностей"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <ownedCommentsInternal>
+          <comment
+            Id="7c47d822-acc8-46de-b314-9024a4f6d016">
+            <body>Процес додавання ліків у базу асинхронний, оскільки він відкривається у новому вікн</body>
+          </comment>
+        </ownedCommentsInternal>
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="554a99ee-e014-4570-8b0a-5ed501022da4"
+            name="BehaviorExecutionSpecification4">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="ae5e230e-e381-421f-bc99-9e7716ecaee8"
+                LastKnownName="Секретар"
+                LastKnownLocation="UML.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="8f6b0aee-44d1-4233-9243-53a353a16d35"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="UML.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="f63439e2-681b-46bd-bf73-7807a607ff76"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="UML.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="6aa60571-fca4-446a-af28-2f8823a0d7bc"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="a591713b-c208-4c69-9c98-bb98680dce07"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e9acec20-ab33-4ffd-b5d7-dca1de5f7e4b"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="eeb4456b-085b-4569-ba36-1d71b876d413"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="9173aaeb-a47a-4be5-8890-70d42ec97883"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="716cf664-0046-4504-92b2-77b51a06f139"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="UML.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="f63439e2-681b-46bd-bf73-7807a607ff76"
+            name="ExecutionOccurrenceSpecification7">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ecf9870a-dcfa-4e49-ab87-924695ae7a50"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ae5e230e-e381-421f-bc99-9e7716ecaee8"
+                LastKnownName="Секретар"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <lostFoundTarget
+            Id="3623f162-7c7d-48ed-99db-7679f702f07f"
+            name="LostFoundTarget2" />
+          <messageOccurrenceSpecification
+            Id="6aa60571-fca4-446a-af28-2f8823a0d7bc"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="ae5e230e-e381-421f-bc99-9e7716ecaee8"
+                LastKnownName="Секретар"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="31a75c06-d27e-4665-a496-0cffddc471f3"
+            name="BehaviorExecutionSpecification6">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d6a76c0f-bf85-4f71-93e9-7d7410238946"
+                LastKnownName="Авторизація"
+                LastKnownLocation="UML.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="69ab6713-8084-406a-ba86-76e2aae4b0fa"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="UML.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="6018b182-24ad-4cfe-a54b-15b7c0edf608"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="UML.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="9ad742dc-3939-4c3d-ab20-ec4bfbfa7e27"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="51c5d6fe-d441-4a46-bc50-8e01aa0bd3ab"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="9f4adf7c-7990-4832-8e24-195fee67a2e4"
+                LastKnownName="MessageOccurrenceSpecification18"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="dc18413f-8704-414b-ae2e-cd0ff6aa4840"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="UML.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="6018b182-24ad-4cfe-a54b-15b7c0edf608"
+            name="ExecutionOccurrenceSpecification11">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="00152363-e23f-4ab8-892e-b4c1bc6fa1ef"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d6a76c0f-bf85-4f71-93e9-7d7410238946"
+                LastKnownName="Авторизація"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a591713b-c208-4c69-9c98-bb98680dce07"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="ae5e230e-e381-421f-bc99-9e7716ecaee8"
+                LastKnownName="Секретар"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9ad742dc-3939-4c3d-ab20-ec4bfbfa7e27"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="d6a76c0f-bf85-4f71-93e9-7d7410238946"
+                LastKnownName="Авторизація"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="b879d0de-fd72-4618-ba23-d6dc8b91a201"
+            name="BehaviorExecutionSpecification8">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="1cab34f0-315f-4ecb-9742-b222a20d95e3"
+                LastKnownName="checkPassword()"
+                LastKnownLocation="UML.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="2647ecf2-e83d-47f5-adea-989e954e489e"
+                LastKnownName="ExecutionOccurrenceSpecification16"
+                LastKnownLocation="UML.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="4938664d-2ea9-4bba-bf21-31df5d55d43a"
+                LastKnownName="ExecutionOccurrenceSpecification15"
+                LastKnownLocation="UML.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="86358355-b534-409d-a526-1f1abd949e25"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="b70ff5d1-e375-4120-ae78-abc393494c4a"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="UML.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="4938664d-2ea9-4bba-bf21-31df5d55d43a"
+            name="ExecutionOccurrenceSpecification15">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="a77559c8-e162-4f29-8156-cd4694567f6a"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1cab34f0-315f-4ecb-9742-b222a20d95e3"
+                LastKnownName="checkPassword()"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="86358355-b534-409d-a526-1f1abd949e25"
+            name="MessageOccurrenceSpecification16">
+            <covered>
+              <lifelineMoniker
+                Id="1cab34f0-315f-4ecb-9742-b222a20d95e3"
+                LastKnownName="checkPassword()"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="51c5d6fe-d441-4a46-bc50-8e01aa0bd3ab"
+            name="MessageOccurrenceSpecification15">
+            <covered>
+              <lifelineMoniker
+                Id="d6a76c0f-bf85-4f71-93e9-7d7410238946"
+                LastKnownName="Авторизація"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b70ff5d1-e375-4120-ae78-abc393494c4a"
+            name="MessageOccurrenceSpecification17">
+            <covered>
+              <lifelineMoniker
+                Id="1cab34f0-315f-4ecb-9742-b222a20d95e3"
+                LastKnownName="checkPassword()"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9f4adf7c-7990-4832-8e24-195fee67a2e4"
+            name="MessageOccurrenceSpecification18">
+            <covered>
+              <lifelineMoniker
+                Id="d6a76c0f-bf85-4f71-93e9-7d7410238946"
+                LastKnownName="Авторизація"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="2647ecf2-e83d-47f5-adea-989e954e489e"
+            name="ExecutionOccurrenceSpecification16">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="420ebcae-d032-4d27-bf7e-68410fe01466"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1cab34f0-315f-4ecb-9742-b222a20d95e3"
+                LastKnownName="checkPassword()"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="dc18413f-8704-414b-ae2e-cd0ff6aa4840"
+            name="MessageOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="d6a76c0f-bf85-4f71-93e9-7d7410238946"
+                LastKnownName="Авторизація"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e9acec20-ab33-4ffd-b5d7-dca1de5f7e4b"
+            name="MessageOccurrenceSpecification12">
+            <covered>
+              <lifelineMoniker
+                Id="ae5e230e-e381-421f-bc99-9e7716ecaee8"
+                LastKnownName="Секретар"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="69ab6713-8084-406a-ba86-76e2aae4b0fa"
+            name="ExecutionOccurrenceSpecification12">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="eea21c28-0ed8-4e84-a218-90a1b64a2fd8"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d6a76c0f-bf85-4f71-93e9-7d7410238946"
+                LastKnownName="Авторизація"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="67335172-2d6c-4244-94cd-061e424460eb"
+            name="BehaviorExecutionSpecification7">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d8fde818-9895-49c8-922c-006af41134a8"
+                LastKnownName="Додавання"
+                LastKnownLocation="UML.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="3ef51a84-6d9a-471a-bbb6-5b84a2e17c57"
+                LastKnownName="ExecutionOccurrenceSpecification14"
+                LastKnownLocation="UML.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="d2b6a23d-0186-47d3-9c77-aa1437ba0e9e"
+                LastKnownName="ExecutionOccurrenceSpecification13"
+                LastKnownLocation="UML.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="d378f45f-0034-4e96-98d1-a98a8121d9d6"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="4054fb16-71e1-4376-a663-5914f92392aa"
+                LastKnownName="MessageOccurrenceSpecification19"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="877d3b13-ddfa-448b-a375-fb245b19442a"
+                LastKnownName="MessageOccurrenceSpecification22"
+                LastKnownLocation="UML.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="d2b6a23d-0186-47d3-9c77-aa1437ba0e9e"
+            name="ExecutionOccurrenceSpecification13">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="d7b14486-fc92-4e39-8a54-5cbc5051ae00"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d8fde818-9895-49c8-922c-006af41134a8"
+                LastKnownName="Додавання"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="eeb4456b-085b-4569-ba36-1d71b876d413"
+            name="MessageOccurrenceSpecification13">
+            <covered>
+              <lifelineMoniker
+                Id="ae5e230e-e381-421f-bc99-9e7716ecaee8"
+                LastKnownName="Секретар"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d378f45f-0034-4e96-98d1-a98a8121d9d6"
+            name="MessageOccurrenceSpecification14">
+            <covered>
+              <lifelineMoniker
+                Id="d8fde818-9895-49c8-922c-006af41134a8"
+                LastKnownName="Додавання"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="822a5027-a13a-4792-9847-e049759f03ef"
+            name="BehaviorExecutionSpecification9">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="3e28e253-08c0-4e6d-b1e1-d7b41bc8f22e"
+                LastKnownName="checkForDuplicates()"
+                LastKnownLocation="UML.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="51243e89-4ebd-4dcb-b8e2-35b2942f82a9"
+                LastKnownName="ExecutionOccurrenceSpecification18"
+                LastKnownLocation="UML.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="30b2e90f-11b5-489c-973b-57ce256b7d57"
+                LastKnownName="ExecutionOccurrenceSpecification17"
+                LastKnownLocation="UML.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="a5a420ff-fadb-4a46-b546-f07b441f4f54"
+                LastKnownName="MessageOccurrenceSpecification20"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="d408ba0f-58a2-4b4f-b24a-535bd786bc92"
+                LastKnownName="MessageOccurrenceSpecification21"
+                LastKnownLocation="UML.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="30b2e90f-11b5-489c-973b-57ce256b7d57"
+            name="ExecutionOccurrenceSpecification17">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="34dd93ae-e9d6-400b-9c16-51e32f17f414"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3e28e253-08c0-4e6d-b1e1-d7b41bc8f22e"
+                LastKnownName="checkForDuplicates()"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a5a420ff-fadb-4a46-b546-f07b441f4f54"
+            name="MessageOccurrenceSpecification20">
+            <covered>
+              <lifelineMoniker
+                Id="3e28e253-08c0-4e6d-b1e1-d7b41bc8f22e"
+                LastKnownName="checkForDuplicates()"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="4054fb16-71e1-4376-a663-5914f92392aa"
+            name="MessageOccurrenceSpecification19">
+            <covered>
+              <lifelineMoniker
+                Id="d8fde818-9895-49c8-922c-006af41134a8"
+                LastKnownName="Додавання"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="877d3b13-ddfa-448b-a375-fb245b19442a"
+            name="MessageOccurrenceSpecification22">
+            <covered>
+              <lifelineMoniker
+                Id="d8fde818-9895-49c8-922c-006af41134a8"
+                LastKnownName="Додавання"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d408ba0f-58a2-4b4f-b24a-535bd786bc92"
+            name="MessageOccurrenceSpecification21">
+            <covered>
+              <lifelineMoniker
+                Id="3e28e253-08c0-4e6d-b1e1-d7b41bc8f22e"
+                LastKnownName="checkForDuplicates()"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="51243e89-4ebd-4dcb-b8e2-35b2942f82a9"
+            name="ExecutionOccurrenceSpecification18">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="6ea76fb9-a5db-47f4-aeb2-98f3e31b4fa1"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3e28e253-08c0-4e6d-b1e1-d7b41bc8f22e"
+                LastKnownName="checkForDuplicates()"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="3ef51a84-6d9a-471a-bbb6-5b84a2e17c57"
+            name="ExecutionOccurrenceSpecification14">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="457fde6c-a2b1-462f-8f34-114d7b71b2fb"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d8fde818-9895-49c8-922c-006af41134a8"
+                LastKnownName="Додавання"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="76eeadbb-80f5-492b-9f36-132a1137b304"
+            name="BehaviorExecutionSpecification10">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="dc9b6975-fd85-4144-b906-c359190ec75c"
+                LastKnownName="Видалення"
+                LastKnownLocation="UML.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="b94da4e3-e918-4c7d-a677-ecdadb4dc8ee"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="UML.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="bf96620c-3b6f-4067-ab14-c2665d4c6dc3"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="UML.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="b736662e-f6a9-44e8-b135-4a910b709aa1"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="UML.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="bf96620c-3b6f-4067-ab14-c2665d4c6dc3"
+            name="ExecutionOccurrenceSpecification19">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="f03e42e1-4099-4633-a86e-90c416be6abd"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="dc9b6975-fd85-4144-b906-c359190ec75c"
+                LastKnownName="Видалення"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9173aaeb-a47a-4be5-8890-70d42ec97883"
+            name="MessageOccurrenceSpecification23">
+            <covered>
+              <lifelineMoniker
+                Id="ae5e230e-e381-421f-bc99-9e7716ecaee8"
+                LastKnownName="Секретар"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b736662e-f6a9-44e8-b135-4a910b709aa1"
+            name="MessageOccurrenceSpecification24">
+            <covered>
+              <lifelineMoniker
+                Id="dc9b6975-fd85-4144-b906-c359190ec75c"
+                LastKnownName="Видалення"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="b94da4e3-e918-4c7d-a677-ecdadb4dc8ee"
+            name="ExecutionOccurrenceSpecification20">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="9cb0cf73-07ed-4425-8551-f72a152a629f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="dc9b6975-fd85-4144-b906-c359190ec75c"
+                LastKnownName="Видалення"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="4cd7a875-5e0a-482f-b96e-a489179b3e1c"
+            name="BehaviorExecutionSpecification12">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="ac83c4e8-580b-495c-b8fb-6d9e7038e385"
+                LastKnownName="Перегляд бази"
+                LastKnownLocation="UML.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="d097156e-a6e6-4330-b1df-e85faf8f4776"
+                LastKnownName="ExecutionOccurrenceSpecification24"
+                LastKnownLocation="UML.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="eb180bc5-fcec-4db2-90bd-ff0fa655ddef"
+                LastKnownName="ExecutionOccurrenceSpecification23"
+                LastKnownLocation="UML.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="40aaf9a9-19ed-48a4-a2c4-21ad3f1fd3a8"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="9fa2102e-e109-4dfc-902d-748a3212bc0e"
+                LastKnownName="MessageOccurrenceSpecification29"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="6665c3b7-14ee-40e0-a04d-382163fbd4cd"
+                LastKnownName="MessageOccurrenceSpecification32"
+                LastKnownLocation="UML.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="eb180bc5-fcec-4db2-90bd-ff0fa655ddef"
+            name="ExecutionOccurrenceSpecification23">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="bc7355ae-bc42-4bb5-ba84-b69662ec63b6"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ac83c4e8-580b-495c-b8fb-6d9e7038e385"
+                LastKnownName="Перегляд бази"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="40aaf9a9-19ed-48a4-a2c4-21ad3f1fd3a8"
+            name="MessageOccurrenceSpecification28">
+            <covered>
+              <lifelineMoniker
+                Id="ac83c4e8-580b-495c-b8fb-6d9e7038e385"
+                LastKnownName="Перегляд бази"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="716cf664-0046-4504-92b2-77b51a06f139"
+            name="MessageOccurrenceSpecification27">
+            <covered>
+              <lifelineMoniker
+                Id="ae5e230e-e381-421f-bc99-9e7716ecaee8"
+                LastKnownName="Секретар"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="630c70a2-1806-4108-91ef-26876d17c692"
+            name="BehaviorExecutionSpecification13">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="fc1fb31a-2555-486a-bb19-7564e3c03130"
+                LastKnownName="displaySearchResults()"
+                LastKnownLocation="UML.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="7e21c328-b1fe-483d-98d1-22ad4b89f996"
+                LastKnownName="ExecutionOccurrenceSpecification26"
+                LastKnownLocation="UML.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="93d9da19-f0c4-4812-8f33-167c7cb42cc5"
+                LastKnownName="ExecutionOccurrenceSpecification25"
+                LastKnownLocation="UML.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="3a796a65-f7a6-46ab-9029-0d8482ff058b"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="c15a87e9-0805-4d35-9245-055041d20646"
+                LastKnownName="MessageOccurrenceSpecification31"
+                LastKnownLocation="UML.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="93d9da19-f0c4-4812-8f33-167c7cb42cc5"
+            name="ExecutionOccurrenceSpecification25">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="97036034-f32f-4905-8cf2-3022e32b1ff9"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="fc1fb31a-2555-486a-bb19-7564e3c03130"
+                LastKnownName="displaySearchResults()"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9fa2102e-e109-4dfc-902d-748a3212bc0e"
+            name="MessageOccurrenceSpecification29">
+            <covered>
+              <lifelineMoniker
+                Id="ac83c4e8-580b-495c-b8fb-6d9e7038e385"
+                LastKnownName="Перегляд бази"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3a796a65-f7a6-46ab-9029-0d8482ff058b"
+            name="MessageOccurrenceSpecification30">
+            <covered>
+              <lifelineMoniker
+                Id="fc1fb31a-2555-486a-bb19-7564e3c03130"
+                LastKnownName="displaySearchResults()"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c15a87e9-0805-4d35-9245-055041d20646"
+            name="MessageOccurrenceSpecification31">
+            <covered>
+              <lifelineMoniker
+                Id="fc1fb31a-2555-486a-bb19-7564e3c03130"
+                LastKnownName="displaySearchResults()"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6665c3b7-14ee-40e0-a04d-382163fbd4cd"
+            name="MessageOccurrenceSpecification32">
+            <covered>
+              <lifelineMoniker
+                Id="ac83c4e8-580b-495c-b8fb-6d9e7038e385"
+                LastKnownName="Перегляд бази"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="7e21c328-b1fe-483d-98d1-22ad4b89f996"
+            name="ExecutionOccurrenceSpecification26">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="d34676f6-4455-43e6-ad59-3fbf44336841"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="fc1fb31a-2555-486a-bb19-7564e3c03130"
+                LastKnownName="displaySearchResults()"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="d097156e-a6e6-4330-b1df-e85faf8f4776"
+            name="ExecutionOccurrenceSpecification24">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="15ef3a96-1e15-4b94-b878-18fd229ce75e"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ac83c4e8-580b-495c-b8fb-6d9e7038e385"
+                LastKnownName="Перегляд бази"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="8f6b0aee-44d1-4233-9243-53a353a16d35"
+            name="ExecutionOccurrenceSpecification8">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ea83bb98-fa51-450e-8dd6-ffe9e07bfffe"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ae5e230e-e381-421f-bc99-9e7716ecaee8"
+                LastKnownName="Секретар"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="5d7decd2-22cc-4b80-95e4-de4b6597c479"
+            name="MessageOccurrenceSpecification26">
+            <covered>
+              <lifelineMoniker
+                Id="ae5e230e-e381-421f-bc99-9e7716ecaee8"
+                LastKnownName="Секретар"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget
+            Id="45298f3d-70ac-4c28-be55-2b99d5a3abdf"
+            name="LostFoundTarget4" />
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="ae5e230e-e381-421f-bc99-9e7716ecaee8"
+            name="Секретар"
+            isActor="true"
+            lifelineDisplayName="Секретар">
+            <represents>
+              <propertyMoniker
+                Id="2c02d8ce-7596-4157-b5dd-82d62904d028"
+                LastKnownLocation="UML.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="f63439e2-681b-46bd-bf73-7807a607ff76"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="8f6b0aee-44d1-4233-9243-53a353a16d35"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="5d7decd2-22cc-4b80-95e4-de4b6597c479"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="UML.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="d6a76c0f-bf85-4f71-93e9-7d7410238946"
+            name="Авторизація"
+            isActor="false"
+            lifelineDisplayName="Авторизація">
+            <represents>
+              <propertyMoniker
+                Id="8de7eb81-88c5-4504-a6a5-aa0bee53b6f3"
+                LastKnownLocation="UML.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="6018b182-24ad-4cfe-a54b-15b7c0edf608"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="69ab6713-8084-406a-ba86-76e2aae4b0fa"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="UML.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="1cab34f0-315f-4ecb-9742-b222a20d95e3"
+            name="checkPassword()"
+            isActor="false"
+            lifelineDisplayName="checkPassword()">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="4938664d-2ea9-4bba-bf21-31df5d55d43a"
+                LastKnownName="ExecutionOccurrenceSpecification15"
+                LastKnownLocation="UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="2647ecf2-e83d-47f5-adea-989e954e489e"
+                LastKnownName="ExecutionOccurrenceSpecification16"
+                LastKnownLocation="UML.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="d8fde818-9895-49c8-922c-006af41134a8"
+            name="Додавання"
+            isActor="false"
+            lifelineDisplayName="Додавання">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="d2b6a23d-0186-47d3-9c77-aa1437ba0e9e"
+                LastKnownName="ExecutionOccurrenceSpecification13"
+                LastKnownLocation="UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="3ef51a84-6d9a-471a-bbb6-5b84a2e17c57"
+                LastKnownName="ExecutionOccurrenceSpecification14"
+                LastKnownLocation="UML.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="3e28e253-08c0-4e6d-b1e1-d7b41bc8f22e"
+            name="checkForDuplicates()"
+            isActor="false"
+            lifelineDisplayName="checkForDuplicates()">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="30b2e90f-11b5-489c-973b-57ce256b7d57"
+                LastKnownName="ExecutionOccurrenceSpecification17"
+                LastKnownLocation="UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="51243e89-4ebd-4dcb-b8e2-35b2942f82a9"
+                LastKnownName="ExecutionOccurrenceSpecification18"
+                LastKnownLocation="UML.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="dc9b6975-fd85-4144-b906-c359190ec75c"
+            name="Видалення"
+            isActor="false"
+            lifelineDisplayName="Видалення">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="bf96620c-3b6f-4067-ab14-c2665d4c6dc3"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="b94da4e3-e918-4c7d-a677-ecdadb4dc8ee"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="UML.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="ac83c4e8-580b-495c-b8fb-6d9e7038e385"
+            name="Перегляд бази"
+            isActor="false"
+            lifelineDisplayName="Перегляд бази">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="eb180bc5-fcec-4db2-90bd-ff0fa655ddef"
+                LastKnownName="ExecutionOccurrenceSpecification23"
+                LastKnownLocation="UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="d097156e-a6e6-4330-b1df-e85faf8f4776"
+                LastKnownName="ExecutionOccurrenceSpecification24"
+                LastKnownLocation="UML.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="fc1fb31a-2555-486a-bb19-7564e3c03130"
+            name="displaySearchResults()"
+            isActor="false"
+            lifelineDisplayName="displaySearchResults()">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="93d9da19-f0c4-4812-8f33-167c7cb42cc5"
+                LastKnownName="ExecutionOccurrenceSpecification25"
+                LastKnownLocation="UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="7e21c328-b1fe-483d-98d1-22ad4b89f996"
+                LastKnownName="ExecutionOccurrenceSpecification26"
+                LastKnownLocation="UML.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="eee5154e-d720-4a68-be1e-6f1a34814abe"
+            name="Початок"
+            messageKind="Found"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <lostFoundTargetMoniker
+                Id="3623f162-7c7d-48ed-99db-7679f702f07f"
+                LastKnownName="LostFoundTarget2"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6aa60571-fca4-446a-af28-2f8823a0d7bc"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="f5adbfbd-4169-4a58-bfb9-918b969394fb"
+            name="Введення логіну і паролю"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a591713b-c208-4c69-9c98-bb98680dce07"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9ad742dc-3939-4c3d-ab20-ec4bfbfa7e27"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="35968035-ca8c-4793-aed1-5d4f3da51e7b"
+            name="Пароль"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="51c5d6fe-d441-4a46-bc50-8e01aa0bd3ab"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="86358355-b534-409d-a526-1f1abd949e25"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="75eb9539-89e5-429f-bf08-86156fe9a8d6"
+            name="Correct / incorrect"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b70ff5d1-e375-4120-ae78-abc393494c4a"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9f4adf7c-7990-4832-8e24-195fee67a2e4"
+                LastKnownName="MessageOccurrenceSpecification18"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="526ed733-5974-4266-a8ce-c66c45773f1e"
+            name="Повід. про успішний логін"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="dc18413f-8704-414b-ae2e-cd0ff6aa4840"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e9acec20-ab33-4ffd-b5d7-dca1de5f7e4b"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="cf589657-3bba-4e10-b3a3-18a9d10f3bca"
+            name="Додавання ліків в базу"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="eeb4456b-085b-4569-ba36-1d71b876d413"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d378f45f-0034-4e96-98d1-a98a8121d9d6"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="0bcc8aa6-6132-48d7-8e5b-0935abdcbcdb"
+            name="Drug entry"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="4054fb16-71e1-4376-a663-5914f92392aa"
+                LastKnownName="MessageOccurrenceSpecification19"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a5a420ff-fadb-4a46-b546-f07b441f4f54"
+                LastKnownName="MessageOccurrenceSpecification20"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="73dda63c-c150-4467-a017-c2116419eca2"
+            name="present or not"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d408ba0f-58a2-4b4f-b24a-535bd786bc92"
+                LastKnownName="MessageOccurrenceSpecification21"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="877d3b13-ddfa-448b-a375-fb245b19442a"
+                LastKnownName="MessageOccurrenceSpecification22"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="f9221a1c-6ef3-4226-9f8c-b0af720dc62d"
+            name="Назва лікарського препарату для видалення"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9173aaeb-a47a-4be5-8890-70d42ec97883"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b736662e-f6a9-44e8-b135-4a910b709aa1"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="0cf970f4-6ca0-4eee-8034-a2163bc86551"
+            name="Пошуковий запит"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="716cf664-0046-4504-92b2-77b51a06f139"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="40aaf9a9-19ed-48a4-a2c4-21ad3f1fd3a8"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="e0d726f6-8db1-4b2f-bf2c-76df69e44d5c"
+            name="Пошуковий запит"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9fa2102e-e109-4dfc-902d-748a3212bc0e"
+                LastKnownName="MessageOccurrenceSpecification29"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="3a796a65-f7a6-46ab-9029-0d8482ff058b"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="0024dfae-bc75-48f0-a910-c31e4a0ad69e"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c15a87e9-0805-4d35-9245-055041d20646"
+                LastKnownName="MessageOccurrenceSpecification31"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6665c3b7-14ee-40e0-a04d-382163fbd4cd"
+                LastKnownName="MessageOccurrenceSpecification32"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="5a58f8e0-e0d3-43cb-a907-72bf81abce42"
+            name="Вихід з програми"
+            messageKind="Lost"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="5d7decd2-22cc-4b80-95e4-de4b6597c479"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker
+                Id="45298f3d-70ac-4c28-be55-2b99d5a3abdf"
+                LastKnownName="LostFoundTarget4"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+        <ownedAttributesInternal>
+          <property
+            Id="8de7eb81-88c5-4504-a6a5-aa0bee53b6f3"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <activityMoniker
+                Id="42c56523-aa66-4758-b730-52ef54c63901"
+                LastKnownName="Авторизація"
+                LastKnownLocation="UML.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="2c02d8ce-7596-4157-b5dd-82d62904d028"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="cf92b226-c577-485f-962b-9c3098d48731"
+                LastKnownName="Секретар"
+                LastKnownLocation="UML.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="a90a0f17-35af-47b9-8ebb-81acf881e317"
+        name="Запис інформації про ліки"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="f232783a-1ed9-40dd-aa1b-149c92163478"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2a9c6fd8-6520-4fd1-b14e-f8f8ef89ba32"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="75d32ebd-21d1-496a-a1b9-5df9ccd477de"
+                  LastKnownName="Click &quot;Add new drug entry&quot; button"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="75d32ebd-21d1-496a-a1b9-5df9ccd477de"
+            name="Click &quot;Add new drug entry&quot; button"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f6d4e510-9a59-40ce-96cb-9cfcce70ca46"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="79316c32-d0bf-462a-a84f-01a5f3c26285"
+                  LastKnownName="Show popup window with text fields"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="79316c32-d0bf-462a-a84f-01a5f3c26285"
+            name="Show popup window with text fields"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="21a62feb-33d6-4b7d-95ce-2d53119a6fc6"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="1e3a3d61-f111-4d97-ab0a-33c94e5d41d1"
+                  LastKnownName="Fork1"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="173acb4a-0bc6-46e7-912c-3633858cde02"
+            name="Enter drug name"
+            isLeaf="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="fe1bee13-99f7-41b9-aaf5-939ef655fa05"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="b77f99a3-9bab-4502-b67b-084f0883f202"
+                  LastKnownName="Drug name"
+                  LastKnownLocation="UML.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="668642f8-f4fa-4158-bf88-68df21f3c734"
+            name="Enter drug type"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c13095c9-57a5-45ed-9068-5d4396405d2f"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="5173a57a-2cc4-4fd5-855e-86061d29a9d2"
+                  LastKnownName="Enter drug quantity"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="5173a57a-2cc4-4fd5-855e-86061d29a9d2"
+            name="Enter drug quantity"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="fc265443-a939-45ab-bd64-5171bc8efd82"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="fde6ba37-a973-4ad8-aabc-3e090bf5c17d"
+                  LastKnownName="Enter drug price"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="fde6ba37-a973-4ad8-aabc-3e090bf5c17d"
+            name="Enter drug price"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="48b3c9e3-804d-43f4-8946-63b4dbd36392"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="d195ef3f-c8e2-49fd-b47e-1b1f5119b398"
+                  LastKnownName="Join1"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="6a7c184b-2295-4d91-b9d3-9ed5a099ce87"
+            name="Validation of entered information"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="bce36fa8-f924-482f-b976-7d37feb8cd9b"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="d195ef3f-c8e2-49fd-b47e-1b1f5119b398"
+                  LastKnownName="Join1"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="60820f73-07be-414f-85a4-6b36daa6ebe0"
+            name="Click &quot;Save&quot; button"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="fc97f139-4504-4958-8582-83fa93f064c2"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d5dd81b2-cd65-4ba5-81ac-2c2363ac89ba"
+                  LastKnownName="Close popup window"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="d5dd81b2-cd65-4ba5-81ac-2c2363ac89ba"
+            name="Close popup window"
+            isLeaf="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="279c5d9f-33bc-40f7-aec2-2ad7a770b935"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="2611a97c-cc9f-4eb3-bda6-4c674f46de1d"
+                  LastKnownName="Drug entry"
+                  LastKnownLocation="UML.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="2d7c9996-7532-48e3-8b8d-94ecd94e3c2f"
+            name="Check database for  duplicates"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="260ea84c-2930-4117-875e-7840d001df8e"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="8d9bedc3-1a14-4093-b72e-38bd9f945964"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
           <objectNode
-            Id="81ed3d7d-d215-4cd5-a44a-e261cd3b14a9"
-            name="Object1"
+            Id="b77f99a3-9bab-4502-b67b-084f0883f202"
+            name="Drug name"
             isLeaf="false"
             ordering="Unordered"
             isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="9609a661-c3aa-48a7-8e8e-c30761388cfa"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <opaqueActionMoniker
+                  Id="2d7c9996-7532-48e3-8b8d-94ecd94e3c2f"
+                  LastKnownName="Check database for  duplicates"
+                  LastKnownLocation="UML.uml" />
+              </objectFlow>
+            </objectFlowTargets>
             <upperBound>
               <literalInteger
-                Id="2729425c-a12e-4ce3-a016-20f0a62708c8"
+                Id="8224fc5e-9cd1-4954-8b41-7cecc5cc020e"
                 name="2147483647"
                 value="2147483647" />
             </upperBound>
           </objectNode>
-          <activityFinalNode
-            Id="dc58519f-1628-47a9-95d3-6846506375ac"
-            name="ActivityFinal1"
-            isLeaf="false" />
+          <forkNode
+            Id="1e3a3d61-f111-4d97-ab0a-33c94e5d41d1"
+            name="Fork1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="08ef5a80-2cd0-4cca-a32a-b27a1e5fe9c8"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="173acb4a-0bc6-46e7-912c-3633858cde02"
+                  LastKnownName="Enter drug name"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="99f7d465-b273-4ba5-935d-69dac67e0f37"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="6a7c184b-2295-4d91-b9d3-9ed5a099ce87"
+                  LastKnownName="Validation of entered information"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <decisionNode
+            Id="8d9bedc3-1a14-4093-b72e-38bd9f945964"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2fde787b-d34f-44aa-904e-d4f729005489"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="668642f8-f4fa-4158-bf88-68df21f3c734"
+                  LastKnownName="Enter drug type"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="258faa03-3f29-4c4b-9cc2-4fa344c3d22e"
+                guard="Duplicates found"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="173acb4a-0bc6-46e7-912c-3633858cde02"
+                  LastKnownName="Enter drug name"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <joinNode
+            Id="d195ef3f-c8e2-49fd-b47e-1b1f5119b398"
+            name="Join1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="6ba4b63e-5145-4670-a60d-5711fe5d7446"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="60820f73-07be-414f-85a4-6b36daa6ebe0"
+                  LastKnownName="Click &quot;Save&quot; button"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <objectNode
+            Id="2611a97c-cc9f-4eb3-bda6-4c674f46de1d"
+            name="Drug entry"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="ddaf69c8-f662-44e9-9c20-eefb12bc0790"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <sendSignalActionMoniker
+                  Id="28c9daf0-01b2-4c7f-8fc3-6cb48e99e575"
+                  LastKnownName="Send entry to database"
+                  LastKnownLocation="UML.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="22c9062b-1f2c-42ac-acab-9718108d5030"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <sendSignalAction
+            Id="28c9daf0-01b2-4c7f-8fc3-6cb48e99e575"
+            name="Send entry to database"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="05df3272-393c-48e2-adaa-f990f02c6117"
+                isLeaf="false">
+                <acceptEventActionMoniker
+                  Id="cd6f8bb6-27c7-4a31-8dcf-479e9dd0a285"
+                  LastKnownName="Receive saving status"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <acceptEventAction
+            Id="cd6f8bb6-27c7-4a31-8dcf-479e9dd0a285"
+            name="Receive saving status"
+            isLeaf="false"
+            isUnmarshall="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="fd0e9a1d-dabe-4e03-ba12-b85762aef306"
+                guard="Success"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="3b77694d-ac48-4f1c-8310-06fe8b669777"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <decisionNode
+            Id="3b77694d-ac48-4f1c-8310-06fe8b669777"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b8ab7b7d-35fb-4d95-83f8-eea33c104a9f"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b4d4f5d4-90c3-4d8e-80fa-5b202a2cba93"
+                  LastKnownName="Show sorry message"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="b4d4f5d4-90c3-4d8e-80fa-5b202a2cba93"
+            name="Show sorry message"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d632a9db-d617-4be5-a7cd-178c3c912203"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="79316c32-d0bf-462a-a84f-01a5f3c26285"
+                  LastKnownName="Show popup window with text fields"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
         </nodes>
       </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="676b2b4e-4235-417b-9b36-386417759e8a"
+        name="Ввести назву ліків"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="228c1b8f-28af-4bf5-8538-0cadd6481679"
+        name="Ввести тип ліків"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fc8976d3-155e-43df-9858-820a4ef4efe2"
+        name="Ввести кількість ліків"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="896380f1-217b-4eb1-99be-39782b9f66f6"
+        name="Ввести ціну ліків"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="82cd2226-69f5-4945-9d74-826797c38762">
+            <useCaseMoniker
+              Id="fc8976d3-155e-43df-9858-820a4ef4efe2"
+              LastKnownName="Ввести кількість ліків"
+              LastKnownLocation="UML.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="cfacbe1d-4e48-4997-b8ec-a479adc12665"
+        name="Отримання інвойсу"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ce922e2d-8cb9-4fe5-b503-0895858beab8"
+        name="Авторизація"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9c336e21-f247-4be3-871b-4883f3e30fc3"
+        name="Показати у вигляді таблиці жирним шрифтом"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="b9c66373-eb80-4cda-a2dc-6f7849ceb199"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="efd8cf60-62f2-4e74-bcc4-071a976bd0d2"
+              LastKnownName="Показати у вигляді таблиці"
+              LastKnownLocation="UML.uml" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="248ccf73-df36-4eb2-a0b0-2f3eb7ea9178"
+        name="Artifact1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="302a1684-776c-4744-a36a-31d5ec68635a"
+        name="Авторизація.activitydiagram"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UML\Авторизація.activitydiagram">
+        <suppliersInternal>
+          <dependency
+            Id="02af66c8-89ca-4a9a-aa8f-e2e9acf9517a">
+            <useCaseMoniker
+              Id="ce922e2d-8cb9-4fe5-b503-0895858beab8"
+              LastKnownName="Авторизація"
+              LastKnownLocation="UML.uml" />
+          </dependency>
+        </suppliersInternal>
+      </artifact>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="b5f64b2a-a2e1-4c98-a676-5b419eed8d10"
+        name="Запис інформації про ліки.activitydiagram"
+        isAbstract="false"
+        isLeaf="false"
+        fileName="UML\Запис інформації про ліки.activitydiagram">
+        <suppliersInternal>
+          <dependency
+            Id="32314cb0-45b9-4b5f-a431-d64085d39e5d">
+            <useCaseMoniker
+              Id="6f066372-a619-424d-96b6-4cae16192138"
+              LastKnownName="Заповнити інформацію"
+              LastKnownLocation="UML.uml" />
+          </dependency>
+        </suppliersInternal>
+      </artifact>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ecf9870a-dcfa-4e49-ab87-924695ae7a50"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ea83bb98-fa51-450e-8dd6-ffe9e07bfffe"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="00152363-e23f-4ab8-892e-b4c1bc6fa1ef"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="eea21c28-0ed8-4e84-a218-90a1b64a2fd8"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="d7b14486-fc92-4e39-8a54-5cbc5051ae00"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="457fde6c-a2b1-462f-8f34-114d7b71b2fb"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="a77559c8-e162-4f29-8156-cd4694567f6a"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="420ebcae-d032-4d27-bf7e-68410fe01466"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="34dd93ae-e9d6-400b-9c16-51e32f17f414"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="6ea76fb9-a5db-47f4-aeb2-98f3e31b4fa1"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="f03e42e1-4099-4633-a86e-90c416be6abd"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="9cb0cf73-07ed-4425-8551-f72a152a629f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="bc7355ae-bc42-4bb5-ba84-b69662ec63b6"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="15ef3a96-1e15-4b94-b878-18fd229ce75e"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="97036034-f32f-4905-8cf2-3022e32b1ff9"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="d34676f6-4455-43e6-ad59-3fbf44336841"
+        name="ExecutionEvent" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

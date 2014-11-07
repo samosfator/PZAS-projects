@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UMLUseCaseDiagram1">
+  <useCaseModelRootMoniker Id="843ffee6-64b3-4212-a7d0-5d09d87792cf" />
+  <nestedChildShapes>
+    <actorShape Id="e7921d1a-2c7b-4293-922a-106cc35fb7b8" absoluteBounds="0.625, 1.875, 0.625, 0.875" isReference="false" heightOffset="0">
+      <actorMoniker Id="36d49b74-9624-4a43-b318-7f43d94b19df" LastKnownName="Секретар" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="84138fb7-8fc9-4b2f-8dce-ff91aeedc83a" absoluteBounds="1.875, 1, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="1d02fbe4-a47c-4811-bee7-f8879905f57e" LastKnownName="Додати ліки" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseShape Id="d88112b7-c67d-4ed0-9a05-a45795a0a781" absoluteBounds="2.75, 2.375, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="6630d64a-65bd-41ab-b860-770cc110b19e" LastKnownName="Видалити ліки" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseShape Id="81e984d2-2a22-4c98-9f46-1c0cc003d60e" absoluteBounds="2.25, 3, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="9e98a737-f1da-40d6-8b64-8c762ed15d4b" LastKnownName="Показати список ліків" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseShape Id="7aa7d07c-afe2-4363-b250-4999e0d39c99" absoluteBounds="3.75, 2.875, 1.375, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="7d4fae0d-5bd7-4052-8228-07938ef0af53" LastKnownName="Показати у вигляді таблиці" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseGeneralizationConnector edgePoints="[(3.76383487276324 : 3.17490112053606); (3.24460173117694 : 3.21336283472763)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110">
+      <generalizationMoniker Id="89ea019c-03c2-47f9-b2a4-334a25288268" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="7aa7d07c-afe2-4363-b250-4999e0d39c99" />
+        <useCaseShapeMoniker Id="81e984d2-2a22-4c98-9f46-1c0cc003d60e" />
+      </nodes>
+    </useCaseGeneralizationConnector>
+    <useCaseShape Id="689906cc-4923-46cc-a1d0-48b04b52087e" absoluteBounds="3, 1.5, 1.25, 0.625" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="10b2d3c6-9aee-4075-a3e7-45aed2df1b25" LastKnownName="Завантажити фотографію ліків" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseShape Id="2a70d86f-7811-4ed7-8739-7bd6f99ec062" absoluteBounds="3.125, 0.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="57fbdb9f-f7a5-4616-9ffd-c913e9d8d326" LastKnownName="Заповнити інформацію" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(2.83923834544263 : 1.15715233091147); (3.16076165455737 : 1.09284766908853)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="49dfc569-5510-461e-a19f-434e008335e6" />
+      <relativeChildShapes />
+      <moveableDecoratorHostShapes>
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="2.7346714349846835, 0.91854146510687207, 0.52439594268798828, 0.14800345897674561" shapeFieldName="NameDecorator" />
+      </moveableDecoratorHostShapes>
+      <nodes>
+        <useCaseShapeMoniker Id="84138fb7-8fc9-4b2f-8dce-ff91aeedc83a" />
+        <useCaseShapeMoniker Id="2a70d86f-7811-4ed7-8739-7bd6f99ec062" />
+      </nodes>
+    </includeConnector>
+    <extendConnector edgePoints="[(3.625 : 1.5); (3.625 : 1.25)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«extend»">
+      <extendMoniker Id="6b7c697b-4e80-4480-add6-eb4ba8367d31" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="689906cc-4923-46cc-a1d0-48b04b52087e" />
+        <useCaseShapeMoniker Id="2a70d86f-7811-4ed7-8739-7bd6f99ec062" />
+      </nodes>
+    </extendConnector>
+    <useCaseShape Id="54a0ee88-4bb4-4587-970e-8351891e32b8" absoluteBounds="4.5, 2, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="57a48f3b-ecc2-48b4-b21c-864fbc9c745e" LastKnownName="Ввести назву ліків" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(3.86595937488608 : 1.21905397716916); (4.75904062511392 : 2.03094602283084)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="f151cbf7-a16d-4b10-b3ed-a86052e73bb9" />
+      <relativeChildShapes />
+      <moveableDecoratorHostShapes>
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="4.4375, 1.625, 0.52439594268798828, 0.14800345897674561" shapeFieldName="NameDecorator" />
+      </moveableDecoratorHostShapes>
+      <nodes>
+        <useCaseShapeMoniker Id="2a70d86f-7811-4ed7-8739-7bd6f99ec062" />
+        <useCaseShapeMoniker Id="54a0ee88-4bb4-4587-970e-8351891e32b8" />
+      </nodes>
+    </includeConnector>
+    <includeConnector edgePoints="[(3.70957251500903 : 2.52652017535521); (4.54042748499097 : 2.34847982464479)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="f0ee9b8e-98e4-4014-af2a-5ec9fb12c829" />
+      <relativeChildShapes />
+      <moveableDecoratorHostShapes>
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="4.125, 2.5, 0.52439594268798828, 0.14800345897674561" shapeFieldName="NameDecorator" />
+      </moveableDecoratorHostShapes>
+      <nodes>
+        <useCaseShapeMoniker Id="d88112b7-c67d-4ed0-9a05-a45795a0a781" />
+        <useCaseShapeMoniker Id="54a0ee88-4bb4-4587-970e-8351891e32b8" />
+      </nodes>
+    </includeConnector>
+    <useCaseShape Id="11aa45de-ca82-4706-94d1-fbfbbb8d67d6" absoluteBounds="5.75, 0.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="55e259d3-ad69-49ac-94d0-d88e626aca45" LastKnownName="Ввести тип ліків" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(4.125 : 1); (5.75 : 1)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="52e5ec78-7935-4f7f-8faf-96ad95d0ee06" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="2a70d86f-7811-4ed7-8739-7bd6f99ec062" />
+        <useCaseShapeMoniker Id="11aa45de-ca82-4706-94d1-fbfbbb8d67d6" />
+      </nodes>
+    </includeConnector>
+    <useCaseShape Id="7ee8c70f-eb1b-4000-8370-bd8251df278d" absoluteBounds="6.625, 1.125, 1, 0.625" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="0fc29c45-1123-4731-b31a-6089ac5338b1" LastKnownName="Ввести кількість ліків" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(4.11007125007267 : 1.06063390625908); (6.63470966215454 : 1.37621370776932)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="05ebfe2f-d0a7-46b3-9190-9adb7f9f2366" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="2a70d86f-7811-4ed7-8739-7bd6f99ec062" />
+        <useCaseShapeMoniker Id="7ee8c70f-eb1b-4000-8370-bd8251df278d" />
+      </nodes>
+    </includeConnector>
+    <useCaseShape Id="d06013b7-92da-4dae-aea7-212d38ee4d42" absoluteBounds="5.5, 1.875, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="e527432e-2b28-4571-a6b1-71d76b02e9e0" LastKnownName="Ввести ціну ліків" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(3.98797634195291 : 1.1719361619777); (5.63702365804709 : 1.9530638380223)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="01284bbd-259f-4d9e-ba5a-c8bc2a9e83c7" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="2a70d86f-7811-4ed7-8739-7bd6f99ec062" />
+        <useCaseShapeMoniker Id="d06013b7-92da-4dae-aea7-212d38ee4d42" />
+      </nodes>
+    </includeConnector>
+    <useCaseDependencyConnector edgePoints="[(6.31661889512863 : 1.93151067519917); (6.76749666549347 : 1.65597425997621)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="c3cb3c13-7022-453a-905b-3881641626b5" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="d06013b7-92da-4dae-aea7-212d38ee4d42" />
+        <useCaseShapeMoniker Id="7ee8c70f-eb1b-4000-8370-bd8251df278d" />
+      </nodes>
+    </useCaseDependencyConnector>
+    <useCaseShape Id="a7c6f753-8afb-4605-abb4-e06b844b5e26" absoluteBounds="0.5, 3.375, 1, 0.75" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="16fbf8f8-2ea0-4bac-91ce-91148b19215f" LastKnownName="Отримання інвойсу" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(0.956521739130435 : 2.75); (0.983704313693896 : 3.37519921495961)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="fc516e03-80c9-425a-93a7-b3b5e8469cf5" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="e7921d1a-2c7b-4293-922a-106cc35fb7b8" />
+        <useCaseShapeMoniker Id="a7c6f753-8afb-4605-abb4-e06b844b5e26" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <commentShape Id="dd13d9d3-d3db-46aa-b1b6-c145f6aa3fb6" absoluteBounds="6.75, 3, 1.25, 1.25" customColor="251, 247, 200">
+      <commentMoniker Id="a42fac8f-c71a-484e-ad4f-b0a3b55c768c" />
+      <relativeChildShapes />
+    </commentShape>
+    <useCaseShape Id="c93e3a70-ff5c-43d5-a33e-e016663d5fb1" absoluteBounds="1.5, 1.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="15a615d2-9c8a-43b8-8791-f9ab1c8bceb6" LastKnownName="Авторизація" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(1.25 : 2.22058823529412); (1.56903289242112 : 2.12675503164085)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="d36e7fdf-887c-4aa2-b67f-b2059eb1f7a3" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="e7921d1a-2c7b-4293-922a-106cc35fb7b8" />
+        <useCaseShapeMoniker Id="c93e3a70-ff5c-43d5-a33e-e016663d5fb1" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <extendConnector edgePoints="[(2.60632605721683 : 3.01054342869471); (2.14367394278317 : 2.23945657130529)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«extend»">
+      <extendMoniker Id="589e8c1c-bdfd-4890-8d2e-f56b156f3478" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="81e984d2-2a22-4c98-9f46-1c0cc003d60e" />
+        <useCaseShapeMoniker Id="c93e3a70-ff5c-43d5-a33e-e016663d5fb1" />
+      </nodes>
+    </extendConnector>
+    <extendConnector edgePoints="[(2.89644660940673 : 2.44822330470336); (2.35355339059327 : 2.17677669529664)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«extend»">
+      <extendMoniker Id="e6164bcd-f3df-4abc-908b-c26b796aea75" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="d88112b7-c67d-4ed0-9a05-a45795a0a781" />
+        <useCaseShapeMoniker Id="c93e3a70-ff5c-43d5-a33e-e016663d5fb1" />
+      </nodes>
+    </extendConnector>
+    <extendConnector edgePoints="[(3.01600550269086 : 1.88276859584336); (2.48719559784731 : 1.94378512332531)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«extend»">
+      <extendMoniker Id="bde78181-ecd8-4ee3-b3d6-9075a912da00" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="689906cc-4923-46cc-a1d0-48b04b52087e" />
+        <useCaseShapeMoniker Id="c93e3a70-ff5c-43d5-a33e-e016663d5fb1" />
+      </nodes>
+    </extendConnector>
+    <extendConnector edgePoints="[(2.25373218748183 : 1.49253562503633); (2.12126781251817 : 1.75746437496367)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«extend»">
+      <extendMoniker Id="dcdfd54d-b6ea-4c99-b617-be9b40aa7bbf" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="84138fb7-8fc9-4b2f-8dce-ff91aeedc83a" />
+        <useCaseShapeMoniker Id="c93e3a70-ff5c-43d5-a33e-e016663d5fb1" />
+      </nodes>
+    </extendConnector>
+    <useCaseShape Id="f6b8ccfe-301b-4573-b46e-2fa4e9ed2389" absoluteBounds="5.5, 2.625, 1, 1" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="a004bb8b-328a-4c6e-a18f-97fe3379f126" LastKnownName="Показати у вигляді таблиці жирним шрифтом" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseGeneralizationConnector edgePoints="[(5.5 : 3.125); (5.125 : 3.125)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110">
+      <generalizationMoniker Id="c69c5a28-7a86-4b6a-9a7f-9a2166e53057" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="f6b8ccfe-301b-4573-b46e-2fa4e9ed2389" />
+        <useCaseShapeMoniker Id="7aa7d07c-afe2-4363-b250-4999e0d39c99" />
+      </nodes>
+    </useCaseGeneralizationConnector>
+    <artifactShape Id="03071880-cdb5-4be9-8b93-585acf8b198b" absoluteBounds="1.875, 3.5, 1.5, 0.75" customColor="161, 199, 231">
+      <artifactMoniker Id="7a268671-cfb6-4770-91f1-c60daaeea06f" LastKnownName="Авторизація.activitydiagram" />
+    </artifactShape>
+    <useCaseDependencyConnector edgePoints="[(2.5 : 3.5); (2.08219949365268 : 2.24659848095804)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="007f0aca-58b0-48b7-b170-884e0fac9d4a" />
+      <relativeChildShapes />
+      <nodes>
+        <artifactShapeMoniker Id="03071880-cdb5-4be9-8b93-585acf8b198b" />
+        <useCaseShapeMoniker Id="c93e3a70-ff5c-43d5-a33e-e016663d5fb1" />
+      </nodes>
+    </useCaseDependencyConnector>
+    <artifactShape Id="2b97941e-b7b6-48ce-818b-7e4361f1dc95" absoluteBounds="6.75, 2, 1.5, 0.75" customColor="161, 199, 231">
+      <artifactMoniker Id="786707b0-2f1f-4223-acf3-dde4cb887c2d" LastKnownName="Запис інформації про ліки.activitydiagram" />
+    </artifactShape>
+    <useCaseDependencyConnector edgePoints="[(6.75 : 2.10887096774194); (4.03275357236761 : 1.14468675148528)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="b345307f-c205-490c-a427-559c468f56d7" />
+      <relativeChildShapes />
+      <nodes>
+        <artifactShapeMoniker Id="2b97941e-b7b6-48ce-818b-7e4361f1dc95" />
+        <useCaseShapeMoniker Id="2a70d86f-7811-4ed7-8739-7bd6f99ec062" />
+      </nodes>
+    </useCaseDependencyConnector>
+    <rectangleShape Id="eaf2329a-d88e-4024-a78a-3acd27e82ffb" absoluteBounds="1.5, 0.5, 6.875, 3.875" outlineColor="83, 134, 191" outlineThickness="0.03125" />
+  </nestedChildShapes>
+</useCaseDiagram>

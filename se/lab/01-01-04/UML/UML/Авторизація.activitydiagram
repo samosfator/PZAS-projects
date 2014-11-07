@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="62b704ef-a245-4018-a33c-f2c6d9f8d2d5" name="Авторизація" linkedPackageId="b1d5f58c-5f4e-41f8-8392-921f05c628da" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="47de8de6-1330-4edd-9bd3-7136f4383407">
+      <elementDefinition Id="f7ca17fc-10b7-4625-9233-41a2e0f9b421" />
+      <body>Check if password is long enough, if login consists of allowed characters</body>
+      <annotatedElements>
+        <opaqueActionMoniker Id="51c9b91d-4c5f-412f-8707-7ee95209f15d" LastKnownName="Prior credentials validation" />
+      </annotatedElements>
+    </comment>
+    <comment Id="f5da6573-8c2e-4f00-bc20-7e4dac23ed7b">
+      <elementDefinition Id="986a418d-456d-4c07-9467-a42c883efe11" />
+      <body>Sorry for inconvinience. Seems like you don't have a permission to access this database. Try to contact to your system administrator or try later.</body>
+      <annotatedElements>
+        <opaqueActionMoniker Id="4c216ab9-ba74-4c90-8b07-f031b99abc73" LastKnownName="Show sorry message" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="e391dc5a-b4a5-41f0-a969-ae667f6c50ac" name="Авторизація" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="42c56523-aa66-4758-b730-52ef54c63901" />
+        <nodes>
+          <initialNode Id="a2496694-2e1d-4c63-b4da-1e50a6ba652f" name="Initial1" isLeaf="false">
+            <elementDefinition Id="0049e974-530d-4938-b076-cb43c0439201" />
+            <flowNodeTargets>
+              <controlFlow Id="cf858098-a8ec-486f-bce5-a53c7653bebd" isLeaf="false">
+                <opaqueActionMoniker Id="885593df-c7b6-417e-8c4f-ff0672bc7f3d" LastKnownName="Введення логіну і паролю" />
+                <elementDefinition Id="e1ac3441-2587-4344-abfb-0c69958b6872" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="885593df-c7b6-417e-8c4f-ff0672bc7f3d" name="Введення логіну і паролю" isLeaf="false">
+            <elementDefinition Id="9801c9e7-d26a-4ca1-83dc-98eaa341819b" />
+            <flowNodeTargets>
+              <controlFlow Id="52c66dfa-d321-4ed1-807e-d084e238fa30" isLeaf="false">
+                <opaqueActionMoniker Id="51c9b91d-4c5f-412f-8707-7ee95209f15d" LastKnownName="Prior credentials validation" />
+                <elementDefinition Id="4fae3d03-0085-48ef-82eb-043b6f567a2f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="51c9b91d-4c5f-412f-8707-7ee95209f15d" name="Prior credentials validation" isLeaf="false">
+            <elementDefinition Id="4c62b59b-33be-4714-ab57-1f286916e4a9" />
+            <flowNodeTargets>
+              <controlFlow Id="3b8b90db-3d27-410b-bb84-e12b2f26c23b" isLeaf="false">
+                <sendSignalActionMoniker Id="a43b3297-9f2c-4778-93c3-ab1f14813a19" LastKnownName="Send credentials to server" />
+                <elementDefinition Id="04d10e18-3d53-4821-ab8c-84de03e8af5e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="1a9fbfbd-c40a-47e8-adc8-73209c9817bf" name="Decision1" isLeaf="false">
+            <elementDefinition Id="90be99be-99de-478f-81ef-6f896ba74ccc" />
+            <flowNodeTargets>
+              <controlFlow Id="4464a590-1f20-4902-9dd2-a4066fe79199" isLeaf="false">
+                <opaqueActionMoniker Id="60ee6614-2a7f-4392-a915-008edc5d904c" LastKnownName="Показ вікна з пропозиціями дій і подальше виконання програми..." />
+                <elementDefinition Id="a4320da7-4465-496d-ad49-2aaf47155a77" />
+              </controlFlow>
+              <controlFlow Id="2a6f67de-af99-40cc-b2c3-2e2e1bfd1ad1" guard="Incorrect login or password" isLeaf="false">
+                <forkNodeMoniker Id="b88cc040-e1dd-4813-840b-030652692e22" LastKnownName="Fork1" />
+                <elementDefinition Id="33932027-e73d-4e0c-9a6a-183ac9e9d352" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="60ee6614-2a7f-4392-a915-008edc5d904c" name="Показ вікна з пропозиціями дій і подальше виконання програми..." isLeaf="false">
+            <elementDefinition Id="bff28a83-9a0f-4f56-8824-b62f037aa550" />
+            <flowNodeTargets>
+              <controlFlow Id="e2595ecb-0482-43f4-a8ec-c7c22b385bf2" isLeaf="false">
+                <activityFinalNodeMoniker Id="e4351091-bf10-4436-b122-fbc7cb43d870" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="46f26103-7807-41a8-b920-8b515c0490b4" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="83b0d4e8-7aae-473f-9441-4d862b9b4adc" name="Show error message" isLeaf="false">
+            <elementDefinition Id="a372a43a-5916-4de1-a6a0-eac987cc9610" />
+            <flowNodeTargets>
+              <controlFlow Id="1277a11b-691e-4cfe-a3c4-c5ab4ec9cd37" isLeaf="false">
+                <joinNodeMoniker Id="9a741320-a49d-4421-990e-b09d7d834841" LastKnownName="Join1" />
+                <elementDefinition Id="7756ea5d-3531-4445-a23e-675663b5495d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <sendSignalAction Id="a43b3297-9f2c-4778-93c3-ab1f14813a19" name="Send credentials to server" isLeaf="false">
+            <elementDefinition Id="bb91aca9-d87a-480e-a26d-f0f5d610ce69" />
+            <flowNodeTargets>
+              <controlFlow Id="638fa810-071e-4a8f-bd30-852b0eb167af" isLeaf="false">
+                <acceptEventActionMoniker Id="76114026-3c86-4769-920e-63bc23daf8e1" LastKnownName="Receive auth success response" />
+                <elementDefinition Id="b951bba0-c226-42a9-9a2b-3987300ab27e" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <sendSignalActionHasTarget>
+                <inputPin Id="23f3edcb-19fe-43f7-98cb-b6ff10d67714" name="Raw login and password" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="cfd1dfdd-cf0d-450a-b567-08c3092c7ddb" />
+                  <upperBound>
+                    <literalInteger Id="6ce5f9d3-2719-47a1-9f5d-15ef3790c856" name="2147483647" value="2147483647">
+                      <elementDefinition Id="7c1a777d-7702-42b7-8a40-e27bd93812b9" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </sendSignalActionHasTarget>
+            </pins>
+          </sendSignalAction>
+          <acceptEventAction Id="76114026-3c86-4769-920e-63bc23daf8e1" name="Receive auth success response" isLeaf="false" isUnmarshall="false">
+            <elementDefinition Id="a82c5ea5-7456-4b3a-9d46-b35e2f31b80b" />
+            <flowNodeTargets>
+              <controlFlow Id="be2273b4-ff6d-4602-a230-db039e761265" isLeaf="false">
+                <decisionNodeMoniker Id="1a9fbfbd-c40a-47e8-adc8-73209c9817bf" LastKnownName="Decision1" />
+                <elementDefinition Id="6cd8a8c2-87f9-43e6-9ae0-f0b9872e03e9" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <acceptEventActionHasResults>
+                <outputPin Id="58dd0c01-f843-49c3-bdc9-e8168b590397" name="AES-256 encrypted login and password" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="f80b8907-b959-4fc4-85c1-400b0fb2e259" />
+                  <upperBound>
+                    <literalInteger Id="a4bf2992-7c85-4a4f-8d3c-7814de2778dd" name="2147483647" value="2147483647">
+                      <elementDefinition Id="e9222302-a91f-44b6-a8bb-ca217697df7a" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </acceptEventActionHasResults>
+            </pins>
+          </acceptEventAction>
+          <opaqueAction Id="6147cab7-e010-4091-ba31-b988ad19a0d1" name="Request do login once more" isLeaf="false">
+            <elementDefinition Id="4150f15d-30b0-4b1d-8302-1713e48c9921" />
+            <flowNodeTargets>
+              <controlFlow Id="9ac18524-29a4-4fd8-b3b5-78c4071b3006" isLeaf="false">
+                <joinNodeMoniker Id="9a741320-a49d-4421-990e-b09d7d834841" LastKnownName="Join1" />
+                <elementDefinition Id="42ac1560-1b99-483d-95c6-b77537b4a427" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode Id="b88cc040-e1dd-4813-840b-030652692e22" name="Fork1" isLeaf="false">
+            <elementDefinition Id="8be0f443-44de-4021-8a93-6bfb8f5c6544" />
+            <flowNodeTargets>
+              <controlFlow Id="c1a64c0f-22e3-4ef2-aa5d-1c6dbcbdcc5c" isLeaf="false">
+                <opaqueActionMoniker Id="83b0d4e8-7aae-473f-9441-4d862b9b4adc" LastKnownName="Show error message" />
+                <elementDefinition Id="3cb793f6-ef29-49bd-9740-8f513a96f7b9" />
+              </controlFlow>
+              <controlFlow Id="1948ad7b-8737-4122-96a3-5d439fa2c7a2" isLeaf="false">
+                <opaqueActionMoniker Id="6147cab7-e010-4091-ba31-b988ad19a0d1" LastKnownName="Request do login once more" />
+                <elementDefinition Id="1f8a9d94-9f34-4892-b66a-442053b4be3c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <joinNode Id="9a741320-a49d-4421-990e-b09d7d834841" name="Join1" isLeaf="false">
+            <elementDefinition Id="26e17ee8-6761-4ccb-9135-d812d92aab8a" />
+            <flowNodeTargets>
+              <controlFlow Id="5f722f9e-a338-4cd4-a76e-be7608982a1c" isLeaf="false">
+                <decisionNodeMoniker Id="2c4a3dcc-5d97-4649-acee-e4aad8eb7529" LastKnownName="Decision2" />
+                <elementDefinition Id="5aa5007c-873c-4d98-bc91-717c78cbe02f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <activityFinalNode Id="e4351091-bf10-4436-b122-fbc7cb43d870" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="cb2309a2-0a94-48cd-a354-7699ab31cfcb" />
+          </activityFinalNode>
+          <decisionNode Id="2c4a3dcc-5d97-4649-acee-e4aad8eb7529" name="Decision2" isLeaf="false">
+            <elementDefinition Id="0ce53c25-2385-4cb1-8a05-d37779f6844e" />
+            <flowNodeTargets>
+              <controlFlow Id="9ad05801-3393-453f-be13-4a057c838dd7" guard="User rejected relogin" isLeaf="false">
+                <activityFinalNodeMoniker Id="e4351091-bf10-4436-b122-fbc7cb43d870" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="31d80849-bdae-41b1-942d-4322f39ac886" />
+              </controlFlow>
+              <controlFlow Id="13fef9cf-69cb-4743-9f50-112120bed301" isLeaf="false">
+                <opaqueActionMoniker Id="4c216ab9-ba74-4c90-8b07-f031b99abc73" LastKnownName="Show sorry message" />
+                <elementDefinition Id="da84ffe5-c89d-4d47-a828-11bbfd1a4cd0" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="4c216ab9-ba74-4c90-8b07-f031b99abc73" name="Show sorry message" isLeaf="false">
+            <elementDefinition Id="6e5737da-3921-4c1e-ba9d-cbadef18cfd7" />
+            <flowNodeTargets>
+              <controlFlow Id="bf701a5e-18ea-43b9-9be6-14569ba2e46b" isLeaf="false">
+                <opaqueActionMoniker Id="885593df-c7b6-417e-8c4f-ff0672bc7f3d" LastKnownName="Введення логіну і паролю" />
+                <elementDefinition Id="711af936-0cbd-42ba-afe2-535cc389fdb9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+    <packageHasNamedElement>
+      <referencedType Id="e9e3c988-0f9b-4288-9253-a19a7beeb1cf" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="b1d5f58c-5f4e-41f8-8392-921f05c628da" name="UML">
+    <elementDefinition Id="7a4ea006-f272-4be3-8bed-6dbd9c52f42e" />
+    <profileInstances>
+      <packageHasProfileInstances Id="09e19f14-e13e-47e7-97d0-2bd00bbada05">
+        <profileInstance Id="d1217162-a06b-465c-b56c-30769660ac73" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="49c91e9c-bcce-4f1a-9a32-28830e6c03d5">
+        <profileInstance Id="08b9d607-e7a1-41c6-890d-f0d554ebdcc1" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

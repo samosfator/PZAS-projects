@@ -22,26 +22,33 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
-    <Content Include="UMLActivityDiagram1.activitydiagram">
+    <Content Include="Авторизація.activitydiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="UMLActivityDiagram1.activitydiagram.layout">
+    <Content Include="Авторизація.activitydiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>UMLActivityDiagram1.activitydiagram</DependentUpon>
+      <DependentUpon>Авторизація.activitydiagram</DependentUpon>
     </Content>
-    <Content Include="UMLSequenceDiagram1.sequencediagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="UMLSequenceDiagram1.sequencediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>UMLSequenceDiagram1.sequencediagram</DependentUpon>
-    </Content>
-    <Content Include="UMLUseCaseDiagram1.usecasediagram">
+    <Content Include="Запис інформації про ліки.activitydiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="UMLUseCaseDiagram1.usecasediagram.layout">
+    <Content Include="Запис інформації про ліки.activitydiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>UMLUseCaseDiagram1.usecasediagram</DependentUpon>
+      <DependentUpon>Запис інформації про ліки.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Прецедентів.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Прецедентів.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Прецедентів.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="Послідовностей.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Послідовностей.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Послідовностей.sequencediagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\UML.uml">
