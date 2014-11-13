@@ -3,11 +3,13 @@ using System.Windows.Forms;
 
 namespace DrugStore {
     static class Program {
+        public static Form AuthForm;
         [STAThread]
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AuthWindow());
+            AuthForm = new AuthWindow();
+            Application.Run(AuthForm);
         }
     }
 }

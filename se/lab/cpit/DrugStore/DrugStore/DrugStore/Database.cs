@@ -1,31 +1,44 @@
 ﻿using System;
+using System.Data;
 using System.Data.OleDb;
+using System.Windows.Forms;
 
 namespace DrugStore {
-    class Database {
+    static class Database {
         private const String DbPath = @"C:\Users\Vlad\IdeaProjects\pzas\se\lab\cpit\DrugStore\db.accdb";
-        private readonly OleDbConnection _connection;
 
-        public Database() {
-            _connection = new OleDbConnection {
-                ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + DbPath + ";Persist Security Info=False;"
-            };
-        }
 
-        public bool Auth(string username, string password) {
-            var command = CreateQuery("select * from users where username='" +
-                                username + "' and password='" + password + "'");
-            using (_connection) {
-                _connection.Open();
+        public static bool Auth(string username, string password) {
+            var connection = NewConnection();
+            var command = CreateCommand(connection, "SELECT * FROM users WHERE username='{0}' AND password='{1}'", username, password);
+            using (command)
+            using (connection) {
+                connection.Open();
                 var reader = command.ExecuteReader();
                 return reader != null && reader.Read();
             }
         }
 
-        private OleDbCommand CreateQuery(string query) {
+        public static void FillDataGridView(DataGridView dgv) {
+            var connection = NewConnection();
+            using (connection) {
+                var dataAdapter = new OleDbDataAdapter(CreateCommand(connection, "SELECT * FROM drugs"));
+                var dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+                dgv.DataSource = dataTable;
+            }
+        }
+
+        private static OleDbConnection NewConnection() {
+            return new OleDbConnection {
+                ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + DbPath + ";Persist Security Info=False;"
+            };
+        }
+
+        private static OleDbCommand CreateCommand(OleDbConnection connection, string query, params object[] args) {
             return new OleDbCommand {
-                Connection = _connection,
-                CommandText = query
+                Connection = connection,
+                CommandText = String.Format(query, args)
             };
         }
     }

@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActionChooser.Designer.cs">
+      <DependentUpon>ActionChooser.cs</DependentUpon>
+    </Compile>
     <Compile Include="AuthWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     <Compile Include="Database.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ActionChooser.resx">
+      <DependentUpon>ActionChooser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AuthWindow.resx">
       <DependentUpon>AuthWindow.cs</DependentUpon>
     </EmbeddedResource>
