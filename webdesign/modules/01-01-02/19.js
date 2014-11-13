@@ -3,7 +3,11 @@
 var n = 5,
 	a = 3,
 	b = 11,
-	resut;
+	h = (b - a) / n,
+	result;
+console.log("Довжина кожного відрізка:", h);
 
-
-console.log("Результат:", result);
+for (var i = 1; i <= n; i++) {
+	var x = (a + i * h).toFixed(1);
+	console.log("F(" + x + ")= 1 - sin(" + x + "):", 1 - Math.sin(x));
+}
