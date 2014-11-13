@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="7a4ea006-f272-4be3-8bed-6dbd9c52f42e"
   name="UML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -2945,6 +2945,14 @@
                   LastKnownName="Show sorry message"
                   LastKnownLocation="UML.uml" />
               </controlFlow>
+              <controlFlow
+                Id="915d6ce6-217f-4e4c-bf51-4961251efc26"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="74a94a6a-ef70-4ded-a0a8-4bb9baf6c350"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="UML.uml" />
+              </controlFlow>
             </flowNodeTargets>
           </decisionNode>
           <opaqueAction
@@ -2962,6 +2970,10 @@
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
+          <activityFinalNode
+            Id="74a94a6a-ef70-4ded-a0a8-4bb9baf6c350"
+            name="ActivityFinal1"
+            isLeaf="false" />
         </nodes>
       </activity>
     </packageHasNamedElement>

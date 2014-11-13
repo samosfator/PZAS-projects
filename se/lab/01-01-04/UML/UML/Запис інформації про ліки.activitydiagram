@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="dfccde6f-916f-4d1f-91f5-9cbea1161893" name="Запис інформації про ліки" linkedPackageId="7a28d37c-b51b-40e5-b92c-4b8c4d94da4f" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="dfccde6f-916f-4d1f-91f5-9cbea1161893" name="Запис інформації про ліки" linkedPackageId="7a28d37c-b51b-40e5-b92c-4b8c4d94da4f" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
   <ownedCommentsInternal>
     <comment Id="ad27f89c-d852-44c7-853f-860a4663be32">
       <elementDefinition Id="6f48d1ad-d6f2-4864-93e4-40902cc8f22a" />
@@ -9,20 +9,6 @@
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="f20b0767-4f05-4f46-9037-a639b16ad3f0">
-      <profileInstance Id="d7ec3262-547f-42b1-a12a-adf534a6dc0d" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="58014845-2839-46d7-a4d1-406be93db460">
-      <profileInstance Id="2a6613f1-5c5a-4121-b51c-7a3ed45f6f8a" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <activityRootModelHasActivity>
       <activity Id="8a212b5a-37d3-4724-8e92-eb46ccc21760" name="Запис інформації про ліки" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
@@ -215,6 +201,10 @@
                 <opaqueActionMoniker Id="7ab4c8eb-cd15-4014-a5f9-1e625e48f443" LastKnownName="Show sorry message" />
                 <elementDefinition Id="b8ab7b7d-35fb-4d95-83f8-eea33c104a9f" />
               </controlFlow>
+              <controlFlow Id="be9b55e2-6c1e-4960-b974-7855763e692f" isLeaf="false">
+                <activityFinalNodeMoniker Id="1b3f8b25-b439-4142-ad6e-bc0870c4dad4" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="915d6ce6-217f-4e4c-bf51-4961251efc26" />
+              </controlFlow>
             </flowNodeTargets>
           </decisionNode>
           <opaqueAction Id="7ab4c8eb-cd15-4014-a5f9-1e625e48f443" name="Show sorry message" isLeaf="false">
@@ -226,11 +216,28 @@
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
+          <activityFinalNode Id="1b3f8b25-b439-4142-ad6e-bc0870c4dad4" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="74a94a6a-ef70-4ded-a0a8-4bb9baf6c350" />
+          </activityFinalNode>
         </nodes>
       </activity>
     </activityRootModelHasActivity>
   </packagedElements>
   <package Id="7a28d37c-b51b-40e5-b92c-4b8c4d94da4f" name="UML">
     <elementDefinition Id="7a4ea006-f272-4be3-8bed-6dbd9c52f42e" />
+    <profileInstances>
+      <packageHasProfileInstances Id="f20b0767-4f05-4f46-9037-a639b16ad3f0">
+        <profileInstance Id="d7ec3262-547f-42b1-a12a-adf534a6dc0d" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="58014845-2839-46d7-a4d1-406be93db460">
+        <profileInstance Id="2a6613f1-5c5a-4121-b51c-7a3ed45f6f8a" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </activityRootModel>
