@@ -64,25 +64,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActionChooser.cs">
+    <Compile Include="Drug.cs" />
+    <Compile Include="gui\ActionChooser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ActionChooser.Designer.cs">
+    <Compile Include="gui\ActionChooser.Designer.cs">
       <DependentUpon>ActionChooser.cs</DependentUpon>
     </Compile>
-    <Compile Include="AuthWindow.cs">
+    <Compile Include="gui\AuthWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AuthWindow.Designer.cs">
+    <Compile Include="gui\AuthWindow.Designer.cs">
       <DependentUpon>AuthWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ActionChooser.resx">
+    <EmbeddedResource Include="gui\ActionChooser.resx">
       <DependentUpon>ActionChooser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AuthWindow.resx">
+    <EmbeddedResource Include="gui\AuthWindow.resx">
       <DependentUpon>AuthWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -29,6 +29,16 @@ namespace DrugStore {
             }
         }
 
+        public static void AddDrugEntry(Drug drug) {
+            var connection = NewConnection();
+            var command = CreateCommand(connection, "INSERT INTO drugs (title, type, quantity, description) VALUES ('{0}', '{1}', '{2}', '{3}')",
+                drug.Title, drug.Type, drug.Quantity, drug.Description);
+            using (connection) {
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+        }
+
         private static OleDbConnection NewConnection() {
             return new OleDbConnection {
                 ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + DbPath + ";Persist Security Info=False;"
