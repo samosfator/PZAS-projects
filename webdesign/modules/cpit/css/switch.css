@@ -20,12 +20,12 @@
     -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 .onoffswitch-inner:before {
-    content: "Викладачі";
+    content: "Аудиторія";
     padding-left: 18px;
     background-color: #34A7C1; color: #FFFFFF;
 }
 .onoffswitch-inner:after {
-    content: "Завдання";
+    content: "Викладачі";
     padding-right: 18px;
     background-color: #EEEEEE; color: #999999;
     text-align: right;

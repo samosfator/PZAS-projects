@@ -18,7 +18,7 @@
 				},
 				name: "Web-дизайн",
 				number: 1,
-				task: "Завдання",
+				room: "6303",
 				time: "08:00",
 				type: "practical"
 			}, {
@@ -28,7 +28,7 @@
 				},
 				name: "Web-дизайн",
 				number: 2,
-				task: "Завдання",
+				room: "6402",
 				time: "09:35",
 				type: "lecture"
 			}, {
@@ -38,7 +38,7 @@
 				},
 				name: "Основи ПІ",
 				number: 3,
-				task: "Завдання",
+				room: "6402",
 				time: "11:10",
 				type: "lecture"
 			}]
@@ -51,7 +51,7 @@
 				},
 				name: "Англійська",
 				number: 1,
-				task: "Завдання",
+				room: "2312",
 				time: "08:00",
 				type: "practical"
 			}, {
@@ -61,7 +61,7 @@
 				},
 				name: "Філософія",
 				number: 2,
-				task: "Завдання",
+				room: "3405",
 				time: "09:35",
 				type: "lecture"
 			}, {
@@ -71,7 +71,7 @@
 				},
 				name: "Алгебра",
 				number: 3,
-				task: "Завдання",
+				room: "3405",
 				time: "11:10",
 				type: "lecture"
 			}]
@@ -84,7 +84,7 @@
 				},
 				name: "Філософія",
 				number: 1,
-				task: "Завдання",
+				room: "6408",
 				time: "08:00",
 				type: "practical"
 			}, {
@@ -94,7 +94,7 @@
 				},
 				name: app.currentWeek % 2 == 0 ? "Алгебра" : "Укр. мова",
 				number: 2,
-				task: "Завдання",
+				room: "6407",
 				time: "09:35",
 				type: "practical"
 			}, {
@@ -104,7 +104,7 @@
 				},
 				name: "Укр. мова",
 				number: 4,
-				task: "Завдання",
+				room: "3405",
 				time: "12:50",
 				type: "lecture"
 			}]
@@ -117,13 +117,13 @@
 				},
 				name: "ОПІ",
 				number: 1,
-				task: "Завдання",
+				room: "6406",
 				time: "08:00",
 				type: "practical"
 			} : {
 				name: "",
 				number: 1,
-				task: "",
+				room: "",
 				time: "08:00",
 				type: "sleep"
 			}, {
@@ -133,7 +133,7 @@
 				},
 				name: "ОПІ",
 				number: 2,
-				task: "Завдання",
+				room: "6406",
 				time: "09:35",
 				type: "practical"
 			}, {
@@ -143,7 +143,7 @@
 				},
 				name: "ОП",
 				number: 3,
-				task: "Завдання",
+				room: "6402",
 				time: "11:10",
 				type: "lecture"
 			}]
@@ -156,7 +156,7 @@
 				},
 				name: "ОП",
 				number: 1,
-				task: "Завдання",
+				room: "6406",
 				time: "08:00",
 				type: "practical"
 			}, {
@@ -166,7 +166,7 @@
 				},
 				name: "ОП",
 				number: 2,
-				task: "Завдання",
+				room: "6406",
 				time: "09:35",
 				type: "practical"
 			}, {
@@ -176,7 +176,7 @@
 				},
 				name: "ОП",
 				number: 4,
-				task: "Завдання",
+				room: "6402",
 				time: "12:50",
 				type: "lecture"
 			}]
