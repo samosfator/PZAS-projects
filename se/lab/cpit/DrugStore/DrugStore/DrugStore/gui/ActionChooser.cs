@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace DrugStore.gui {
     public partial class ActionChooser : Form {
         private const int MinTextLength = 4;
+        private const int MaxPrice = 999999;
+        private static readonly Color ValidColor = Color.Chartreuse;
+        private static readonly Color InvalidColor = Color.Crimson;
         public ActionChooser() {
             InitializeComponent();
             Database.FillDataGridView(dgv_drugsList);
@@ -15,17 +19,41 @@ namespace DrugStore.gui {
             Program.AuthForm.Show();
         }
 
-        private void SuccessMessage(Label label, string text) {
-            label.ForeColor = Color.Chartreuse;
+        private static void SuccessMessage(Label label, string text) {
+            label.ForeColor = ValidColor;
             label.Text = text;
         }
 
-        private void ErrorMessage(Label label, string text) {
-            label.ForeColor = Color.Crimson;
+        private static void ErrorMessage(Label label, string text) {
+            label.ForeColor = InvalidColor;
             label.Text = text;
+        }
+
+        private void EraseTextFields() {
+            tb_addTitle.Text = "";
+            tb_addType.Text = "";
+            tb_addQuantity.Text = "";
+            tb_addPrice.Text = "";
+            tb_addDescr.Text = "";
+            lbl_check_title.Text = "";
+            lbl_check_type.Text = "";
+            lbl_check_quantity.Text = "";
+            lbl_check_price.Text = "";
+        }
+
+        private new bool Validate() {
+            if (lbl_check_title.ForeColor.Equals(InvalidColor) ||
+                lbl_check_type.ForeColor.Equals(InvalidColor) ||
+                lbl_check_quantity.ForeColor.Equals(InvalidColor) ||
+                lbl_check_price.ForeColor.Equals(InvalidColor)) {
+                ErrorMessage(lbl_add_success, "Будь-ласка, введіть дані корректно!");
+                return false;
+            }
+            return true;
         }
 
         private void btn_addDrug_Click(object sender, EventArgs e) {
+            if (!Validate()) return; 
             var drug = new Drug {
                 Title = tb_addTitle.Text,
                 Type = tb_addType.Text,
@@ -33,7 +61,11 @@ namespace DrugStore.gui {
                 Quantity = Convert.ToInt32(tb_addQuantity.Text),
                 Price = Convert.ToDouble(tb_addPrice.Text)
             };
-            Database.AddDrugEntry(drug);
+            if (Database.AddDrugEntry(drug)) {
+                SuccessMessage(lbl_add_success, "Успішно додано!");
+                EraseTextFields();
+                Database.FillDataGridView(dgv_drugsList);
+            } else ErrorMessage(lbl_add_success, "Помилка при додаванні у базу");
         }
 
         private void tb_addTitle_TextChanged(object sender, EventArgs e) {
@@ -53,10 +85,21 @@ namespace DrugStore.gui {
         private void tb_addQuantity_TextChanged(object sender, EventArgs e) {
             var text = tb_addQuantity.Text;
             int quantity;
-            var valid = int.TryParse(text, out quantity);
+            var valid = int.TryParse(text, out quantity) && (quantity < MaxPrice);
             if (valid) {
                 SuccessMessage(lbl_check_quantity, "Все у нормі");
             } else ErrorMessage(lbl_check_quantity, "Введіть ціле число");
+        }
+
+        private void tb_addPrice_TextChanged(object sender, EventArgs e) {
+            var text = tb_addPrice.Text;
+            double price;
+            var valid = double.TryParse(text, out price) && (price < MaxPrice);
+            if (valid) {
+                SuccessMessage(lbl_check_price, "Все у нормі");
+            } else if (text.Contains(".")) {
+                ErrorMessage(lbl_check_price, "Змініть крапку на кому");
+            } else ErrorMessage(lbl_check_price, "Введіть числове значення");
         }
     }
 }

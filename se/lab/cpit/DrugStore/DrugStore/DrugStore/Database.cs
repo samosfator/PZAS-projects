@@ -16,17 +16,17 @@ namespace DrugStore {
         public static void FillDataGridView(DataGridView dgv) {
             var connection = NewConnection();
             using (connection) {
-                var dataAdapter = new OleDbDataAdapter(CreateCommand(connection, "SELECT * FROM drugs"));
+                var dataAdapter = new OleDbDataAdapter(CreateCommand(connection, "SELECT * FROM drugs ORDER BY title"));
                 var dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
                 dgv.DataSource = dataTable;
             }
         }
 
-        public static void AddDrugEntry(Drug drug) {
+        public static bool AddDrugEntry(Drug drug) {
             var command = CreateCommand(NewConnection(), "INSERT INTO drugs (title, type, quantity, price, description) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}')",
                 drug.Title, drug.Type, drug.Quantity, drug.Price, drug.Description);
-            ExecuteQuery(command);
+            return ExecuteQuery(command) > 0;
         }
 
         public static bool CheckForDups(string title) {
@@ -47,10 +47,10 @@ namespace DrugStore {
             };
         }
 
-        private static void ExecuteQuery(OleDbCommand command) {
+        private static int ExecuteQuery(OleDbCommand command) {
             using (command) {
                 command.Connection.Open();
-                command.ExecuteNonQuery();
+                return command.ExecuteNonQuery();
             }
         }
 

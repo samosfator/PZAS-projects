@@ -32,7 +32,6 @@ namespace DrugStore.gui {
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lbl_add_success = new System.Windows.Forms.Label();
-            this.lbl_check_descr = new System.Windows.Forms.Label();
             this.lbl_check_price = new System.Windows.Forms.Label();
             this.lbl_check_quantity = new System.Windows.Forms.Label();
             this.lbl_check_type = new System.Windows.Forms.Label();
@@ -111,7 +110,6 @@ namespace DrugStore.gui {
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lbl_add_success);
-            this.groupBox2.Controls.Add(this.lbl_check_descr);
             this.groupBox2.Controls.Add(this.lbl_check_price);
             this.groupBox2.Controls.Add(this.lbl_check_quantity);
             this.groupBox2.Controls.Add(this.lbl_check_type);
@@ -133,17 +131,6 @@ namespace DrugStore.gui {
             this.lbl_add_success.Size = new System.Drawing.Size(14, 13);
             this.lbl_add_success.TabIndex = 12;
             this.lbl_add_success.Text = "X";
-            // 
-            // lbl_check_descr
-            // 
-            this.lbl_check_descr.AutoSize = true;
-            this.lbl_check_descr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbl_check_descr.ForeColor = System.Drawing.Color.Red;
-            this.lbl_check_descr.Location = new System.Drawing.Point(21, 132);
-            this.lbl_check_descr.Name = "lbl_check_descr";
-            this.lbl_check_descr.Size = new System.Drawing.Size(14, 13);
-            this.lbl_check_descr.TabIndex = 11;
-            this.lbl_check_descr.Text = "X";
             // 
             // lbl_check_price
             // 
@@ -259,6 +246,7 @@ namespace DrugStore.gui {
             this.tb_addPrice.Name = "tb_addPrice";
             this.tb_addPrice.Size = new System.Drawing.Size(100, 20);
             this.tb_addPrice.TabIndex = 7;
+            this.tb_addPrice.TextChanged += new System.EventHandler(this.tb_addPrice_TextChanged);
             // 
             // btn_addDrug
             // 
@@ -348,7 +336,6 @@ namespace DrugStore.gui {
         private TextBox tb_addPrice;
         private Label label5;
         private GroupBox groupBox2;
-        private Label lbl_check_descr;
         private Label lbl_check_price;
         private Label lbl_check_quantity;
         private Label lbl_check_type;
