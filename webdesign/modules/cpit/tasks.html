@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ПЗАС-12 — розклад занять</title>
+	<meta charset="utf-8">
+	<link rel="icon" href="img/favicon.png">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/lib/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+	<div id="week">
+		<div class="day">
+			<div class="task-descr">
+				Дано ціле число N (> 0). Знайти суму N<sup>2</sup> + (N + 1)<sup>2</sup> + (N + 2)<sup>2</sup> + . + (2*N)<sup>2</sup>
+			</div>
+			<br>
+			<div class="task-demo">
+				<input type="text" id="task1N" placeholder="Введіть N">
+				<br><br>
+				<div class="result"></div>
+
+				<script>
+				$('#task1N').on('keyup', function() {
+					var n = parseInt($('#task1N').val()),
+						sum = 0;
+					for (var i = 0; i <= n; i++) {
+						sum += Math.pow((i + n), 2);
+					}
+					$('.result').eq(0).text(sum);
+				})
+				</script>
+			</div>
+		</div>
+		<div class="day">
+			<div class="task-descr">
+				Дано ціле число N (> 1). Послідовність чисел Фібоначчі F<sub>K</sub> (цілого типу) визначається таким чином: F<sub>1</sub> = 1, F<sub>2</sub> = 1, F<sub>K</sub> = F<sub>K-2</sub> + F<sub>K-1</sub>, К = 3, 4. Вивести елементи F<sub>1</sub>, F<sub>2</sub> ..., F<sub>N</sub>.
+			</div>
+			<br>
+			<div class="task-demo">
+				<input type="text" id="task2N" placeholder="Введіть N">
+				<br><br>
+				<div class="result"></div>
+
+				<script>
+				$('#task2N').on('keyup', function() {
+					$('.result').eq(1).text('');
+					var n = parseInt($('#task2N').val()),
+						result = fib(n);
+
+					function fib(n) {
+						return n < 2 ? n : fib(n - 1) + fib(n - 2);
+					}
+
+					for (var i = 1; i <= n; i++) {
+						$('.result').eq(1).append("F<sub>" + i, "</sub> = ", fib(i) + "<br>");
+						console.log("F" + i, "=", fib(i));
+					}
+				})
+				</script>
+			</div>
+		</div>
+		<div class="day">
+			<div class="task-descr">
+				Дано речення. Вивести всі наявні в ньому буквосполучення нн.
+			</div>
+			<br>
+			<div class="task-demo">
+				<input type="text" size="50" id="task3N" value="Речення з буквосполученням нн" placeholder="Введіть речення">
+				<br><br>
+				<div class="result"></div>
+
+				<script>
+				$('#task3N').on('keyup', function() {
+					$('.result').eq(2).text('');
+					var sentence = $('#task3N').val();
+					sentence.match(/нн/g).forEach(function(el) {
+						$('.result').eq(2).append(el + "<br>");
+					});
+				})
+				</script>
+			</div>
+		</div>
+		<div class="day">
+			А також ще 30 інших завдань...
+		</div>
+	</div>
+</body>
+</html>

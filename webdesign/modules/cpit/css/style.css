@@ -40,6 +40,10 @@ tr:last-child td {
 	width: 88%;
 }
 
+.center {
+	text-align: center;
+}
+
 .clear {
 	clear: both;
 }
