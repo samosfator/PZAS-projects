@@ -9,14 +9,8 @@ namespace DrugStore {
 
 
         public static bool Auth(string username, string password) {
-            var connection = NewConnection();
-            var command = CreateCommand(connection, "SELECT * FROM users WHERE username='{0}' AND password='{1}'", username, password);
-            using (command)
-            using (connection) {
-                connection.Open();
-                var reader = command.ExecuteReader();
-                return reader != null && reader.Read();
-            }
+            var command = CreateCommand(NewConnection(), "SELECT * FROM users WHERE username='{0}' AND password='{1}'", username, password);
+            return ReadAffected(command);
         }
 
         public static void FillDataGridView(DataGridView dgv) {
@@ -30,13 +24,14 @@ namespace DrugStore {
         }
 
         public static void AddDrugEntry(Drug drug) {
-            var connection = NewConnection();
-            var command = CreateCommand(connection, "INSERT INTO drugs (title, type, quantity, description) VALUES ('{0}', '{1}', '{2}', '{3}')",
-                drug.Title, drug.Type, drug.Quantity, drug.Description);
-            using (connection) {
-                connection.Open();
-                command.ExecuteNonQuery();
-            }
+            var command = CreateCommand(NewConnection(), "INSERT INTO drugs (title, type, quantity, price, description) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}')",
+                drug.Title, drug.Type, drug.Quantity, drug.Price, drug.Description);
+            ExecuteQuery(command);
+        }
+
+        public static bool CheckForDups(string title) {
+            var command = CreateCommand(NewConnection(), "SELECT * FROM drugs WHERE title='{0}'", title);
+            return ReadAffected(command);
         }
 
         private static OleDbConnection NewConnection() {
@@ -50,6 +45,21 @@ namespace DrugStore {
                 Connection = connection,
                 CommandText = String.Format(query, args)
             };
+        }
+
+        private static void ExecuteQuery(OleDbCommand command) {
+            using (command) {
+                command.Connection.Open();
+                command.ExecuteNonQuery();
+            }
+        }
+
+        private static bool ReadAffected(OleDbCommand command) {
+            using (command) {
+                command.Connection.Open();
+                var reader = command.ExecuteReader();
+                return reader != null && reader.Read();
+            }
         }
     }
 }

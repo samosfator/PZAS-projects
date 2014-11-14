@@ -1,4 +1,4 @@
-﻿namespace DrugStore {
+﻿namespace DrugStore.gui {
     partial class AuthWindow {
         /// <summary>
         /// Required designer variable.

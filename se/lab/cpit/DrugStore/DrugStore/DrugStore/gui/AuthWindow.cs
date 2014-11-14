@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace DrugStore {
+namespace DrugStore.gui {
     public partial class AuthWindow : Form {
         public AuthWindow() {
             InitializeComponent();
