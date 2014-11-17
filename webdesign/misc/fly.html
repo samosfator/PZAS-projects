@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p>Я живий!</p>
+</body>
+<style type="text/css" media="screen">
+	p {
+		margin: 0 auto;
+		margin-top: 15%;
+		background: #fc0;
+		font-size: 32px;
+		width: 130px;
+		padding: 30px;
+		color: white;
+		text-align: center;
+		-webkit-transition: all .2s linear;
+		transition: all .2s linear;
+	}
+</style>
+<script>
+	var p = document.getElementsByTagName("p")[0];
+	setInterval(function(){
+		var color = "rgb(" + Math.floor(Math.random() * 255) + ", " +
+											Math.floor(Math.random() * 255) + ", " +
+											Math.floor(Math.random() * 255) + ")";
+		p.style["-webkit-transform"] = "rotate(" + (Math.random() > .5 ? -1 : 1) * Math.random() * 45 + "deg)";
+		p.style["box-shadow"] = "0px 0px " + Math.random() * 100 + "px 25px " + color;
+		p.style["border-radius"] = Math.random() * 20 + "px";
+		p.style["font-size"] = Math.random() * 64 + "px";
+		p.style["font-style"] = Math.random() > .5 ? "bold" : "normal";
+		p.style.backgroundColor = color;
+	}, 200);
+</script>
+</html>
