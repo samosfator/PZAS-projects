@@ -64,7 +64,6 @@ namespace DrugStore.gui {
             if (Database.AddDrugEntry(drug)) {
                 SuccessMessage(lbl_add_success, "Успішно додано!");
                 EraseTextFields();
-                Database.FillDataGridView(dgv_drugsList);
             } else ErrorMessage(lbl_add_success, "Помилка при додаванні у базу");
         }
 
@@ -100,6 +99,15 @@ namespace DrugStore.gui {
             } else if (text.Contains(".")) {
                 ErrorMessage(lbl_check_price, "Змініть крапку на кому");
             } else ErrorMessage(lbl_check_price, "Введіть числове значення");
+        }
+
+        private void btn_reloadTable_Click(object sender, EventArgs e) {
+            dgv_drugsList.DataSource = null;
+            Database.FillDataGridView(dgv_drugsList);
+        }
+
+        private void tb_del_title_TextChanged(object sender, EventArgs e) {
+
         }
     }
 }

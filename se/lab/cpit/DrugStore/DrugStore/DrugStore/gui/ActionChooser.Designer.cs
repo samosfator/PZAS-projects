@@ -28,6 +28,7 @@ namespace DrugStore.gui {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActionChooser));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btn_reloadTable = new System.Windows.Forms.Button();
             this.dgv_drugsList = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -49,12 +50,18 @@ namespace DrugStore.gui {
             this.tb_addDescr = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btn_delDrug = new System.Windows.Forms.Button();
+            this.lbox_items = new System.Windows.Forms.ListBox();
+            this.tb_del_title = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_drugsList)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -71,6 +78,7 @@ namespace DrugStore.gui {
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.btn_reloadTable);
             this.tabPage1.Controls.Add(this.dgv_drugsList);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -79,6 +87,16 @@ namespace DrugStore.gui {
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Список ліків";
             // 
+            // btn_reloadTable
+            // 
+            this.btn_reloadTable.Location = new System.Drawing.Point(6, 319);
+            this.btn_reloadTable.Name = "btn_reloadTable";
+            this.btn_reloadTable.Size = new System.Drawing.Size(117, 23);
+            this.btn_reloadTable.TabIndex = 1;
+            this.btn_reloadTable.Text = "Оновити таблицю";
+            this.btn_reloadTable.UseVisualStyleBackColor = true;
+            this.btn_reloadTable.Click += new System.EventHandler(this.btn_reloadTable_Click);
+            // 
             // dgv_drugsList
             // 
             this.dgv_drugsList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
@@ -86,7 +104,7 @@ namespace DrugStore.gui {
             this.dgv_drugsList.Location = new System.Drawing.Point(-4, 0);
             this.dgv_drugsList.Name = "dgv_drugsList";
             this.dgv_drugsList.ReadOnly = true;
-            this.dgv_drugsList.Size = new System.Drawing.Size(826, 345);
+            this.dgv_drugsList.Size = new System.Drawing.Size(826, 316);
             this.dgv_drugsList.TabIndex = 0;
             // 
             // tabPage2
@@ -286,12 +304,59 @@ namespace DrugStore.gui {
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage3.Controls.Add(this.btn_delDrug);
+            this.tabPage3.Controls.Add(this.lbox_items);
+            this.tabPage3.Controls.Add(this.tb_del_title);
+            this.tabPage3.Controls.Add(this.label6);
+            this.tabPage3.Controls.Add(this.groupBox3);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(822, 345);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Видалити ліки";
+            // 
+            // btn_delDrug
+            // 
+            this.btn_delDrug.Location = new System.Drawing.Point(23, 186);
+            this.btn_delDrug.Name = "btn_delDrug";
+            this.btn_delDrug.Size = new System.Drawing.Size(207, 30);
+            this.btn_delDrug.TabIndex = 3;
+            this.btn_delDrug.Text = "Видалити препарат";
+            this.btn_delDrug.UseVisualStyleBackColor = true;
+            // 
+            // lbox_items
+            // 
+            this.lbox_items.FormattingEnabled = true;
+            this.lbox_items.Location = new System.Drawing.Point(23, 59);
+            this.lbox_items.Name = "lbox_items";
+            this.lbox_items.Size = new System.Drawing.Size(207, 121);
+            this.lbox_items.TabIndex = 2;
+            // 
+            // tb_del_title
+            // 
+            this.tb_del_title.Location = new System.Drawing.Point(130, 22);
+            this.tb_del_title.Name = "tb_del_title";
+            this.tb_del_title.Size = new System.Drawing.Size(100, 20);
+            this.tb_del_title.TabIndex = 1;
+            this.tb_del_title.TextChanged += new System.EventHandler(this.tb_del_title_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(20, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Назва препарату";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Location = new System.Drawing.Point(6, 6);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(240, 224);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
             // 
             // ActionChooser
             // 
@@ -312,6 +377,8 @@ namespace DrugStore.gui {
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -341,6 +408,12 @@ namespace DrugStore.gui {
         private Label lbl_check_type;
         private Label lbl_check_title;
         private Label lbl_add_success;
+        private Button btn_reloadTable;
+        private GroupBox groupBox3;
+        private Button btn_delDrug;
+        private ListBox lbox_items;
+        private TextBox tb_del_title;
+        private Label label6;
 
     }
 }
