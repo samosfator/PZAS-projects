@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form name="task1">
+		<input type="text" id="N">
+		<br>
+		<textarea id="result"></textarea>
+	</form>
+	<button onclick="calc()">Обчислити</button>
+	<script>
+		function calc() {
+			var n = task1.N.value,
+			sum = 0;
+			for (var i = 1; i <=n; i++) {
+				sum += 1 / i;
+				console.log(1 + " / " + i);
+			}
+			task1.result.value = sum;
+		}
+	</script>
+</body>
+</html>

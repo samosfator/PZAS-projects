@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form name="task2">
+		<input type="text" id="arr" placeholder="Введіть масив через кому або пробіл">
+		<br>
+		<textarea id="result"></textarea>
+	</form>
+	<button onclick="calc()">Обчислити</button>
+	<script>
+		function calc() {
+			var arr = task2.arr.value.trim().split(/\D/g);
+			task2.result.value += arr.filter(function(e, i){return i % 2 != 0});
+			task2.result.value += ",";
+			task2.result.value += arr.filter(function(e, i){return i % 2 == 0});
+		}
+	</script>
+</body>
+</html>
