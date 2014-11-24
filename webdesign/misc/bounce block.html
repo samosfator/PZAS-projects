@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<span id="elemToMove" style="position: absolute; left: 20; top: 20;">
+		<img src="1920x1200.jpg" height="100" 	width="220" alt="as">
+	</span>
+	<script type="text/javascript">
+		var move = document.getElementById('elemToMove');
+		var R = 0, // відстань до полюса
+			a = 45 * Math.PI / 180, // кут ( в радіанах )
+			dR = 1, // прирощення відстані
+			delay = 1, // затримка (у мсек. )
+			goBack = false;
+		// функція руху елемента
+
+		function moveElem() { // зміна координат елемента
+			//alert("R="+R);
+
+			move.style.left = R * Math.cos(a) + "px";
+			move.style.top = R * Math.sin(a) + "2*px";
+			// збільшення відстані до полюса
+			if (!goBack) {
+				R += dR;
+				if (move.getBoundingClientRect().width < 200) {
+					goBack = true;
+				}
+			} else {
+				R -= dR;
+				console.log("---------------", R);
+				if (R < 2) goBack = false;
+			}
+			console.log(R, move.getBoundingClientRect().width);
+			if (R < 100) {
+				move.style.right = R * Math.cos(a) + "px";
+				move.style.top = R * Math.sin(a) + "2*px";
+			}
+		}
+
+		// періодичний виклик функції руху
+		setInterval(moveElem, delay);
+</script>
+</body>
+</html>
