@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Задача 52</title>
+</head>
+<body>
+  52. Скласти програму, яка друкує задане слово, починаючи з останньої літери.
+  <form name="task52">
+    <input type="text" id="sentence" placeholder="Введіть слово">
+    <br>
+    <textarea name="" id="res" cols="30" rows="10"></textarea>
+  </form>
+  <button onclick="task52Calc()">Обчислити</button>
+  <script>
+    function task52Calc() {
+      var word = task52.sentence.value;
+      task52.res.value = "";
+      task52.res.value = word.split('').reverse().join('');
+    }
+  </script>
+</body>
+</html>

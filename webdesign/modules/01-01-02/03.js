@@ -1,5 +1,4 @@
-//Дане натуральне n, обчислити 1 / 0! + 1 / 1! + ... + 1 / n!
-var n = 5,
+var n = parseInt(prompt("Введіть число N: ")),
 	result = 0;
 
 
@@ -15,4 +14,4 @@ function fact(n) {
 	return n < 2 ? 1 : fact(n - 1) * n;
 }
 
-console.log(result);
+alert("Результат = " + result);

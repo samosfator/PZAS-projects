@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Задача 32</title>
+</head>
+<body>
+  32. Дано ціле число N (> 0). Знайти подвійний факторіал N: N!! = N•(N-2)•(N-4)•.(останній співмножник рівний 2, якщо N - парне, і 1, якщо N - непарне).
+<form name="task32">
+  <input type="text" id="n" placeholder="Введіть N">
+  <br>
+  <textarea name="" id="res" cols="30" rows="10"></textarea>
+</form>
+  <button onclick="task32Calc()">Обчислити</button>
+<script>
+  function task32Calc() {
+    var n = parseInt(task32.n.value);
+    task32.res.value = "";
+    task32.res.value = doubleFact(n);
+  }
+
+  function doubleFact(n) {
+    return n < 3 ? n : doubleFact(n - 2) * n;
+  }
+</script>
+</body>
+</html>

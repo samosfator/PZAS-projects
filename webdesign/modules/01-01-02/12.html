@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Задача 12</title>
+</head>
+<body>
+  12. Дано ціле число N (> 0). Знайти суму N<sup>2</sup> + (N + 1)<sup>2</sup> + (N + 2)<sup>2</sup> + . + (2*N)<sup>2</sup>
+<form name="task12">
+  <input type="text" id="n" placeholder="Введіть N">
+  <br>
+  <textarea name="" id="res" cols="30" rows="10"></textarea>
+</form>
+  <button onclick="task12Calc()">Обчислити</button>
+<script>
+  function task12Calc() {
+    var n = parseInt(task12.n.value),
+      sum = 0;
+    for (var i = 0; i <= n; i++) {
+        sum += Math.pow((n + i), 2);
+    }
+    task12.res.value += sum;
+  }
+</script>
+</body>
+</html>

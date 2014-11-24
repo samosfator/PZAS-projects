@@ -6,7 +6,6 @@
 	<link rel="icon" href="img/favicon.png">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/switch.css">
-	<!--Replace with google cdn link-->
 	<script src="js/lib/jquery-2.1.1.min.js"></script>
 	<script src="js/lib/angular.min.js"></script>
 	<script src="js/lib/moment.min.js"></script>
@@ -26,13 +25,13 @@
 				</label>
 			</div>
 		</div>
-		<!-- VK Widget -->
 		<script type="text/javascript" src="//vk.com/js/api/openapi.js?115"></script>
-		<div id="vk_groups" style="margin-top: 25px;"></div>
-		<script type="text/javascript">
-			VK.Widgets.Group("vk_groups", {mode: 2, wide: 1, width: "300", height: "400"}, 4129271);
-		</script>
+
 		<!-- VK Widget -->
+		<div id="vk_groups"></div>
+		<script type="text/javascript">
+			VK.Widgets.Group("vk_groups", {mode: 1, width: "300", height: "400", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 76497135);
+		</script>
 	</div>
 	<div id="week" ng-controller="DayController as days">
 		<div class="day" ng-repeat="day in days track by $index">
@@ -59,7 +58,7 @@
 		</div>
 	</div>
 	<div class="clear"></div>
-	<a href="tasks.html" title="Цікаві задачі на модуль по Javascript"><h1 class="center">Цікаві задачі</h1></a>
+	<a href="tasks.html" title="Цікаві задачі на Javascript"><h1 class="center">Цікаві задачі</h1></a>
 </body>
 <script src="js/script.js"></script>
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Задача 25</title>
+</head>
+<body>
+  25. Дані цілі позитивні числа N і K. Знайти суму1<sup>K</sup> + 2<sup>K</sup> + ... + N<sup>K</sup>. 
+<form name="task25">
+  <input type="text" id="n" placeholder="Введіть N">
+  <input type="text" id="k" placeholder="Введіть K">
+  <br>
+  <textarea name="" id="res" cols="30" rows="10"></textarea>
+</form>
+  <button onclick="task25Calc()">Обчислити</button>
+<script>
+  function task25Calc() {
+    var n = parseInt(task25.n.value),
+      k = parseInt(task25.k.value),
+      sum = 0;
+    for (var i = 1; i <= n; i++) {
+        sum += Math.pow(i, k);
+    }
+    task25.res.value += sum;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Задача 46</title>
+</head>
+<body>
+  46. Дано ціле число N (> 0). Використовуючи операції ділення без остачі і узяття залишку від ділення визначити, чи є в записі числа N цифра «2». Якщо є, то вивести True, якщо ні - вивести False.
+<form name="task46">
+  <input type="text" id="n" placeholder="Введіть N">
+  <br>
+  <textarea name="" id="res" cols="30" rows="10"></textarea>
+</form>
+  <button onclick="task46Calc()">Обчислити</button>
+<script>
+  function task46Calc() {
+    var n = parseInt(task46.n.value),
+      has2 = false;
+    task46.res.value = "";
+    for (; n; n = Math.floor(n / 10)) {
+      console.log(n % 10);
+      if (n % 10 == 2) has2 = true;
+    }
+    task46.res.value += has2 ? "True" : "False";
+  }
+</script>
+</body>
+</html>

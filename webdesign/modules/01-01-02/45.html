@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Задача 45</title>
+</head>
+<body>
+  45. Дано ціле число N (> 0). Використовуючи операції ділення без остачі і узяття залишку від ділення, знайти число, отримане числа N справа наліво.
+<form name="task45">
+  <input type="text" id="n" placeholder="Введіть N">
+  <br>
+  <textarea name="" id="res" cols="30" rows="10"></textarea>
+</form>
+  <button onclick="task45Calc()">Обчислити</button>
+<script>
+  function task45Calc() {
+    var n = parseInt(task45.n.value),
+      reversed = 0;
+      task45.res.value = "";
+    for (; n; n = Math.floor(n / 10)) {
+        reversed *= 10;
+        reversed += n % 10;
+      }
+      n = reversed;
+    task45.res.value += n;
+  }
+</script>
+</body>
+</html>

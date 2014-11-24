@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Задача 6</title>
+</head>
+<body>
+  6. Дано два цілі числа А і B (А < B). Вивести в порядку убування всі цілі числа, розташовані між А і B (не включаючи числа А і B), а також кількість N цих чисел.
+<form name="task6">
+  <input type="text" id="a" placeholder="Введіть А">
+  <input type="text" id="b" placeholder="Введіть B">
+  <br>
+  <textarea name="" id="res" cols="30" rows="10"></textarea>
+</form>
+  <button onclick="task6Calc()">Обчислити</button>
+<script>
+  function task6Calc() {
+    var a = parseInt(task6.a.value),
+      b = parseInt(task6.b.value);
+    for (var i = 1; a + i < b; i++) {
+        task6.res.value += (b - i) + "\n";
+    }
+    task6.res.value += "А взагалі цих чисел: " + (b - a - 1);
+  }
+</script>
+</body>
+</html>

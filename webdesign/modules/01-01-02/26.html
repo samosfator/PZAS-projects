@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Задача 26</title>
+</head>
+<body>
+  26. Дано ціле число N (> 0). Знайти суму 1<sup>1</sup> + 2<sup>2</sup> + . + N<sup>N</sup>.
+<form name="task26">
+  <input type="text" id="n" placeholder="Введіть N">
+  <br>
+  <textarea name="" id="res" cols="30" rows="10"></textarea>
+</form>
+  <button onclick="task26Calc()">Обчислити</button>
+<script>
+  function task26Calc() {
+    task26.res.value = "";
+    var n = parseInt(task26.n.value),
+      sum = 0;
+    for (var i = 1; i <= n; i++) {
+        sum += Math.pow(i, i);
+    }
+    task26.res.value += sum;
+  }
+</script>
+</body>
+</html>

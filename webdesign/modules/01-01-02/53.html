@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+<form name="task53">
+  Дано слово s1. Отримати слово s2, утворене непарними буквами слова s1. 
+  <input type="text" id="i1">
+  <textarea id="res" rows="12" cols="12"></textarea>
+</form>
+  <button onclick=go()>Обчислити</button>
+  <script>
+    function go() {
+      task53.res.value = "";
+      var input = task53.i1.value;
+      for (var i = 0; i < input.length; i++) {
+        if ((i+1) % 2 != 0) {
+          task53.res.value += input[i];
+        }
+      }
+    }
+  </script>
+</body>
+</html>
