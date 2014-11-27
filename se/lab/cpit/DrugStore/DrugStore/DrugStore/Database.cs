@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace DrugStore {
     static class Database {
-        private const String DbPath = @"C:\Users\Vlad\IdeaProjects\pzas\se\lab\cpit\DrugStore\db.accdb";
+        private const String DbPath = "db.accdb";
 
         public static bool Auth(string username, string password) {
             var command = CreateCommand(NewConnection(), "SELECT * FROM users WHERE username='{0}' AND password='{1}'", username, password);
@@ -14,9 +14,9 @@ namespace DrugStore {
         }
 
         public static void LoadTable(DataGridView dgv) {
-            var connection = NewConnection();
-            using (connection) {
-                var dataAdapter = new OleDbDataAdapter(CreateCommand(connection, "SELECT * FROM drugs ORDER BY title"));
+            var command = CreateCommand(NewConnection(), "SELECT * FROM drugs ORDER BY title");
+            using (command) {
+                var dataAdapter = new OleDbDataAdapter(command);
                 var dataTable = new DataTable();
                 dataTable.DefaultView.AllowEdit = false;
                 dataAdapter.Fill(dataTable);
