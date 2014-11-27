@@ -36,12 +36,12 @@
       <SubType>Content</SubType>
       <DependentUpon>Запис інформації про ліки.activitydiagram</DependentUpon>
     </Content>
-    <Content Include="Прецедентів.usecasediagram">
+    <Content Include="Модель вимог.usecasediagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Прецедентів.usecasediagram.layout">
+    <Content Include="Модель вимог.usecasediagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>Прецедентів.usecasediagram</DependentUpon>
+      <DependentUpon>Модель вимог.usecasediagram</DependentUpon>
     </Content>
     <Content Include="Послідовностей.sequencediagram">
       <SubType>Content</SubType>

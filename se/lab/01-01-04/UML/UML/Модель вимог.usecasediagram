@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="843ffee6-64b3-4212-a7d0-5d09d87792cf" name="UMLUseCaseDiagram1" linkedPackageId="e6fe3520-3d49-4c92-aaee-cee60781323f" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="36d49b74-9624-4a43-b318-7f43d94b19df" name="Секретар" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cf92b226-c577-485f-962b-9c3098d48731" />
+        <targetEnds>
+          <association Id="fc516e03-80c9-425a-93a7-b3b5e8469cf5" isDerived="false" sourceEndRoleName="Секретар" targetEndRoleName="Отримання інвойсу" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="16fbf8f8-2ea0-4bac-91ce-91148b19215f" LastKnownName="Пошук ліків" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="92b21886-97fa-48e1-acd5-bbe3c6b211b2" name="Секретар" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="549f910c-b0de-4554-a59e-11352b2cc71e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a70897e5-545e-47a3-9959-99a127c1969c" name="Отримання інвойсу" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="47b706b9-8378-4ec8-a4d1-45e3f4aab613" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bb259bde-836f-457d-a1e5-5f25e43b8d6c" />
+          </association>
+          <association Id="d36e7fdf-887c-4aa2-b67f-b2059eb1f7a3" isDerived="false" sourceEndRoleName="Секретар" targetEndRoleName="Авторизація" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="15a615d2-9c8a-43b8-8791-f9ab1c8bceb6" LastKnownName="Авторизація" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="928ff160-26d0-4f4f-a6dc-2f25cf24c5b8" name="Секретар" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0b64a988-3d0c-4ff6-a5b1-c284e3c5bf8f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b7d385e4-7e93-4243-87d8-bd88d2748ebd" name="Авторизація" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="adc569c0-9f5f-4ad8-ac29-58fb3c63fb58" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5b72f0fd-6b4f-4b2f-8f17-d5925c418c89" />
+          </association>
+          <association Id="8f61e07b-319d-40e5-9d0f-64b33cc7f490" isDerived="false" sourceEndRoleName="Секретар" targetEndRoleName="Показати список ліків" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9e98a737-f1da-40d6-8b64-8c762ed15d4b" LastKnownName="Переглянути список ліків" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8b8cc5ea-2c1d-4bcd-8b57-aa54c2b94c6c" name="Секретар" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a76df2b1-9bf1-4cd0-918f-117367b3a36c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ca0a81a4-6cc0-45b6-99b3-24a1d1a7494f" name="Показати список ліків" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="64d44bff-6ceb-4d26-b1ac-969ae63697bf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="637d8cb8-3afe-4515-8234-a1dd1f378ef8" />
+          </association>
+          <association Id="17154089-5f4a-40fe-a7be-6ab0468b6ad0" isDerived="false" sourceEndRoleName="Секретар" targetEndRoleName="Додати ліки" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1d02fbe4-a47c-4811-bee7-f8879905f57e" LastKnownName="Додати ліки" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="78262734-713f-4b85-af7d-4a460995ef2c" name="Секретар" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c28ac9af-0fd9-4db3-88c0-7db4d670fbc9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="46d6e4f9-4b7c-460f-a390-5da30973a52a" name="Додати ліки" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3337cae5-41ac-40f4-b054-098e3a3d4759" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="11833f7e-f995-46f1-89a5-f25d7e68c230" />
+          </association>
+          <association Id="1d6f0e20-7cfa-4e5a-a6cb-0795063ab67b" isDerived="false" sourceEndRoleName="Секретар" targetEndRoleName="Видалити ліки" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6630d64a-65bd-41ab-b860-770cc110b19e" LastKnownName="Видалити ліки" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f3c7fd97-6f98-4ac1-b2f2-aed7cd8d9582" name="Секретар" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cde08a1b-4e5e-473c-b2e2-789bf2b750c1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="79ab8b6c-1c00-4ef4-9a83-cc2bf92ae561" name="Видалити ліки" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="58951056-92e7-4117-bc8c-435f30ff0d57" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9acc4ef8-4032-4e3c-9294-a639982cbf85" />
+          </association>
+          <association Id="4ba56bda-adf8-4f07-8bdf-b39a8c1ec8eb" isDerived="false" sourceEndRoleName="Секретар" targetEndRoleName="Редагувати інформацію про ліки" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="fdb98cd6-ce8c-44a8-86ec-fd49ad13d6d4" LastKnownName="Редагувати інформацію про ліки" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c3ceee1f-a400-4b8a-80e8-16bd850b105a" name="Секретар" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9dfbcaea-71c3-4a5c-8434-bcb46841b96f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e2ad8508-39b8-432a-a15d-968d609364d9" name="Редагувати інформацію про ліки" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2ab1ab7e-9770-4006-83af-3ccf8841a1f7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f342b21d-60d5-473f-9c10-4240fd43605a" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1d02fbe4-a47c-4811-bee7-f8879905f57e" name="Додати ліки" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5763b225-0138-466d-827d-5dbebee65f0a" />
+        <additions>
+          <include Id="49dfc569-5510-461e-a19f-434e008335e6">
+            <useCaseMoniker Id="57fbdb9f-f7a5-4616-9ffd-c913e9d8d326" LastKnownName="Заповнити інформацію про ліки" />
+            <elementDefinition Id="7af2fdd4-6053-4b47-aa4a-e08baa30a1c0" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6630d64a-65bd-41ab-b860-770cc110b19e" name="Видалити ліки" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="29278d35-4213-405f-ae95-18cdf4824592" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9e98a737-f1da-40d6-8b64-8c762ed15d4b" name="Переглянути список ліків" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f36fb11c-aeb1-4d4d-aefb-727653e1ba2e" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7d4fae0d-5bd7-4052-8228-07938ef0af53" name="Показати у вигляді таблиці" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="efd8cf60-62f2-4e74-bcc4-071a976bd0d2" />
+        <generalsInternal>
+          <generalization Id="89ea019c-03c2-47f9-b2a4-334a25288268" isSubstitutable="false">
+            <useCaseMoniker Id="9e98a737-f1da-40d6-8b64-8c762ed15d4b" LastKnownName="Переглянути список ліків" />
+            <elementDefinition Id="9c593b33-fc6e-4423-85f9-9a4e63a5d80a" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="10b2d3c6-9aee-4075-a3e7-45aed2df1b25" name="Завантажити фотографію ліків" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b3ea2fc2-e050-41af-a59b-ffd025605ce3" />
+        <extendedCases>
+          <extend Id="01ea0037-f621-4065-9d8c-7d86172842f1">
+            <useCaseMoniker Id="1d02fbe4-a47c-4811-bee7-f8879905f57e" LastKnownName="Додати ліки" />
+            <elementDefinition Id="4bf47699-4457-4b04-ba07-47555e2f178d" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="57fbdb9f-f7a5-4616-9ffd-c913e9d8d326" name="Заповнити інформацію про ліки" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6f066372-a619-424d-96b6-4cae16192138" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="16fbf8f8-2ea0-4bac-91ce-91148b19215f" name="Пошук ліків" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cfacbe1d-4e48-4997-b8ec-a479adc12665" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="15a615d2-9c8a-43b8-8791-f9ab1c8bceb6" name="Авторизація" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ce922e2d-8cb9-4fe5-b503-0895858beab8" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a004bb8b-328a-4c6e-a18f-97fe3379f126" name="Відобразити жирним шрифтом" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9c336e21-f247-4be3-871b-4883f3e30fc3" />
+        <generalsInternal>
+          <generalization Id="c69c5a28-7a86-4b6a-9a7f-9a2166e53057" isSubstitutable="false">
+            <useCaseMoniker Id="7d4fae0d-5bd7-4052-8228-07938ef0af53" LastKnownName="Показати у вигляді таблиці" />
+            <elementDefinition Id="b9c66373-eb80-4cda-a2dc-6f7849ceb199" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="fdb98cd6-ce8c-44a8-86ec-fd49ad13d6d4" name="Редагувати інформацію про ліки" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7b7676b6-0e89-47cb-a2cb-602deff86ab3" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="e6fe3520-3d49-4c92-aaee-cee60781323f" name="UML">
+    <elementDefinition Id="7a4ea006-f272-4be3-8bed-6dbd9c52f42e" />
+    <profileInstances>
+      <packageHasProfileInstances Id="76d85610-6775-4906-8ef8-8f93c9da14c6">
+        <profileInstance Id="dc57ff54-c866-4dbd-b3a7-9d0ff50cb9bc" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="3946b644-b17c-482c-87d3-02334fcbe2d2">
+        <profileInstance Id="861925a3-13aa-4aca-ad8b-111d197e264e" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>
