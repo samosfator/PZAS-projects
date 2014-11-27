@@ -244,6 +244,7 @@ namespace DrugStore.gui {
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::DrugStore.Properties.Resources.colordrugs2;
             this.pictureBox1.Location = new System.Drawing.Point(231, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(171, 152);
@@ -254,6 +255,7 @@ namespace DrugStore.gui {
             // btn_addDrug
             // 
             this.btn_addDrug.BackColor = System.Drawing.Color.LightGreen;
+            this.btn_addDrug.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_addDrug.Location = new System.Drawing.Point(125, 139);
             this.btn_addDrug.Name = "btn_addDrug";
             this.btn_addDrug.Size = new System.Drawing.Size(100, 29);
@@ -301,7 +303,7 @@ namespace DrugStore.gui {
             this.tab_view_drugs.Padding = new System.Windows.Forms.Padding(3);
             this.tab_view_drugs.Size = new System.Drawing.Size(603, 257);
             this.tab_view_drugs.TabIndex = 0;
-            this.tab_view_drugs.Text = "Список ліків";
+            this.tab_view_drugs.Text = "Перегляд";
             // 
             // btn_reloadTable
             // 
@@ -327,9 +329,12 @@ namespace DrugStore.gui {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::DrugStore.Properties.Resources.colordrugs2;
             this.ClientSize = new System.Drawing.Size(635, 304);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "ActionChooser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Облік ліків";

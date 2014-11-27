@@ -41,7 +41,9 @@ namespace DrugStore.gui {
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 39);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(35, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 0;
@@ -50,9 +52,10 @@ namespace DrugStore.gui {
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 71);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(18, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.Size = new System.Drawing.Size(51, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Пароль";
             // 
@@ -60,7 +63,7 @@ namespace DrugStore.gui {
             // 
             this.tb_login.Location = new System.Drawing.Point(75, 39);
             this.tb_login.Name = "tb_login";
-            this.tb_login.Size = new System.Drawing.Size(100, 20);
+            this.tb_login.Size = new System.Drawing.Size(100, 21);
             this.tb_login.TabIndex = 2;
             this.tb_login.Text = "admin";
             // 
@@ -69,15 +72,15 @@ namespace DrugStore.gui {
             this.tb_password.Location = new System.Drawing.Point(75, 68);
             this.tb_password.Name = "tb_password";
             this.tb_password.PasswordChar = '♥';
-            this.tb_password.Size = new System.Drawing.Size(100, 20);
+            this.tb_password.Size = new System.Drawing.Size(100, 21);
             this.tb_password.TabIndex = 3;
             this.tb_password.Text = "admin";
             // 
             // btn_signin
             // 
-            this.btn_signin.Location = new System.Drawing.Point(27, 104);
+            this.btn_signin.Location = new System.Drawing.Point(21, 104);
             this.btn_signin.Name = "btn_signin";
-            this.btn_signin.Size = new System.Drawing.Size(148, 32);
+            this.btn_signin.Size = new System.Drawing.Size(154, 32);
             this.btn_signin.TabIndex = 5;
             this.btn_signin.Text = "Увійти";
             this.btn_signin.UseVisualStyleBackColor = true;
@@ -85,11 +88,15 @@ namespace DrugStore.gui {
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.btn_signin);
             this.groupBox2.Controls.Add(this.tb_login);
             this.groupBox2.Controls.Add(this.tb_password);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(13, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 159);
@@ -117,11 +124,17 @@ namespace DrugStore.gui {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::DrugStore.Properties.Resources.colorpills2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(230, 208);
-            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.statusStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AuthWindow";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Фармацевтика";
             this.groupBox2.ResumeLayout(false);

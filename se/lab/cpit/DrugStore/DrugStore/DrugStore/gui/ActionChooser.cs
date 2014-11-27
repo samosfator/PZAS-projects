@@ -11,7 +11,7 @@ namespace DrugStore.gui {
         private static bool ActionRecently;
         private readonly Drug _newDrug = new Drug();
         //Паттерн "Одинак" (Синглтон)
-        private static readonly ActionChooser instance = new ActionChooser();
+        private static ActionChooser _instance;
         private ActionChooser() {
             InitializeComponent();
             Database.LoadTable(dgv_drugsList);
@@ -20,7 +20,10 @@ namespace DrugStore.gui {
         }
         public static ActionChooser Instance {
             get {
-                return instance;
+                if (_instance == null || _instance.IsDisposed) {
+                    _instance = new ActionChooser();
+                }
+                return _instance;
             }
         }
 
@@ -200,5 +203,13 @@ namespace DrugStore.gui {
         private void tb_addDescr_TextChanged(object sender, EventArgs e) {
             _newDrug.Description = tb_addDescr.Text;
         }
+
+        protected override CreateParams CreateParams {
+            get {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+                return cp;
+            }
+        } 
     }
 }
