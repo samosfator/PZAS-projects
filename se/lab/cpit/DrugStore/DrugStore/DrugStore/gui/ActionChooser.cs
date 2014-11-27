@@ -107,11 +107,17 @@ namespace DrugStore.gui {
             var dialog = new OpenFileDialog { Filter = "Зображення ліків (*.jpg)|*.jpg", FilterIndex = 1 };
             if (dialog.ShowDialog() == DialogResult.OK) {
                 _newDrug.Picture = EncodePicture(dialog.FileName);
-                Console.WriteLine(_newDrug.Picture.Length);
+                pictureBox1.Image = Image.FromFile(dialog.FileName);
             } else {
-                _newDrug.Picture = EncodePicture("square.jpg");
-                Console.WriteLine(_newDrug.Picture.Length);
+                _newDrug.Picture = EncodePicture(Properties.Resources.square);
+                pictureBox1.Image = Properties.Resources.square;
             }
+        }
+
+        private byte[] EncodePicture(Image img) {
+            var memStream = new MemoryStream();
+            img.Save(memStream, ImageFormat.Jpeg);
+            return memStream.ToArray();
         }
 
         private static byte[] EncodePicture(string path) {

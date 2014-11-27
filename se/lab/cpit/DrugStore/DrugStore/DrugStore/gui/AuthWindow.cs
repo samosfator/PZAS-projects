@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace DrugStore.gui {
@@ -12,6 +13,8 @@ namespace DrugStore.gui {
             tb_login.KeyDown += (sender, args) => {
                 if (tb_password.Text.Length > 1) LoginClick(args);
             };
+
+            groupBox2.BackColor = Color.FromArgb(128, Color.Gold);
         }
 
         private void LoginClick(KeyEventArgs args) {

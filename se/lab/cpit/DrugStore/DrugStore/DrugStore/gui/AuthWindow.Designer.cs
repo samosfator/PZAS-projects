@@ -42,10 +42,10 @@ namespace DrugStore.gui {
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(35, 44);
+            this.label1.Font = new System.Drawing.Font("Buxton Sketch", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(31, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.Size = new System.Drawing.Size(39, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Логін";
             // 
@@ -53,9 +53,10 @@ namespace DrugStore.gui {
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(18, 71);
+            this.label2.Font = new System.Drawing.Font("Buxton Sketch", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(20, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 15);
+            this.label2.Size = new System.Drawing.Size(50, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Пароль";
             // 
@@ -63,7 +64,7 @@ namespace DrugStore.gui {
             // 
             this.tb_login.Location = new System.Drawing.Point(75, 39);
             this.tb_login.Name = "tb_login";
-            this.tb_login.Size = new System.Drawing.Size(100, 21);
+            this.tb_login.Size = new System.Drawing.Size(100, 31);
             this.tb_login.TabIndex = 2;
             this.tb_login.Text = "admin";
             // 
@@ -72,14 +73,14 @@ namespace DrugStore.gui {
             this.tb_password.Location = new System.Drawing.Point(75, 68);
             this.tb_password.Name = "tb_password";
             this.tb_password.PasswordChar = '♥';
-            this.tb_password.Size = new System.Drawing.Size(100, 21);
+            this.tb_password.Size = new System.Drawing.Size(100, 31);
             this.tb_password.TabIndex = 3;
             this.tb_password.Text = "admin";
             // 
             // btn_signin
             // 
             this.btn_signin.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btn_signin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_signin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_signin.ForeColor = System.Drawing.Color.White;
             this.btn_signin.Location = new System.Drawing.Point(75, 105);
             this.btn_signin.Name = "btn_signin";
@@ -98,7 +99,7 @@ namespace DrugStore.gui {
             this.groupBox2.Controls.Add(this.tb_password);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox2.Font = new System.Drawing.Font("Buxton Sketch", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(13, 12);
             this.groupBox2.Name = "groupBox2";

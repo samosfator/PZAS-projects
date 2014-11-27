@@ -25,7 +25,6 @@ namespace DrugStore.gui {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActionChooser));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tab_add_drugs = new System.Windows.Forms.TabPage();
@@ -189,13 +188,14 @@ namespace DrugStore.gui {
             // 
             // btn_addPicture
             // 
-            this.btn_addPicture.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_addPicture.BackColor = System.Drawing.Color.SeaShell;
+            this.btn_addPicture.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_addPicture.Location = new System.Drawing.Point(231, 139);
             this.btn_addPicture.Name = "btn_addPicture";
             this.btn_addPicture.Size = new System.Drawing.Size(171, 28);
             this.btn_addPicture.TabIndex = 9;
             this.btn_addPicture.Text = "+ зобр.";
-            this.btn_addPicture.UseVisualStyleBackColor = true;
+            this.btn_addPicture.UseVisualStyleBackColor = false;
             this.btn_addPicture.Click += new System.EventHandler(this.btn_addPicture_Click);
             // 
             // lb_drug_list
@@ -245,7 +245,6 @@ namespace DrugStore.gui {
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::DrugStore.Properties.Resources.colordrugs2;
             this.pictureBox1.Location = new System.Drawing.Point(231, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(171, 152);
@@ -325,14 +324,6 @@ namespace DrugStore.gui {
             this.dgv_drugsList.AllowUserToResizeColumns = false;
             this.dgv_drugsList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_drugsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_drugsList.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_drugsList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_drugsList.Location = new System.Drawing.Point(-4, 0);
             this.dgv_drugsList.Name = "dgv_drugsList";
