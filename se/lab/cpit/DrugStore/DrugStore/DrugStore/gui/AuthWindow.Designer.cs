@@ -1,4 +1,6 @@
-﻿namespace DrugStore.gui {
+﻿using System.Windows.Forms;
+
+namespace DrugStore.gui {
     partial class AuthWindow {
         /// <summary>
         /// Required designer variable.
