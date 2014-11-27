@@ -25,6 +25,7 @@ namespace DrugStore.gui {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActionChooser));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tab_add_drugs = new System.Windows.Forms.TabPage();
@@ -324,6 +325,14 @@ namespace DrugStore.gui {
             this.dgv_drugsList.AllowUserToResizeColumns = false;
             this.dgv_drugsList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_drugsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_drugsList.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_drugsList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_drugsList.Location = new System.Drawing.Point(-4, 0);
             this.dgv_drugsList.Name = "dgv_drugsList";
