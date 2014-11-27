@@ -307,18 +307,24 @@ namespace DrugStore.gui {
             // 
             // btn_reloadTable
             // 
-            this.btn_reloadTable.Location = new System.Drawing.Point(490, 238);
+            this.btn_reloadTable.BackColor = System.Drawing.Color.LavenderBlush;
+            this.btn_reloadTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_reloadTable.Location = new System.Drawing.Point(-4, 0);
             this.btn_reloadTable.Name = "btn_reloadTable";
-            this.btn_reloadTable.Size = new System.Drawing.Size(117, 23);
+            this.btn_reloadTable.Size = new System.Drawing.Size(607, 23);
             this.btn_reloadTable.TabIndex = 1;
             this.btn_reloadTable.Text = "Оновити таблицю";
-            this.btn_reloadTable.UseVisualStyleBackColor = true;
+            this.btn_reloadTable.UseVisualStyleBackColor = false;
             this.btn_reloadTable.Click += new System.EventHandler(this.btn_reloadTable_Click);
             // 
             // dgv_drugsList
             // 
+            this.dgv_drugsList.AllowUserToAddRows = false;
+            this.dgv_drugsList.AllowUserToDeleteRows = false;
+            this.dgv_drugsList.AllowUserToResizeColumns = false;
             this.dgv_drugsList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_drugsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_drugsList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_drugsList.Location = new System.Drawing.Point(-4, 0);
             this.dgv_drugsList.Name = "dgv_drugsList";
             this.dgv_drugsList.ReadOnly = true;

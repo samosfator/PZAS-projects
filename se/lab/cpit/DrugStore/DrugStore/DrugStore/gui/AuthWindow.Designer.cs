@@ -78,12 +78,15 @@ namespace DrugStore.gui {
             // 
             // btn_signin
             // 
-            this.btn_signin.Location = new System.Drawing.Point(21, 104);
+            this.btn_signin.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btn_signin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_signin.ForeColor = System.Drawing.Color.White;
+            this.btn_signin.Location = new System.Drawing.Point(75, 105);
             this.btn_signin.Name = "btn_signin";
-            this.btn_signin.Size = new System.Drawing.Size(154, 32);
+            this.btn_signin.Size = new System.Drawing.Size(100, 32);
             this.btn_signin.TabIndex = 5;
             this.btn_signin.Text = "Увійти";
-            this.btn_signin.UseVisualStyleBackColor = true;
+            this.btn_signin.UseVisualStyleBackColor = false;
             this.btn_signin.Click += new System.EventHandler(this.btn_signin_Click);
             // 
             // groupBox2

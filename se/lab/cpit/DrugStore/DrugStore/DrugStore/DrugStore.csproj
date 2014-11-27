@@ -113,6 +113,7 @@
     <None Include="Resources\AuthPill.jpg" />
     <None Include="Resources\colorpills2.jpg" />
     <None Include="Resources\colordrugs2.jpg" />
+    <None Include="Resources\add-icon.png" />
     <Content Include="square.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
