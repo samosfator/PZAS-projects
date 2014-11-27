@@ -226,6 +226,7 @@ namespace DrugStore.gui {
             this.tb_addDescr.Size = new System.Drawing.Size(171, 31);
             this.tb_addDescr.TabIndex = 14;
             this.tb_addDescr.Text = "";
+            this.tb_addDescr.TextChanged += new System.EventHandler(this.tb_addDescr_TextChanged);
             // 
             // btn_delDrug
             // 

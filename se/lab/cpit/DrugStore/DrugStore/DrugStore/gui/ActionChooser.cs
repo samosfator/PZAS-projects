@@ -27,7 +27,6 @@ namespace DrugStore.gui {
         private void btn_addDrug_Click(object sender, EventArgs e) {
             if (!ValidateAdd()) return;
             ActionRecently = true;
-            _newDrug.Description = tb_addDescr.Text;
             if (Database.AddDrug(_newDrug)) {
                 SuccessMessage("Успішно додано!");
                 EraseTextFields();
@@ -164,12 +163,12 @@ namespace DrugStore.gui {
 
         private void EraseTextFields() {
             tb_addTitle.Text = "";
-            tb_addTitle.BackColor = ValidColor;
+            tb_addTitle.BackColor = Color.White;
             tb_addType.Text = "";
-            tb_addType.BackColor = ValidColor;
+            tb_addType.BackColor = Color.White;
             num_quantity.Value = 0;
             tb_addPrice.Text = "";
-            tb_addPrice.BackColor = ValidColor;
+            tb_addPrice.BackColor = Color.White;
             tb_addDescr.Text = "";
         }
 
@@ -187,14 +186,6 @@ namespace DrugStore.gui {
             return true;
         }
 
-        private bool ValidateUpdate() {
-            if (!_newDrug.IsDup) {
-                ErrorMessage(tb_addTitle, "Виберіть існуючий препарат!");
-                return false;
-            }
-            return ValidateNumFields();
-        }
-
         private void LoadSearchTips(ListBox lbox) {
             var searchTips = Database.GetSearchTips(tb_filter.Text, "title").ToArray();
             lbox.Items.Clear();
@@ -204,6 +195,10 @@ namespace DrugStore.gui {
         protected override void OnClosed(EventArgs e) {
             Hide();
             Program.AuthForm.Show();
+        }
+
+        private void tb_addDescr_TextChanged(object sender, EventArgs e) {
+            _newDrug.Description = tb_addDescr.Text;
         }
     }
 }
