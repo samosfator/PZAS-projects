@@ -26,7 +26,7 @@
     </comment>
     <comment
       Id="6f48d1ad-d6f2-4864-93e4-40902cc8f22a">
-      <body>Some troubles occured while saving drug entry. Close other programs and try again.</body>
+      <body>Some troubles occured while saving drug entry. </body>
       <annotatedElements>
         <opaqueActionMoniker
           Id="b4d4f5d4-90c3-4d8e-80fa-5b202a2cba93"
@@ -2742,22 +2742,7 @@
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
-                Id="2a9c6fd8-6520-4fd1-b14e-f8f8ef89ba32"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="75d32ebd-21d1-496a-a1b9-5df9ccd477de"
-                  LastKnownName="Click &quot;Add new drug entry&quot; button"
-                  LastKnownLocation="UML.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </initialNode>
-          <opaqueAction
-            Id="75d32ebd-21d1-496a-a1b9-5df9ccd477de"
-            name="Click &quot;Add new drug entry&quot; button"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="f6d4e510-9a59-40ce-96cb-9cfcce70ca46"
+                Id="5cb89168-f762-4710-a08b-562484d20674"
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="79316c32-d0bf-462a-a84f-01a5f3c26285"
@@ -2765,7 +2750,7 @@
                   LastKnownLocation="UML.uml" />
               </controlFlow>
             </flowNodeTargets>
-          </opaqueAction>
+          </initialNode>
           <opaqueAction
             Id="79316c32-d0bf-462a-a84f-01a5f3c26285"
             name="Show popup window with text fields"
@@ -2808,14 +2793,14 @@
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="5173a57a-2cc4-4fd5-855e-86061d29a9d2"
-                  LastKnownName="Enter drug quantity"
+                  LastKnownName="Enter drug quantity and price"
                   LastKnownLocation="UML.uml" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
           <opaqueAction
             Id="5173a57a-2cc4-4fd5-855e-86061d29a9d2"
-            name="Enter drug quantity"
+            name="Enter drug quantity and price"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
@@ -2823,14 +2808,14 @@
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="fde6ba37-a973-4ad8-aabc-3e090bf5c17d"
-                  LastKnownName="Enter drug price"
+                  LastKnownName="Attach drug photo"
                   LastKnownLocation="UML.uml" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
           <opaqueAction
             Id="fde6ba37-a973-4ad8-aabc-3e090bf5c17d"
-            name="Enter drug price"
+            name="Attach drug photo"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
@@ -2860,26 +2845,11 @@
           </opaqueAction>
           <opaqueAction
             Id="60820f73-07be-414f-85a4-6b36daa6ebe0"
-            name="Click &quot;Save&quot; button"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="fc97f139-4504-4958-8582-83fa93f064c2"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="d5dd81b2-cd65-4ba5-81ac-2c2363ac89ba"
-                  LastKnownName="Close popup window"
-                  LastKnownLocation="UML.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <opaqueAction
-            Id="d5dd81b2-cd65-4ba5-81ac-2c2363ac89ba"
-            name="Close popup window"
+            name="Click &quot;Add&quot; button"
             isLeaf="false">
             <objectFlowTargets>
               <objectFlow
-                Id="279c5d9f-33bc-40f7-aec2-2ad7a770b935"
+                Id="4a38d91f-6f23-4777-a21a-eeb67b026502"
                 isLeaf="false"
                 isMulticast="false"
                 isMultireceive="false">
@@ -2944,7 +2914,7 @@
                   LastKnownLocation="UML.uml" />
               </controlFlow>
               <controlFlow
-                Id="99f7d465-b273-4ba5-935d-69dac67e0f37"
+                Id="7830d26e-af1f-4ace-b857-57c615e41eac"
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="6a7c184b-2295-4d91-b9d3-9ed5a099ce87"
@@ -2987,7 +2957,7 @@
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="60820f73-07be-414f-85a4-6b36daa6ebe0"
-                  LastKnownName="Click &quot;Save&quot; button"
+                  LastKnownName="Click &quot;Add&quot; button"
                   LastKnownLocation="UML.uml" />
               </controlFlow>
             </flowNodeTargets>

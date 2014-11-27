@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="dfccde6f-916f-4d1f-91f5-9cbea1161893" name="Запис інформації про ліки" linkedPackageId="7a28d37c-b51b-40e5-b92c-4b8c4d94da4f" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="dfccde6f-916f-4d1f-91f5-9cbea1161893" name="Запис інформації про ліки" linkedPackageId="7a28d37c-b51b-40e5-b92c-4b8c4d94da4f" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
   <ownedCommentsInternal>
     <comment Id="ad27f89c-d852-44c7-853f-860a4663be32">
       <elementDefinition Id="6f48d1ad-d6f2-4864-93e4-40902cc8f22a" />
-      <body>Some troubles occured while saving drug entry. Close other programs and try again.</body>
+      <body>Some troubles occured while saving drug entry. </body>
       <annotatedElements>
         <opaqueActionMoniker Id="7ab4c8eb-cd15-4014-a5f9-1e625e48f443" LastKnownName="Show sorry message" />
       </annotatedElements>
@@ -17,21 +17,12 @@
           <initialNode Id="0c491955-16c8-4993-b371-0cbe37f6dc5a" name="Initial1" isLeaf="false">
             <elementDefinition Id="f232783a-1ed9-40dd-aa1b-149c92163478" />
             <flowNodeTargets>
-              <controlFlow Id="6a292caa-28a0-4c2a-bc0f-382fade1583f" isLeaf="false">
-                <opaqueActionMoniker Id="9c24ddbe-22e1-4622-85ef-69cad2568d71" LastKnownName="Click &quot;Add new drug entry&quot; button" />
-                <elementDefinition Id="2a9c6fd8-6520-4fd1-b14e-f8f8ef89ba32" />
+              <controlFlow Id="4c919167-100c-446b-9de4-b00d5c9907b1" isLeaf="false">
+                <opaqueActionMoniker Id="ac7dce6f-04c3-4578-8f41-a4856d964bf4" LastKnownName="Show popup window with text fields" />
+                <elementDefinition Id="5cb89168-f762-4710-a08b-562484d20674" />
               </controlFlow>
             </flowNodeTargets>
           </initialNode>
-          <opaqueAction Id="9c24ddbe-22e1-4622-85ef-69cad2568d71" name="Click &quot;Add new drug entry&quot; button" isLeaf="false">
-            <elementDefinition Id="75d32ebd-21d1-496a-a1b9-5df9ccd477de" />
-            <flowNodeTargets>
-              <controlFlow Id="5c8daee1-1fc8-49e9-b0a9-62e633f72982" isLeaf="false">
-                <opaqueActionMoniker Id="ac7dce6f-04c3-4578-8f41-a4856d964bf4" LastKnownName="Show popup window with text fields" />
-                <elementDefinition Id="f6d4e510-9a59-40ce-96cb-9cfcce70ca46" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
           <opaqueAction Id="ac7dce6f-04c3-4578-8f41-a4856d964bf4" name="Show popup window with text fields" isLeaf="false">
             <elementDefinition Id="79316c32-d0bf-462a-a84f-01a5f3c26285" />
             <flowNodeTargets>
@@ -54,21 +45,21 @@
             <elementDefinition Id="668642f8-f4fa-4158-bf88-68df21f3c734" />
             <flowNodeTargets>
               <controlFlow Id="9c9f3f9e-b30f-4d4a-bf24-870d36cbd4f0" isLeaf="false">
-                <opaqueActionMoniker Id="add1965a-88cd-48b5-8a35-409ddd3d8651" LastKnownName="Enter drug quantity" />
+                <opaqueActionMoniker Id="add1965a-88cd-48b5-8a35-409ddd3d8651" LastKnownName="Enter drug quantity and price" />
                 <elementDefinition Id="c13095c9-57a5-45ed-9068-5d4396405d2f" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <opaqueAction Id="add1965a-88cd-48b5-8a35-409ddd3d8651" name="Enter drug quantity" isLeaf="false">
+          <opaqueAction Id="add1965a-88cd-48b5-8a35-409ddd3d8651" name="Enter drug quantity and price" isLeaf="false">
             <elementDefinition Id="5173a57a-2cc4-4fd5-855e-86061d29a9d2" />
             <flowNodeTargets>
               <controlFlow Id="cd37beaa-a1ac-4852-b804-2203f3d20d19" isLeaf="false">
-                <opaqueActionMoniker Id="81c0c839-b72e-4bff-8295-be55e311cbfd" LastKnownName="Enter drug price" />
+                <opaqueActionMoniker Id="81c0c839-b72e-4bff-8295-be55e311cbfd" LastKnownName="Attach drug photo" />
                 <elementDefinition Id="fc265443-a939-45ab-bd64-5171bc8efd82" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <opaqueAction Id="81c0c839-b72e-4bff-8295-be55e311cbfd" name="Enter drug price" isLeaf="false">
+          <opaqueAction Id="81c0c839-b72e-4bff-8295-be55e311cbfd" name="Attach drug photo" isLeaf="false">
             <elementDefinition Id="fde6ba37-a973-4ad8-aabc-3e090bf5c17d" />
             <flowNodeTargets>
               <controlFlow Id="cde3870e-d959-4898-82eb-d8cf04014303" isLeaf="false">
@@ -86,21 +77,12 @@
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <opaqueAction Id="b26341a6-03aa-483d-86b3-d0ed02441ae2" name="Click &quot;Save&quot; button" isLeaf="false">
+          <opaqueAction Id="b26341a6-03aa-483d-86b3-d0ed02441ae2" name="Click &quot;Add&quot; button" isLeaf="false">
             <elementDefinition Id="60820f73-07be-414f-85a4-6b36daa6ebe0" />
-            <flowNodeTargets>
-              <controlFlow Id="c39f71ee-47d4-4ce7-b412-e699d6090cab" isLeaf="false">
-                <opaqueActionMoniker Id="1b6d76ba-8dab-4371-b136-9b34b8569a34" LastKnownName="Close popup window" />
-                <elementDefinition Id="fc97f139-4504-4958-8582-83fa93f064c2" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
-          <opaqueAction Id="1b6d76ba-8dab-4371-b136-9b34b8569a34" name="Close popup window" isLeaf="false">
-            <elementDefinition Id="d5dd81b2-cd65-4ba5-81ac-2c2363ac89ba" />
             <objectFlowTargets>
-              <objectFlow Id="43046281-4ac9-4fe3-b457-7fee580dd301" isLeaf="false" isMulticast="false" isMultireceive="false">
+              <objectFlow Id="0c88bd50-7f43-435d-b1f5-16afb5e5b4d0" isLeaf="false" isMulticast="false" isMultireceive="false">
                 <objectNodeMoniker Id="3965cb1c-f23e-44fc-b204-33c98fb17cf2" LastKnownName="Drug entry" />
-                <elementDefinition Id="279c5d9f-33bc-40f7-aec2-2ad7a770b935" />
+                <elementDefinition Id="4a38d91f-6f23-4777-a21a-eeb67b026502" />
               </objectFlow>
             </objectFlowTargets>
           </opaqueAction>
@@ -134,9 +116,9 @@
                 <opaqueActionMoniker Id="19c36b66-97db-4d74-8108-283a1b606fb6" LastKnownName="Enter drug name" />
                 <elementDefinition Id="08ef5a80-2cd0-4cca-a32a-b27a1e5fe9c8" />
               </controlFlow>
-              <controlFlow Id="e77d9321-9ea8-47f7-9f11-ef370de8f7bd" isLeaf="false">
+              <controlFlow Id="e71a2958-721b-48b4-a711-2e2724bb730f" isLeaf="false">
                 <opaqueActionMoniker Id="4f9d423d-b786-498f-bcbc-14365e383a67" LastKnownName="Validation of entered information" />
-                <elementDefinition Id="99f7d465-b273-4ba5-935d-69dac67e0f37" />
+                <elementDefinition Id="7830d26e-af1f-4ace-b857-57c615e41eac" />
               </controlFlow>
             </flowNodeTargets>
           </forkNode>
@@ -157,7 +139,7 @@
             <elementDefinition Id="d195ef3f-c8e2-49fd-b47e-1b1f5119b398" />
             <flowNodeTargets>
               <controlFlow Id="4b41175a-47ca-45bf-9b2b-25f3bba55dd8" isLeaf="false">
-                <opaqueActionMoniker Id="b26341a6-03aa-483d-86b3-d0ed02441ae2" LastKnownName="Click &quot;Save&quot; button" />
+                <opaqueActionMoniker Id="b26341a6-03aa-483d-86b3-d0ed02441ae2" LastKnownName="Click &quot;Add&quot; button" />
                 <elementDefinition Id="6ba4b63e-5145-4670-a60d-5711fe5d7446" />
               </controlFlow>
             </flowNodeTargets>
