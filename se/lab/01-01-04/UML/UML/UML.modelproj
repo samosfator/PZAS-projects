@@ -29,12 +29,12 @@
       <SubType>Content</SubType>
       <DependentUpon>Авторизація.activitydiagram</DependentUpon>
     </Content>
-    <Content Include="Запис інформації про ліки.activitydiagram">
+    <Content Include="AddNewDrug.activitydiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Запис інформації про ліки.activitydiagram.layout">
+    <Content Include="AddNewDrug.activitydiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>Запис інформації про ліки.activitydiagram</DependentUpon>
+      <DependentUpon>AddNewDrug.activitydiagram</DependentUpon>
     </Content>
     <Content Include="Модель вимог.usecasediagram">
       <SubType>Content</SubType>

@@ -85,7 +85,7 @@ namespace DrugStore.gui {
             var drug = Database.GetDrug(lb_drug_list.SelectedItem.ToString());
             tb_addTitle.Text = drug.Title;
             tb_addType.Text = drug.Type;
-            num_quantity.Value = new decimal(drug.Price);
+            num_quantity.Value = drug.Quantity;
             tb_addPrice.Text = drug.Price.ToString();
             tb_addDescr.Text = drug.Description;
             pictureBox1.Image = drug.Picture != null ? Image.FromStream(new MemoryStream(drug.Picture)) : null;

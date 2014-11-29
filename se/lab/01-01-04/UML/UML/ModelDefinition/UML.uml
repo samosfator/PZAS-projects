@@ -5,26 +5,6 @@
   name="UML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <ownedCommentsInternal>
     <comment
-      Id="f7ca17fc-10b7-4625-9233-41a2e0f9b421">
-      <body>Check if password is long enough, if login consists of allowed characters</body>
-      <annotatedElements>
-        <opaqueActionMoniker
-          Id="4c62b59b-33be-4714-ab57-1f286916e4a9"
-          LastKnownName="Prior credentials validation"
-          LastKnownLocation="UML.uml" />
-      </annotatedElements>
-    </comment>
-    <comment
-      Id="986a418d-456d-4c07-9467-a42c883efe11">
-      <body>Sorry for inconvinience. Seems like you don't have a permission to access this database. Try to contact to your system administrator or try later.</body>
-      <annotatedElements>
-        <opaqueActionMoniker
-          Id="6e5737da-3921-4c1e-ba9d-cbadef18cfd7"
-          LastKnownName="Show sorry message"
-          LastKnownLocation="UML.uml" />
-      </annotatedElements>
-    </comment>
-    <comment
       Id="6f48d1ad-d6f2-4864-93e4-40902cc8f22a">
       <body>Some troubles occured while saving drug entry. </body>
       <annotatedElements>
@@ -1104,14 +1084,14 @@
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="9801c9e7-d26a-4ca1-83dc-98eaa341819b"
-                  LastKnownName="Введення логіну і паролю"
+                  LastKnownName="Enter login"
                   LastKnownLocation="UML.uml" />
               </controlFlow>
             </flowNodeTargets>
           </initialNode>
           <opaqueAction
             Id="9801c9e7-d26a-4ca1-83dc-98eaa341819b"
-            name="Введення логіну і паролю"
+            name="Enter login"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
@@ -1119,14 +1099,14 @@
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="4c62b59b-33be-4714-ab57-1f286916e4a9"
-                  LastKnownName="Prior credentials validation"
+                  LastKnownName="Enter password"
                   LastKnownLocation="UML.uml" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
           <opaqueAction
             Id="4c62b59b-33be-4714-ab57-1f286916e4a9"
-            name="Prior credentials validation"
+            name="Enter password"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
@@ -1149,7 +1129,7 @@
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="bff28a83-9a0f-4f56-8824-b62f037aa550"
-                  LastKnownName="Показ вікна з пропозиціями дій і подальше виконання програми..."
+                  LastKnownName="Showing next window"
                   LastKnownLocation="UML.uml" />
               </controlFlow>
               <controlFlow
@@ -1165,7 +1145,7 @@
           </decisionNode>
           <opaqueAction
             Id="bff28a83-9a0f-4f56-8824-b62f037aa550"
-            name="Показ вікна з пропозиціями дій і подальше виконання програми..."
+            name="Showing next window"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
@@ -1245,7 +1225,7 @@
               <acceptEventActionHasResults>
                 <outputPin
                   Id="f80b8907-b959-4fc4-85c1-400b0fb2e259"
-                  name="AES-256 encrypted login and password"
+                  name="Escaped login and password"
                   isLeaf="false"
                   ordering="Unordered"
                   isControlType="false"
@@ -1262,7 +1242,7 @@
           </acceptEventAction>
           <opaqueAction
             Id="4150f15d-30b0-4b1d-8302-1713e48c9921"
-            name="Request do login once more"
+            name="Propose do login once more"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
@@ -1293,7 +1273,7 @@
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="4150f15d-30b0-4b1d-8302-1713e48c9921"
-                  LastKnownName="Request do login once more"
+                  LastKnownName="Propose do login once more"
                   LastKnownLocation="UML.uml" />
               </controlFlow>
             </flowNodeTargets>
@@ -1332,30 +1312,15 @@
                   LastKnownLocation="UML.uml" />
               </controlFlow>
               <controlFlow
-                Id="da84ffe5-c89d-4d47-a828-11bbfd1a4cd0"
+                Id="88e70670-8117-4c4e-a195-bf152ab3f336"
                 isLeaf="false">
                 <opaqueActionMoniker
-                  Id="6e5737da-3921-4c1e-ba9d-cbadef18cfd7"
-                  LastKnownName="Show sorry message"
+                  Id="9801c9e7-d26a-4ca1-83dc-98eaa341819b"
+                  LastKnownName="Enter login"
                   LastKnownLocation="UML.uml" />
               </controlFlow>
             </flowNodeTargets>
           </decisionNode>
-          <opaqueAction
-            Id="6e5737da-3921-4c1e-ba9d-cbadef18cfd7"
-            name="Show sorry message"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="711af936-0cbd-42ba-afe2-535cc389fdb9"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="9801c9e7-d26a-4ca1-83dc-98eaa341819b"
-                  LastKnownName="Введення логіну і паролю"
-                  LastKnownLocation="UML.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
         </nodes>
       </activity>
     </packageHasNamedElement>
@@ -3267,6 +3232,58 @@
         name="UseCase1"
         isAbstract="false"
         isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="0efd2d15-c0c5-40de-9871-74de7f9b1bc3"
+        name="Auth"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="1b57312a-b066-49a1-8fa5-bbb2d5bdecc6"
+            name="Initial1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="2bbbaad8-2e24-445f-8dfa-c2b5224120d9"
+            name="Enter login"
+            isLeaf="false" />
+          <opaqueAction
+            Id="efa8644e-05df-43f9-9659-3b5a33098ed9"
+            name="Enter password"
+            isLeaf="false" />
+          <opaqueAction
+            Id="73c1eba7-357e-477c-83d1-2b8d8fdaae5a"
+            name="Press &quot;Sign in&quot; button"
+            isLeaf="false" />
+          <sendSignalAction
+            Id="20400d4a-43ed-472e-962c-59fa95ca83c8"
+            name="Send select query to database"
+            isLeaf="false" />
+          <objectNode
+            Id="89bfc98b-c9f7-49b2-a95c-f0888ab9ec7c"
+            name="Login and password"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="97d8ac49-9976-4ecc-8f94-a492c1e3731e"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <acceptEventAction
+            Id="f183567e-731e-445f-b883-834188ef09a5"
+            name="Event1"
+            isLeaf="false"
+            isUnmarshall="false" />
+        </nodes>
+      </activity>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
