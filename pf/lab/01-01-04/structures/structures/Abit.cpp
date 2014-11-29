@@ -1,9 +1,12 @@
 ﻿#include <iostream>
+#include <fstream>
 #include <string>
 #include <algorithm>
 #include "Abit.h"
 
 using namespace std;
+
+ofstream outfile("output.txt");
 
 Abit::Abit() {
 	abitNumber = getAbitNumber();
@@ -49,11 +52,16 @@ Abit::ABITURIENT* Abit::inputAbits(int abitNumber) {
 void Abit::printAbits(ABITURIENT * ABITUR, int abitNumber) {
 	for (int i = 0; i < abitNumber; i++) {
 		cout << "-----------------" << endl;
+		outfile << "-----------------" << endl;
 		cout << "Ім'я: " << ABITUR[i].NAME << endl;
+		outfile << "Ім'я: " << ABITUR[i].NAME << endl;
 		cout << "Стать: " << ABITUR[i].GENDER << endl;
+		outfile << "Стать: " << ABITUR[i].GENDER << endl;
 		cout << "Спеціальність: " << ABITUR[i].SPEC << endl;
+		outfile << "Спеціальність: " << ABITUR[i].SPEC << endl;
 		for (int j = 0; j < 3; j++) {
 			cout << ABITUR[i].EXAM[j][0] << " : " << ABITUR[i].EXAM[j][1] << endl;
+			outfile << ABITUR[i].EXAM[j][0] << " : " << ABITUR[i].EXAM[j][1] << endl;
 		}
 	}
 }
@@ -72,6 +80,7 @@ bool Abit::avScoreComparator(const ABITURIENT &a, const ABITURIENT &b) {
 
 void Abit::sortAbits() {
 	cout << "\nАбітурієнти відсортовані за зростанням середнього балу\n";
+	outfile << "\nАбітурієнти відсортовані за зростанням середнього балу\n";
 	sort(ABITUR, ABITUR + abitNumber,
 		[this](ABITURIENT a, ABITURIENT b) {
 			return avScoreComparator(a, b);
@@ -81,6 +90,7 @@ void Abit::sortAbits() {
 
 void Abit::filterAbits() {
 	cout << "\nАбітурієнти, у яких середній бал нижче за прохідний:\n";
+	outfile << "\nАбітурієнти, у яких середній бал нижче за прохідний:\n";
 
 	int filteredAbits = 0;
 	for (int i = 0; i < abitNumber; i++) {
@@ -88,11 +98,15 @@ void Abit::filterAbits() {
 		if (getAvScore(abit) < passingScore) {
 			filteredAbits++;
 			cout << endl;
+			outfile << endl;
 			cout << abit.NAME << " - " << abit.SPEC << endl;
+			outfile << abit.NAME << " - " << abit.SPEC << endl;
 			cout << endl;
+			outfile << endl;
 		}
 	}
 	if (filteredAbits < 1) {
 		cout << "Немає абітурієнтів, у яких середній бал нижче за прохідний" << endl;
+		outfile << "Немає абітурієнтів, у яких середній бал нижче за прохідний" << endl;
 	}
 }
